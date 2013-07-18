@@ -20,6 +20,11 @@
 		EECE12ED1797EC7B000E1DCE /* HTTPRequest-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = EECE12E11797EC7B000E1DCE /* HTTPRequest-Info.plist */; };
 		EECE12EE1797EC7B000E1DCE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EECE12E31797EC7B000E1DCE /* main.m */; };
 		EECE12EF1797EC7B000E1DCE /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EECE12E51797EC7B000E1DCE /* ViewController.m */; };
+		EECE12F21797ECF9000E1DCE /* HTTPRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = EECE12F11797ECF9000E1DCE /* HTTPRequest.m */; };
+		EECE12F51797ED6D000E1DCE /* HTTPResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = EECE12F41797ED6D000E1DCE /* HTTPResponse.m */; };
+		EECE12FF1797F174000E1DCE /* Task.m in Sources */ = {isa = PBXBuildFile; fileRef = EECE12FA1797F174000E1DCE /* Task.m */; };
+		EECE13001797F174000E1DCE /* TaskQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = EECE12FD1797F174000E1DCE /* TaskQueue.m */; };
+		EECE13031797F8FD000E1DCE /* HTTPTransfer.m in Sources */ = {isa = PBXBuildFile; fileRef = EECE13021797F8FC000E1DCE /* HTTPTransfer.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +45,17 @@
 		EECE12E31797EC7B000E1DCE /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		EECE12E41797EC7B000E1DCE /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		EECE12E51797EC7B000E1DCE /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		EECE12F01797ECF9000E1DCE /* HTTPRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTTPRequest.h; sourceTree = "<group>"; };
+		EECE12F11797ECF9000E1DCE /* HTTPRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTTPRequest.m; sourceTree = "<group>"; };
+		EECE12F31797ED6D000E1DCE /* HTTPResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTTPResponse.h; sourceTree = "<group>"; };
+		EECE12F41797ED6D000E1DCE /* HTTPResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTTPResponse.m; sourceTree = "<group>"; };
+		EECE12F91797F174000E1DCE /* Task.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Task.h; sourceTree = "<group>"; };
+		EECE12FA1797F174000E1DCE /* Task.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Task.m; sourceTree = "<group>"; };
+		EECE12FB1797F174000E1DCE /* TaskPriorityConverter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TaskPriorityConverter.h; sourceTree = "<group>"; };
+		EECE12FC1797F174000E1DCE /* TaskQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TaskQueue.h; sourceTree = "<group>"; };
+		EECE12FD1797F174000E1DCE /* TaskQueue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TaskQueue.m; sourceTree = "<group>"; };
+		EECE13011797F8FC000E1DCE /* HTTPTransfer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTTPTransfer.h; sourceTree = "<group>"; };
+		EECE13021797F8FC000E1DCE /* HTTPTransfer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTTPTransfer.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +75,7 @@
 		EECE12A31797EA89000E1DCE = {
 			isa = PBXGroup;
 			children = (
+				EECE12F61797F14E000E1DCE /* Task */,
 				EECE12B51797EA89000E1DCE /* HTTPRequest */,
 				EECE12D51797EC7B000E1DCE /* App */,
 				EECE12AE1797EA89000E1DCE /* Frameworks */,
@@ -87,6 +104,12 @@
 		EECE12B51797EA89000E1DCE /* HTTPRequest */ = {
 			isa = PBXGroup;
 			children = (
+				EECE12F01797ECF9000E1DCE /* HTTPRequest.h */,
+				EECE12F11797ECF9000E1DCE /* HTTPRequest.m */,
+				EECE12F31797ED6D000E1DCE /* HTTPResponse.h */,
+				EECE12F41797ED6D000E1DCE /* HTTPResponse.m */,
+				EECE13011797F8FC000E1DCE /* HTTPTransfer.h */,
+				EECE13021797F8FC000E1DCE /* HTTPTransfer.m */,
 			);
 			path = HTTPRequest;
 			sourceTree = "<group>";
@@ -109,6 +132,18 @@
 				EECE12E51797EC7B000E1DCE /* ViewController.m */,
 			);
 			path = App;
+			sourceTree = "<group>";
+		};
+		EECE12F61797F14E000E1DCE /* Task */ = {
+			isa = PBXGroup;
+			children = (
+				EECE12F91797F174000E1DCE /* Task.h */,
+				EECE12FA1797F174000E1DCE /* Task.m */,
+				EECE12FC1797F174000E1DCE /* TaskQueue.h */,
+				EECE12FD1797F174000E1DCE /* TaskQueue.m */,
+				EECE12FB1797F174000E1DCE /* TaskPriorityConverter.h */,
+			);
+			path = Task;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -182,6 +217,11 @@
 				EECE12E61797EC7B000E1DCE /* AppDelegate.m in Sources */,
 				EECE12EE1797EC7B000E1DCE /* main.m in Sources */,
 				EECE12EF1797EC7B000E1DCE /* ViewController.m in Sources */,
+				EECE12F21797ECF9000E1DCE /* HTTPRequest.m in Sources */,
+				EECE12F51797ED6D000E1DCE /* HTTPResponse.m in Sources */,
+				EECE12FF1797F174000E1DCE /* Task.m in Sources */,
+				EECE13001797F174000E1DCE /* TaskQueue.m in Sources */,
+				EECE13031797F8FD000E1DCE /* HTTPTransfer.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
