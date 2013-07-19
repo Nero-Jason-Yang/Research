@@ -3,18 +3,33 @@
 
 #define KEY_HTTPHeaderField_ContentType @"Content-Type"
 #define KEY_HTTPHeaderField_IfModifiedSince @"If-Modified-Since"
+#define KEY_HTTPHeaderField_IfNoneMatch @"If-None-Match"
 
 @interface HTTPRequest () <HTTPTransferDelegate>
 {
     NSMutableURLRequest *_request;
     HTTPRequestCompletion _completion;
     HTTPTransfer *_transfer;
-    BOOL _cancelled;
+    BOOL _cancelling;
 }
 @end
 
 @implementation HTTPRequest
 
+// the global performing request list
++ (NSMutableSet *)requests
+{
+    static NSMutableSet *set = nil;
+    if (!set) {
+        static dispatch_once_t onceToken;
+        dispatch_once(&onceToken, ^{
+            set = [NSMutableSet set];
+        });
+    }
+    return set;
+}
+
+// sub-classes derived from HTTPRequest should override this method to specify correct response-class
 - (Class)responseClass
 {
     return HTTPResponse.class;
@@ -30,13 +45,36 @@
 
 #pragma mark - task
 
+- (NSOperationQueue *)connectionQueue
+{
+    if (_connectionQueue) {
+        return _connectionQueue;
+    }
+    return [HTTPTransfer connectionQueue];
+}
+
 - (void)performWithCompletion:(HTTPRequestCompletion)completion
 {
     NSParameterAssert(completion);
-    NSParameterAssert(!_completion);
+    
+    // start performing
+    NSMutableSet *requests = [HTTPRequest requests];
+    @synchronized(requests) {
+        if ([requests containsObject:self]) {
+            NSAssert(0, @"request is still under performing");
+            completion(self.responseForCancelling); // cancelled
+            return;
+        }
+        [requests addObject:self];
+    }
+    
+    // prepare
     _completion = completion;
-    _cancelled = NO;
+    _cancelling = NO;
+    _transfer = nil;
     _response = nil;
+    
+    // perform now
     
     dispatch_block_t block = ^{
         [self performEncoding];
@@ -64,6 +102,10 @@
 
 - (void)didFinishPerformEncoding
 {
+    if ([self checkCancelling]) {
+        return;
+    }
+    
     AsyncBlock block = ^(dispatch_block_t completion){
         [self performTransferWithCompletion:completion];
     };
@@ -82,13 +124,18 @@
 - (void)performTransferWithCompletion:(dispatch_block_t)transferCompletion
 {
     if ([self checkCancelling]) {
-        transferCompletion();
+        if (transferCompletion) {
+            transferCompletion();
+        }
         return;
     }
     
     _transfer = [[HTTPTransfer alloc] init];
+    _transfer.connectionQueue = self.connectionQueue;
     [_transfer sendRequest:_request withCompletion:^(NSHTTPURLResponse *header, NSData *body, NSError *error) {
-        transferCompletion();
+        if (transferCompletion) {
+            transferCompletion();
+        }
         
         HTTPResponse *response = [[self.responseClass alloc] init];
         response.request = self;
@@ -103,6 +150,10 @@
 - (void)didFinishPerformTransferWithResponse:(HTTPResponse *)response
 {
     _transfer = nil;
+    
+    if ([self checkCancelling]) {
+        return;
+    }
     
     dispatch_block_t block = ^{
         [self performDecodingWithResponse:response];
@@ -125,13 +176,31 @@
     
     [response decode];
     
+    [self didFinishPerformWithResponse:response];
+}
+
+- (void)didFinishPerformWithResponse:(HTTPResponse *)response
+{
+    // complete performing
+    NSParameterAssert(_completion);
     _response = response;
-    _completion(response);
+    if (_completion) {
+        _completion(response);
+        _completion = nil;
+    }
+    _cancelling = NO;
+    
+    // end performing
+    NSMutableSet *requests = [HTTPRequest requests];
+    @synchronized(requests) {
+        NSAssert([requests containsObject:self], @"the finished request must exist in the global list before end it");
+        [requests removeObject:self];
+    }
 }
 
 - (void)cancel
 {
-    _cancelled = YES;
+    _cancelling = YES;
     
     HTTPTransfer *transfer = _transfer;
     if (transfer) {
@@ -141,16 +210,19 @@
 
 - (BOOL)checkCancelling
 {
-    if (_cancelled) {
-        HTTPResponse *response = [[self.responseClass alloc] init];
-        response.error = nil;
-        
-        NSParameterAssert(_completion);
-        _completion(response);
+    if (_cancelling) {
+        [self didFinishPerformWithResponse:self.responseForCancelling];
         return YES;
     }
     
     return NO;
+}
+
+- (HTTPResponse *)responseForCancelling
+{
+    HTTPResponse *response = [[self.responseClass alloc] init];
+    response.error = [NSError errorWithDomain:HTTPRequestErrorDomain code:HTTPRequestErrorCode_Cancelling userInfo:nil];
+    return response;
 }
 
 #pragma mark - major
@@ -247,6 +319,23 @@
     else {
         if ([self valueForHeaderField:KEY_HTTPHeaderField_IfModifiedSince]) {
             [self setValue:nil forHeaderField:KEY_HTTPHeaderField_IfModifiedSince];
+        }
+    }
+}
+
+- (NSString *)ifNoneMatch
+{
+    return [self valueForHeaderField:KEY_HTTPHeaderField_IfNoneMatch];
+}
+
+- (void)setIfNoneMatch:(NSString *)ifNoneMatch
+{
+    if (ifNoneMatch) {
+        [self setValue:ifNoneMatch forHeaderField:KEY_HTTPHeaderField_IfNoneMatch];
+    }
+    else {
+        if ([self valueForHeaderField:KEY_HTTPHeaderField_IfNoneMatch]) {
+            [self setValue:nil forHeaderField:KEY_HTTPHeaderField_IfNoneMatch];
         }
     }
 }

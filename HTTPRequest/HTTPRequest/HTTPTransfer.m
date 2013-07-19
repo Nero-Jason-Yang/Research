@@ -14,6 +14,26 @@
 
 @implementation HTTPTransfer
 
++ (NSOperationQueue *)connectionQueue
+{
+    static NSOperationQueue *queue;
+    if (!queue) {
+        static dispatch_once_t onceToken;
+        dispatch_once(&onceToken, ^{
+            queue = [[NSOperationQueue alloc] init];
+        });
+    }
+    return queue;
+}
+
+- (NSOperationQueue *)connectionQueue
+{
+    if (_connectionQueue) {
+        return _connectionQueue;
+    }
+    return [HTTPTransfer connectionQueue];
+}
+
 - (void)sendRequest:(NSURLRequest *)request withDelegate:(id<HTTPTransferDelegate>)delegate
 {
     NSParameterAssert(!_connection);
@@ -27,6 +47,7 @@
     NSParameterAssert(!_connection);
     _completion = completion;
     _connection = [[NSURLConnection alloc] initWithRequest:request delegate:self startImmediately:NO];
+    [_connection setDelegateQueue:self.connectionQueue];
     [_connection start];
 }
 

@@ -7,4 +7,8 @@
 @property (nonatomic) NSData *body;
 @property (nonatomic) NSError *error;
 - (void)decode;
+- (BOOL)success;
+// helper
+@property (nonatomic,readonly) NSString *lastModified;
+@property (nonatomic,readonly) NSString *etag;
 @end

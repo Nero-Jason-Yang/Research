@@ -8,6 +8,8 @@
 typedef void(^HTTPTransferCompletion)(NSHTTPURLResponse *header, NSData *body, NSError *error);
 
 @interface HTTPTransfer : NSObject
++ (NSOperationQueue *)connectionQueue;
+@property (nonatomic) NSOperationQueue *connectionQueue;
 - (void)sendRequest:(NSURLRequest *)request withDelegate:(id<HTTPTransferDelegate>)delegate;
 - (void)sendRequest:(NSURLRequest *)request withCompletion:(HTTPTransferCompletion)completion;
 - (void)cancel;

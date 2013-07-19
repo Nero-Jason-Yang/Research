@@ -11,6 +11,7 @@ typedef void(^HTTPRequestCompletion)(HTTPResponse *response);
 @property (nonatomic) TaskQueue *encodingQueue;
 @property (nonatomic) TaskQueue *decodingQueue;
 @property (nonatomic) TaskQueue *transferQueue;
+@property (nonatomic) NSOperationQueue *connectionQueue;
 @property (nonatomic,readonly) HTTPResponse *response;
 - (void)performWithCompletion:(HTTPRequestCompletion)completion;
 - (void)cancel;
@@ -26,4 +27,10 @@ typedef void(^HTTPRequestCompletion)(HTTPResponse *response);
 @property (nonatomic) NSString *stringBody;
 @property (nonatomic) NSString *contentType;
 @property (nonatomic) NSString *ifModifiedSince;
+@property (nonatomic) NSString *ifNoneMatch;
 @end
+
+#define CONTENTTYPE_XML @"text/xml"
+
+#define HTTPRequestErrorDomain @"HTTPRequest"
+#define HTTPRequestErrorCode_Cancelling 0
