@@ -9,5 +9,7 @@
 - (void)removeTask:(Task *)task;
 - (Task *)addTaskWithBlock:(dispatch_block_t)block;
 - (Task *)addTaskWithBlock:(dispatch_block_t)block tags:(NSUInteger)tags;
+- (Task *)addTaskWithAsyncBlock:(AsyncBlock)block;
+- (Task *)addTaskWithAsyncBlock:(AsyncBlock)block tags:(NSUInteger)tags;
 - (void)task:(Task *)task didChangeTagsFrom:(NSUInteger)tags;
 @end

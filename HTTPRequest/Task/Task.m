@@ -120,3 +120,37 @@
 }
 
 @end
+
+
+@implementation AsyncBlockTask
+{
+    AsyncBlock _block;
+}
+
+- (id)initWithBlock:(AsyncBlock)block
+{
+    if (self = [super init]) {
+        _block = block;
+    }
+    return self;
+}
+
+- (id)initWithBlock:(AsyncBlock)block tags:(NSUInteger)tags
+{
+    if (self = [super initWithTags:tags]) {
+        _block = block;
+    }
+    return self;
+}
+
+- (void)performWithCompletion:(dispatch_block_t)completion
+{
+    if (_block) {
+        _block(completion);
+    }
+    else {
+        completion();
+    }
+}
+
+@end

@@ -52,6 +52,20 @@
     return task;
 }
 
+- (Task *)addTaskWithAsyncBlock:(AsyncBlock)block
+{
+    AsyncBlockTask *task = [[AsyncBlockTask alloc] initWithBlock:block];
+    [self addTask:task];
+    return task;
+}
+
+- (Task *)addTaskWithAsyncBlock:(AsyncBlock)block tags:(NSUInteger)tags
+{
+    AsyncBlockTask *task = [[AsyncBlockTask alloc] initWithBlock:block tags:tags];
+    [self addTask:task];
+    return task;
+}
+
 - (void)task:(Task *)task didChangeTagsFrom:(NSUInteger)tags;
 {
     @synchronized(self) {

@@ -23,6 +23,7 @@ typedef void(^HTTPRequestCompletion)(HTTPResponse *response);
 - (void)setValue:(NSString *)value forHeaderField:(NSString *)field;
 - (void)encode;
 // helper
+@property (nonatomic) NSString *stringBody;
 @property (nonatomic) NSString *contentType;
 @property (nonatomic) NSString *ifModifiedSince;
 @end

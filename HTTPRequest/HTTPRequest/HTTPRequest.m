@@ -1,18 +1,19 @@
 #import "HTTPRequest.h"
 #import "HTTPTransfer.h"
 
-@interface HTTPRequest () <HTTPTransferDelegate>
+#define KEY_HTTPHeaderField_ContentType @"Content-Type"
+#define KEY_HTTPHeaderField_IfModifiedSince @"If-Modified-Since"
 
+@interface HTTPRequest () <HTTPTransferDelegate>
+{
+    NSMutableURLRequest *_request;
+    HTTPRequestCompletion _completion;
+    HTTPTransfer *_transfer;
+    BOOL _cancelled;
+}
 @end
 
 @implementation HTTPRequest
-{
-    NSMutableURLRequest *_request;
-    HTTPTransfer *_transfer;
-//    __weak Task *_connTask;
-    
-    BOOL _cancelling;
-}
 
 - (Class)responseClass
 {
@@ -27,12 +28,18 @@
     return self;
 }
 
-#pragma mark task
+#pragma mark - task
 
 - (void)performWithCompletion:(HTTPRequestCompletion)completion
 {
+    NSParameterAssert(completion);
+    NSParameterAssert(!_completion);
+    _completion = completion;
+    _cancelled = NO;
+    _response = nil;
+    
     dispatch_block_t block = ^{
-        [self performEncodingWithCompletion:completion];
+        [self performEncoding];
     };
     
     TaskQueue *queue = self.encodingQueue;
@@ -44,32 +51,61 @@
     }
 }
 
-- (void)performEncodingWithCompletion:(HTTPRequestCompletion)completion
+- (void)performEncoding
 {
+    if ([self checkCancelling]) {
+        return;
+    }
+    
     [self encode];
     
-    dispatch_block_t block = ^{
+    [self didFinishPerformEncoding];
+}
+
+- (void)didFinishPerformEncoding
+{
+    AsyncBlock block = ^(dispatch_block_t completion){
         [self performTransferWithCompletion:completion];
     };
     
     TaskQueue *queue = self.transferQueue;
     if (queue) {
-        [queue addTaskWithBlock:block tags:self.tags];
+        [queue addTaskWithAsyncBlock:block tags:self.tags];
     }
     else {
-        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_LOW, 0), block);
+        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_LOW, 0), ^{
+            block(nil);
+        });
     }
 }
 
-- (void)performTransferWithCompletion:(HTTPRequestCompletion)completion
+- (void)performTransferWithCompletion:(dispatch_block_t)transferCompletion
 {
+    if ([self checkCancelling]) {
+        transferCompletion();
+        return;
+    }
+    
     _transfer = [[HTTPTransfer alloc] init];
     [_transfer sendRequest:_request withCompletion:^(NSHTTPURLResponse *header, NSData *body, NSError *error) {
-        // TODO
+        transferCompletion();
+        
+        HTTPResponse *response = [[self.responseClass alloc] init];
+        response.request = self;
+        response.header = header;
+        response.body = body;
+        response.error = error;
+        
+        [self didFinishPerformTransferWithResponse:response];
     }];
+}
+
+- (void)didFinishPerformTransferWithResponse:(HTTPResponse *)response
+{
+    _transfer = nil;
     
     dispatch_block_t block = ^{
-        [self performDecodingWithCompletion:completion];
+        [self performDecodingWithResponse:response];
     };
     
     TaskQueue *queue = self.decodingQueue;
@@ -81,14 +117,21 @@
     }
 }
 
-- (void)performDecodingWithCompletion:(HTTPRequestCompletion)completion
+- (void)performDecodingWithResponse:(HTTPResponse *)response
 {
-    // TODO
+    if ([self checkCancelling]) {
+        return;
+    }
+    
+    [response decode];
+    
+    _response = response;
+    _completion(response);
 }
 
 - (void)cancel
 {
-    _cancelling = YES;
+    _cancelled = YES;
     
     HTTPTransfer *transfer = _transfer;
     if (transfer) {
@@ -96,11 +139,21 @@
     }
 }
 
-- (void)transfer
+- (BOOL)checkCancelling
 {
+    if (_cancelled) {
+        HTTPResponse *response = [[self.responseClass alloc] init];
+        response.error = nil;
+        
+        NSParameterAssert(_completion);
+        _completion(response);
+        return YES;
+    }
+    
+    return NO;
 }
 
-#pragma mark major
+#pragma mark - major
 
 - (NSURL *)url
 {
@@ -157,34 +210,48 @@
     // should be override
 }
 
-#pragma mark helper
+#pragma mark - helper
+
+- (NSString *)stringBody
+{
+    NSData *data = self.body;
+    return data ? [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding] : nil;
+}
+
+- (void)setStringBody:(NSString *)stringBody
+{
+    NSData *data = stringBody ? [stringBody dataUsingEncoding:NSUTF8StringEncoding] : nil;
+    self.body = data;
+}
 
 - (NSString *)contentType
 {
-    return [_request valueForHTTPHeaderField:@"Content-Type"];
+    return [_request valueForHTTPHeaderField:KEY_HTTPHeaderField_ContentType];
 }
 
 - (void)setContentType:(NSString *)contentType
 {
-    [_request setValue:contentType forHTTPHeaderField:@"Content-Type"];
+    [_request setValue:contentType forHTTPHeaderField:KEY_HTTPHeaderField_ContentType];
 }
 
 - (NSString *)ifModifiedSince
 {
-    return [self valueForHeaderField:@"If-Modified-Since"];
+    return [self valueForHeaderField:KEY_HTTPHeaderField_IfModifiedSince];
 }
 
 - (void)setIfModifiedSince:(NSString *)ifModifiedSince
 {
     if (ifModifiedSince) {
-        [self setValue:ifModifiedSince forHeaderField:@"If-Modified-Since"];
+        [self setValue:ifModifiedSince forHeaderField:KEY_HTTPHeaderField_IfModifiedSince];
     }
     else {
-        if ([self valueForHeaderField:@"If-Modified-Since"]) {
-            [self setValue:nil forHeaderField:@"If-Modified-Since"];
+        if ([self valueForHeaderField:KEY_HTTPHeaderField_IfModifiedSince]) {
+            [self setValue:nil forHeaderField:KEY_HTTPHeaderField_IfModifiedSince];
         }
     }
 }
+
+#pragma mark -
 
 #pragma mark <HTTPConnectionDelegate>
 

@@ -15,3 +15,9 @@
 - (id)initWithBlock:(dispatch_block_t)block;
 - (id)initWithBlock:(dispatch_block_t)block tags:(NSUInteger)tags;
 @end
+
+typedef void(^AsyncBlock)(dispatch_block_t completion);
+@interface AsyncBlockTask : Task
+- (id)initWithBlock:(AsyncBlock)block;
+- (id)initWithBlock:(AsyncBlock)block tags:(NSUInteger)tags;
+@end
