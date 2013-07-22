@@ -5,6 +5,7 @@
 #define EntityName_Album @"Album"
 #define KEY_Album_Name   @"name"
 #define KEY_Album_Photos @"photos"
+#define KEY_Album_CoverPhoto @"coverPhoto"
 
 #define EntityName_Photo @"Photo"
 #define KEY_Photo_Name   @"name"
@@ -22,8 +23,14 @@
         NSSet *photos = [album relationshipValueForKey:KEY_Album_Photos];
         if ([photos isKindOfClass:NSSet.class]) {
             for (NSManagedObject *photo in photos) {
-                NSLog(@"%@", [photo attributes]);
+                NSLog(@"%@", photo.attributes);
             }
+        }
+        NSManagedObject *coverPhoto = [album relationshipValueForKey:KEY_Album_CoverPhoto];
+        if (coverPhoto) {
+            NSLog(@"Cover Photo %@", coverPhoto.attributes);
+            [album setRelationshipValue:nil forKey:KEY_Album_CoverPhoto];
+            [album save];
         }
     }
     
@@ -35,6 +42,7 @@
     NSManagedObject *photo2 = [db createObjectWithEntityName:EntityName_Photo];
     [photo2 setAttributeValue:@"bear" forKey:KEY_Photo_Name];
     [photo2 setRelationshipValue:album forKey:KEY_Photo_Album];
+    [album setRelationshipValue:photo1 forKey:KEY_Album_CoverPhoto];
     [db saveContext];
 }
 
