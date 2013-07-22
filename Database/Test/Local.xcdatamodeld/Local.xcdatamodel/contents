@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model name="" userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="2057" systemVersion="11G63" minimumToolsVersion="Xcode 4.3" macOSVersion="Automatic" iOSVersion="Automatic">
+    <entity name="AlbumObject" syncable="YES">
+        <attribute name="cud" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="metadata" optional="YES" attributeType="Transformable" valueTransformerName="NSDictionaryTransformer" syncable="YES"/>
+        <attribute name="uploadingCompleted" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="uploadingCud" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="uploadingMetadata" optional="YES" attributeType="Transformable" valueTransformerName="NSDictionaryTransformer" syncable="YES"/>
+        <relationship name="album" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Collection" inverseName="albumObjects" inverseEntity="Collection" syncable="YES"/>
+        <relationship name="object" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Object" inverseName="albumObjects" inverseEntity="Object" syncable="YES"/>
+    </entity>
+    <entity name="Collection" syncable="YES">
+        <attribute name="cud" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="metadata" optional="YES" attributeType="Transformable" valueTransformerName="NSDictionaryTransformer" syncable="YES"/>
+        <attribute name="uploadingCompleted" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="uploadingCud" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="uploadingMetadata" optional="YES" attributeType="Transformable" valueTransformerName="NSDictionaryTransformer" syncable="YES"/>
+        <relationship name="albumObjects" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="AlbumObject" inverseName="album" inverseEntity="AlbumObject" syncable="YES"/>
+    </entity>
+    <entity name="Instance" syncable="YES">
+        <attribute name="cud" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="metadata" optional="YES" attributeType="Transformable" valueTransformerName="NSDictionaryTransformer" syncable="YES"/>
+        <attribute name="uploadingCompleted" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="uploadingCud" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="uploadingMetadata" optional="YES" attributeType="Transformable" valueTransformerName="NSDictionaryTransformer" syncable="YES"/>
+        <relationship name="object" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Object" inverseName="instance" inverseEntity="Object" syncable="YES"/>
+    </entity>
+    <entity name="Object" syncable="YES">
+        <attribute name="cud" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="metadata" optional="YES" attributeType="Transformable" valueTransformerName="NSDictionaryTransformer" syncable="YES"/>
+        <attribute name="uploadingCompleted" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="uploadingCud" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="uploadingMetadata" optional="YES" attributeType="Transformable" valueTransformerName="NSDictionaryTransformer" syncable="YES"/>
+        <relationship name="albumObjects" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="AlbumObject" inverseName="object" inverseEntity="AlbumObject" syncable="YES"/>
+        <relationship name="instance" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Instance" inverseName="object" inverseEntity="Instance" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="Object" positionX="160" positionY="192" width="128" height="150"/>
+        <element name="Instance" positionX="160" positionY="192" width="128" height="135"/>
+        <element name="Collection" positionX="160" positionY="192" width="128" height="135"/>
+        <element name="AlbumObject" positionX="160" positionY="192" width="128" height="150"/>
+    </elements>
+</model>
