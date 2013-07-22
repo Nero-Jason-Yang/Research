@@ -9,6 +9,7 @@
 #import "ViewController.h"
 #import "NSDictionaryTransformerTest.h"
 #import "ToManyRelationshipTest.h"
+#import "TransformerRelationshipTest.h"
 
 @interface ViewController ()
 
@@ -37,6 +38,12 @@
 - (IBAction)onToManyRelationship:(id)sender
 {
     ToManyRelationshipTest *tester = [[ToManyRelationshipTest alloc] init];
+    [tester test];
+}
+
+- (IBAction)onTransformerRelationship:(id)sender
+{
+    TransformerRelationshipTest *tester = [[TransformerRelationshipTest alloc] init];
     [tester test];
 }
 

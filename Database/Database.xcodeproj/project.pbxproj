@@ -29,6 +29,8 @@
 		EEE3B482179D044A00EE4FD6 /* Local.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = EEE3B480179D044A00EE4FD6 /* Local.xcdatamodeld */; };
 		EEE3B497179D17BD00EE4FD6 /* ToManyRelationship.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = EEE3B493179D17BD00EE4FD6 /* ToManyRelationship.xcdatamodeld */; };
 		EEE3B498179D17BD00EE4FD6 /* ToManyRelationshipTest.m in Sources */ = {isa = PBXBuildFile; fileRef = EEE3B496179D17BD00EE4FD6 /* ToManyRelationshipTest.m */; };
+		EEE83920179D3C59006F3575 /* TransformerRelationship.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = EEE8391E179D3C59006F3575 /* TransformerRelationship.xcdatamodeld */; };
+		EEE83923179D3C6B006F3575 /* TransformerRelationshipTest.m in Sources */ = {isa = PBXBuildFile; fileRef = EEE83922179D3C6A006F3575 /* TransformerRelationshipTest.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -65,6 +67,9 @@
 		EEE3B494179D17BD00EE4FD6 /* ToManyRelationship.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ToManyRelationship.xcdatamodel; sourceTree = "<group>"; };
 		EEE3B495179D17BD00EE4FD6 /* ToManyRelationshipTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ToManyRelationshipTest.h; sourceTree = "<group>"; };
 		EEE3B496179D17BD00EE4FD6 /* ToManyRelationshipTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ToManyRelationshipTest.m; sourceTree = "<group>"; };
+		EEE8391F179D3C59006F3575 /* TransformerRelationship.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = TransformerRelationship.xcdatamodel; sourceTree = "<group>"; };
+		EEE83921179D3C6A006F3575 /* TransformerRelationshipTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TransformerRelationshipTest.h; sourceTree = "<group>"; };
+		EEE83922179D3C6A006F3575 /* TransformerRelationshipTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TransformerRelationshipTest.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -148,6 +153,9 @@
 				EEE3B493179D17BD00EE4FD6 /* ToManyRelationship.xcdatamodeld */,
 				EEE3B495179D17BD00EE4FD6 /* ToManyRelationshipTest.h */,
 				EEE3B496179D17BD00EE4FD6 /* ToManyRelationshipTest.m */,
+				EEE8391E179D3C59006F3575 /* TransformerRelationship.xcdatamodeld */,
+				EEE83921179D3C6A006F3575 /* TransformerRelationshipTest.h */,
+				EEE83922179D3C6A006F3575 /* TransformerRelationshipTest.m */,
 				EEE3B480179D044A00EE4FD6 /* Local.xcdatamodeld */,
 			);
 			path = Test;
@@ -264,6 +272,8 @@
 				EEE3B482179D044A00EE4FD6 /* Local.xcdatamodeld in Sources */,
 				EEE3B497179D17BD00EE4FD6 /* ToManyRelationship.xcdatamodeld in Sources */,
 				EEE3B498179D17BD00EE4FD6 /* ToManyRelationshipTest.m in Sources */,
+				EEE83920179D3C59006F3575 /* TransformerRelationship.xcdatamodeld in Sources */,
+				EEE83923179D3C6B006F3575 /* TransformerRelationshipTest.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -432,6 +442,16 @@
 			);
 			currentVersion = EEE3B494179D17BD00EE4FD6 /* ToManyRelationship.xcdatamodel */;
 			path = ToManyRelationship.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+		EEE8391E179D3C59006F3575 /* TransformerRelationship.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				EEE8391F179D3C59006F3575 /* TransformerRelationship.xcdatamodel */,
+			);
+			currentVersion = EEE8391F179D3C59006F3575 /* TransformerRelationship.xcdatamodel */;
+			path = TransformerRelationship.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};
