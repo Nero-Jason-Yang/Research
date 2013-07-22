@@ -25,11 +25,27 @@
                                     <action selector="onNSDictionaryTransformer:" destination="2" eventType="touchUpInside" id="ciL-hS-hRb"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0N3-LE-hZ4">
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="ToManyRelationship">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="onToManyRelationship:" destination="2" eventType="touchUpInside" id="gkR-b6-j3m"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="0N3-LE-hZ4" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="4F7-HD-7sM"/>
                             <constraint firstAttribute="trailing" secondItem="e44-f0-pjm" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="IHZ-xw-wX1"/>
-                            <constraint firstItem="e44-f0-pjm" firstAttribute="top" secondItem="3" secondAttribute="top" constant="252" id="J49-cs-ycx"/>
+                            <constraint firstAttribute="trailing" secondItem="0N3-LE-hZ4" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="b8g-vc-wPp"/>
+                            <constraint firstItem="e44-f0-pjm" firstAttribute="top" secondItem="3" secondAttribute="top" constant="20" symbolic="YES" type="default" id="n9e-9b-WuR"/>
+                            <constraint firstItem="0N3-LE-hZ4" firstAttribute="top" secondItem="e44-f0-pjm" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="tih-10-x3R"/>
                             <constraint firstItem="e44-f0-pjm" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="ygM-g8-SW0"/>
                         </constraints>
                     </view>
@@ -44,6 +60,10 @@
         </class>
         <class className="ViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/ViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="onNSDictionaryTransformer:"/>
+                <relationship kind="action" name="onToManyRelationship:"/>
+            </relationships>
         </class>
     </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">

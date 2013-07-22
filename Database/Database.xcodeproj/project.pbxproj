@@ -27,6 +27,8 @@
 		EEE3B47C179CE61400EE4FD6 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EEE3B47B179CE61400EE4FD6 /* CoreData.framework */; };
 		EEE3B47F179CE6BD00EE4FD6 /* NSDictionaryTransformerTest.m in Sources */ = {isa = PBXBuildFile; fileRef = EEE3B47E179CE6BD00EE4FD6 /* NSDictionaryTransformerTest.m */; };
 		EEE3B482179D044A00EE4FD6 /* Local.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = EEE3B480179D044A00EE4FD6 /* Local.xcdatamodeld */; };
+		EEE3B497179D17BD00EE4FD6 /* ToManyRelationship.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = EEE3B493179D17BD00EE4FD6 /* ToManyRelationship.xcdatamodeld */; };
+		EEE3B498179D17BD00EE4FD6 /* ToManyRelationshipTest.m in Sources */ = {isa = PBXBuildFile; fileRef = EEE3B496179D17BD00EE4FD6 /* ToManyRelationshipTest.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -60,6 +62,9 @@
 		EEE3B47D179CE6BD00EE4FD6 /* NSDictionaryTransformerTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSDictionaryTransformerTest.h; sourceTree = "<group>"; };
 		EEE3B47E179CE6BD00EE4FD6 /* NSDictionaryTransformerTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSDictionaryTransformerTest.m; sourceTree = "<group>"; };
 		EEE3B481179D044A00EE4FD6 /* Local.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Local.xcdatamodel; sourceTree = "<group>"; };
+		EEE3B494179D17BD00EE4FD6 /* ToManyRelationship.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ToManyRelationship.xcdatamodel; sourceTree = "<group>"; };
+		EEE3B495179D17BD00EE4FD6 /* ToManyRelationshipTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ToManyRelationshipTest.h; sourceTree = "<group>"; };
+		EEE3B496179D17BD00EE4FD6 /* ToManyRelationshipTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ToManyRelationshipTest.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -140,6 +145,9 @@
 				EEE3B45B179CE56300EE4FD6 /* NSDictionaryTransformer.xcdatamodeld */,
 				EEE3B47D179CE6BD00EE4FD6 /* NSDictionaryTransformerTest.h */,
 				EEE3B47E179CE6BD00EE4FD6 /* NSDictionaryTransformerTest.m */,
+				EEE3B493179D17BD00EE4FD6 /* ToManyRelationship.xcdatamodeld */,
+				EEE3B495179D17BD00EE4FD6 /* ToManyRelationshipTest.h */,
+				EEE3B496179D17BD00EE4FD6 /* ToManyRelationshipTest.m */,
 				EEE3B480179D044A00EE4FD6 /* Local.xcdatamodeld */,
 			);
 			path = Test;
@@ -254,6 +262,8 @@
 				EEE3B47A179CE5E200EE4FD6 /* NSURL+Utils.m in Sources */,
 				EEE3B47F179CE6BD00EE4FD6 /* NSDictionaryTransformerTest.m in Sources */,
 				EEE3B482179D044A00EE4FD6 /* Local.xcdatamodeld in Sources */,
+				EEE3B497179D17BD00EE4FD6 /* ToManyRelationship.xcdatamodeld in Sources */,
+				EEE3B498179D17BD00EE4FD6 /* ToManyRelationshipTest.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -390,6 +400,7 @@
 				EEE3B448179CE51000EE4FD6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
@@ -411,6 +422,16 @@
 			);
 			currentVersion = EEE3B481179D044A00EE4FD6 /* Local.xcdatamodel */;
 			path = Local.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+		EEE3B493179D17BD00EE4FD6 /* ToManyRelationship.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				EEE3B494179D17BD00EE4FD6 /* ToManyRelationship.xcdatamodel */,
+			);
+			currentVersion = EEE3B494179D17BD00EE4FD6 /* ToManyRelationship.xcdatamodel */;
+			path = ToManyRelationship.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};
