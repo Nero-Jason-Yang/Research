@@ -12,6 +12,7 @@
 #import "TransformerRelationshipTest.h"
 #import "SameAttributesForDifferentEntitiesTest.h"
 #import "ReadWriteSaveConcurrentTest.h"
+#import "OverrideWithDifferentReturnTypesTest.h"
 
 @interface ViewController ()
 
@@ -58,6 +59,12 @@
 - (IBAction)onReadWriteSaveConcurrent:(id)sender
 {
     ReadWriteSaveConcurrentTest *tester = [[ReadWriteSaveConcurrentTest alloc] init];
+    [tester test];
+}
+
+- (IBAction)onOverrideWithDiffernetReturnTypes:(id)sender
+{
+    OverrideWithDifferentReturnTypesTest *tester = [[OverrideWithDifferentReturnTypesTest alloc] init];
     [tester test];
 }
 
