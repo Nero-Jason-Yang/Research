@@ -42,14 +42,14 @@
         [object1 setAttributeValue:info1 forKey:KEY_Record_Info];
         [object1 save];
     }
-    [NSThread sleepForTimeInterval:2.0f];
+    //[NSThread sleepForTimeInterval:2.0f];
     {
         NSDate *date = [NSDate date];
         NSDictionary *info2 = @{ @"name":@"info2", @"date":date.description };
         object2 = [database createObjectWithEntityName:EntityName_Record];
         [object2 setAttributeValue:info2 forKey:KEY_Record_Info];
     }
-    [NSThread sleepForTimeInterval:3.0f];
+    //[NSThread sleepForTimeInterval:3.0f];
     {
         NSDate *date = [NSDate date];
         NSDictionary *info3 = @{ @"name":@"info3", @"date":date.description };
@@ -74,6 +74,13 @@
     [minfo setObject:@[@"a", @"b", [NSNumber numberWithInt:108]] forKey:@"array"];
     [object1 setAttributeValue:minfo forKey:KEY_Record_Info];
     [object1 save];
+    [minfo setObject:@"11" forKey:@"aa"];
+    [object1 setAttributeValue:minfo forKey:KEY_Record_Info];
+    [object1 save];
+    NSMutableDictionary *newdic = minfo.mutableCopy;
+    [newdic setObject:@"22" forKey:@"bb"];
+    [object1 setAttributeValue:newdic forKey:KEY_Record_Info];
+    [object1 save];
     NSLog(@"After modifying records ...");
     array = [database fetchObjectsForEntity:EntityName_Record];
     for (NSManagedObject *object in array) {
@@ -96,6 +103,21 @@
         }
     }
     NSLog(@"After deleting end.");
+    
+    // test time cost for write
+    NSDictionary *testdic = @{@"a":@"b", @"aa":@"bb", @"aaa":@"bbb", @"aaaa":@"bbbb", @"aaaaa":@"bbbbb", @"aaaaaa":@"bbbbbb"};
+    NSDate *start = [NSDate date], *stop;
+    for (NSUInteger i = 0; i < 100000; i ++) {
+        NSManagedObject *mo = [database createObjectWithEntityName:EntityName_Record];
+        [mo setAttributeValue:testdic forKey:KEY_Record_Info];
+    }
+    stop = [NSDate date];
+    NSLog(@"%fs", [stop timeIntervalSinceDate:start]);
+    start = stop;
+    [database saveContext];
+    stop = [NSDate date];
+    NSLog(@"%fs", [stop timeIntervalSinceDate:start]);
+    return;
 }
 
 @end

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model name="" userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="2057" systemVersion="11G63" minimumToolsVersion="Xcode 4.3" macOSVersion="Automatic" iOSVersion="Automatic">
+    <entity name="Instance" representedClassName="SameManagedObject" syncable="YES">
+        <attribute name="cmetadata" optional="YES" attributeType="Transformable" valueTransformerName="NSDictionaryTransformer" syncable="YES"/>
+        <attribute name="instanceid" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="lmetadata" optional="YES" attributeType="Transformable" valueTransformerName="NSDictionaryTransformer" syncable="YES"/>
+        <attribute name="loperation" optional="YES" attributeType="Integer 16" syncable="YES"/>
+        <attribute name="umetadata" optional="YES" attributeType="Transformable" valueTransformerName="NSDictionaryTransformer" syncable="YES"/>
+        <attribute name="uoperation" optional="YES" attributeType="Integer 16" syncable="YES"/>
+        <relationship name="referencedObject" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Object" inverseName="instances" inverseEntity="Object" syncable="YES"/>
+    </entity>
+    <entity name="Object" representedClassName="SameManagedObject" syncable="YES">
+        <attribute name="cmetadata" optional="YES" attributeType="Transformable" valueTransformerName="NSDictionaryTransformer" syncable="YES"/>
+        <attribute name="lmetadata" optional="YES" attributeType="Transformable" valueTransformerName="NSDictionaryTransformer" syncable="YES"/>
+        <attribute name="loperation" optional="YES" attributeType="Integer 16" syncable="YES"/>
+        <attribute name="objectid" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="umetadata" optional="YES" attributeType="Transformable" valueTransformerName="NSDictionaryTransformer" syncable="YES"/>
+        <attribute name="uoperation" optional="YES" attributeType="Integer 16" syncable="YES"/>
+        <relationship name="instances" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Instance" inverseName="referencedObject" inverseEntity="Instance" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="Object" positionX="160" positionY="192" width="128" height="150"/>
+        <element name="Instance" positionX="160" positionY="192" width="128" height="150"/>
+    </elements>
+</model>

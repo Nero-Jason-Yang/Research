@@ -10,6 +10,7 @@
 #import "NSDictionaryTransformerTest.h"
 #import "ToManyRelationshipTest.h"
 #import "TransformerRelationshipTest.h"
+#import "SameAttributesForDifferentEntitiesTest.h"
 
 @interface ViewController ()
 
@@ -44,6 +45,12 @@
 - (IBAction)onTransformerRelationship:(id)sender
 {
     TransformerRelationshipTest *tester = [[TransformerRelationshipTest alloc] init];
+    [tester test];
+}
+
+- (IBAction)onSameAttributesForDifferentEntities:(id)sender
+{
+    SameAttributesForDifferentEntitiesTest *tester = [[SameAttributesForDifferentEntitiesTest alloc] init];
     [tester test];
 }
 

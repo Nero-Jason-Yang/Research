@@ -51,14 +51,30 @@
                                     <action selector="onTransformerRelationship:" destination="2" eventType="touchUpInside" id="CbH-lY-w1W"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Atk-a7-3Ow">
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="SameAttributesForDifferentEntities">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="onSameAttributesForDifferentEntities:" destination="2" eventType="touchUpInside" id="Yee-3F-zRd"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="Atk-a7-3Ow" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="3CO-xQ-0sV"/>
                             <constraint firstItem="0N3-LE-hZ4" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="4F7-HD-7sM"/>
                             <constraint firstAttribute="trailing" secondItem="e44-f0-pjm" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="IHZ-xw-wX1"/>
                             <constraint firstAttribute="trailing" secondItem="Eyx-B5-mJH" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="RpI-bX-xzl"/>
+                            <constraint firstItem="Atk-a7-3Ow" firstAttribute="top" secondItem="Eyx-B5-mJH" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="Yza-Q0-a4q"/>
                             <constraint firstAttribute="trailing" secondItem="0N3-LE-hZ4" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="b8g-vc-wPp"/>
                             <constraint firstItem="e44-f0-pjm" firstAttribute="top" secondItem="3" secondAttribute="top" constant="20" symbolic="YES" type="default" id="n9e-9b-WuR"/>
+                            <constraint firstAttribute="trailing" secondItem="Atk-a7-3Ow" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="s4X-NW-fPV"/>
                             <constraint firstItem="Eyx-B5-mJH" firstAttribute="top" secondItem="0N3-LE-hZ4" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="sa5-KH-UpZ"/>
                             <constraint firstItem="0N3-LE-hZ4" firstAttribute="top" secondItem="e44-f0-pjm" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="tih-10-x3R"/>
                             <constraint firstItem="Eyx-B5-mJH" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="vuC-NG-ist"/>
@@ -70,18 +86,6 @@
             </objects>
         </scene>
     </scenes>
-    <classes>
-        <class className="NSLayoutConstraint" superclassName="NSObject">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
-        </class>
-        <class className="ViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/ViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="onNSDictionaryTransformer:"/>
-                <relationship kind="action" name="onToManyRelationship:"/>
-            </relationships>
-        </class>
-    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
