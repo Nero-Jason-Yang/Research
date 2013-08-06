@@ -10,6 +10,10 @@
 		EE4DC6A117AB6CE2003EF354 /* SameAttributesForDifferentEntities.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = EE4DC69F17AB6CE2003EF354 /* SameAttributesForDifferentEntities.xcdatamodeld */; };
 		EE4DC6A417AB6DA4003EF354 /* SameAttributesForDifferentEntitiesTest.m in Sources */ = {isa = PBXBuildFile; fileRef = EE4DC6A317AB6DA4003EF354 /* SameAttributesForDifferentEntitiesTest.m */; };
 		EE4DC6AD17AB6E3A003EF354 /* SameManagedObject.m in Sources */ = {isa = PBXBuildFile; fileRef = EE4DC6AC17AB6E3A003EF354 /* SameManagedObject.m */; };
+		46BF7AA517AFEE7800678564 /* NSDictionarySlowTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = 46BF7AA417AFEE7800678564 /* NSDictionarySlowTransformer.m */; };
+		46BF7AA817AFEEFA00678564 /* ReadWriteSaveConcurrent.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 46BF7AA617AFEEF900678564 /* ReadWriteSaveConcurrent.xcdatamodeld */; };
+		46BF7AAB17AFEF4100678564 /* ReadWriteSaveConcurrentTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 46BF7AAA17AFEF4100678564 /* ReadWriteSaveConcurrentTest.m */; };
+		46BF7AAE17AFEFBA00678564 /* ReadWriteSaveConcurrentItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 46BF7AAD17AFEFBA00678564 /* ReadWriteSaveConcurrentItem.m */; };
 		EEE3B424179CE51000EE4FD6 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EEE3B423179CE51000EE4FD6 /* UIKit.framework */; };
 		EEE3B426179CE51000EE4FD6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EEE3B425179CE51000EE4FD6 /* Foundation.framework */; };
 		EEE3B428179CE51000EE4FD6 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EEE3B427179CE51000EE4FD6 /* CoreGraphics.framework */; };
@@ -42,6 +46,13 @@
 		EE4DC6A317AB6DA4003EF354 /* SameAttributesForDifferentEntitiesTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SameAttributesForDifferentEntitiesTest.m; sourceTree = "<group>"; };
 		EE4DC6AB17AB6E3A003EF354 /* SameManagedObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SameManagedObject.h; sourceTree = "<group>"; };
 		EE4DC6AC17AB6E3A003EF354 /* SameManagedObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SameManagedObject.m; sourceTree = "<group>"; };
+		46BF7AA317AFEE7800678564 /* NSDictionarySlowTransformer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSDictionarySlowTransformer.h; sourceTree = "<group>"; };
+		46BF7AA417AFEE7800678564 /* NSDictionarySlowTransformer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSDictionarySlowTransformer.m; sourceTree = "<group>"; };
+		46BF7AA717AFEEFA00678564 /* ReadWriteSaveConcurrent.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ReadWriteSaveConcurrent.xcdatamodel; sourceTree = "<group>"; };
+		46BF7AA917AFEF4100678564 /* ReadWriteSaveConcurrentTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReadWriteSaveConcurrentTest.h; sourceTree = "<group>"; };
+		46BF7AAA17AFEF4100678564 /* ReadWriteSaveConcurrentTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReadWriteSaveConcurrentTest.m; sourceTree = "<group>"; };
+		46BF7AAC17AFEFBA00678564 /* ReadWriteSaveConcurrentItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReadWriteSaveConcurrentItem.h; sourceTree = "<group>"; };
+		46BF7AAD17AFEFBA00678564 /* ReadWriteSaveConcurrentItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReadWriteSaveConcurrentItem.m; sourceTree = "<group>"; };
 		EEE3B420179CE51000EE4FD6 /* Database.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Database.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EEE3B423179CE51000EE4FD6 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		EEE3B425179CE51000EE4FD6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -95,6 +106,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		46BF7AA217AFEE7800678564 /* ReadWriteSaveConcurrent */ = {
+			isa = PBXGroup;
+			children = (
+				46BF7AA317AFEE7800678564 /* NSDictionarySlowTransformer.h */,
+				46BF7AA417AFEE7800678564 /* NSDictionarySlowTransformer.m */,
+				46BF7AA917AFEF4100678564 /* ReadWriteSaveConcurrentTest.h */,
+				46BF7AAA17AFEF4100678564 /* ReadWriteSaveConcurrentTest.m */,
+				46BF7AAC17AFEFBA00678564 /* ReadWriteSaveConcurrentItem.h */,
+				46BF7AAD17AFEFBA00678564 /* ReadWriteSaveConcurrentItem.m */,
+				46BF7AA617AFEEF900678564 /* ReadWriteSaveConcurrent.xcdatamodeld */,
+			);
+			path = ReadWriteSaveConcurrent;
+			sourceTree = "<group>";
+		};
 		EEE3B417179CE51000EE4FD6 = {
 			isa = PBXGroup;
 			children = (
@@ -170,6 +195,7 @@
 				EE4DC6A317AB6DA4003EF354 /* SameAttributesForDifferentEntitiesTest.m */,
 				EE4DC6AB17AB6E3A003EF354 /* SameManagedObject.h */,
 				EE4DC6AC17AB6E3A003EF354 /* SameManagedObject.m */,
+				46BF7AA217AFEE7800678564 /* ReadWriteSaveConcurrent */,
 			);
 			path = Test;
 			sourceTree = "<group>";
@@ -290,6 +316,10 @@
 				EE4DC6A117AB6CE2003EF354 /* SameAttributesForDifferentEntities.xcdatamodeld in Sources */,
 				EE4DC6A417AB6DA4003EF354 /* SameAttributesForDifferentEntitiesTest.m in Sources */,
 				EE4DC6AD17AB6E3A003EF354 /* SameManagedObject.m in Sources */,
+				46BF7AA517AFEE7800678564 /* NSDictionarySlowTransformer.m in Sources */,
+				46BF7AA817AFEEFA00678564 /* ReadWriteSaveConcurrent.xcdatamodeld in Sources */,
+				46BF7AAB17AFEF4100678564 /* ReadWriteSaveConcurrentTest.m in Sources */,
+				46BF7AAE17AFEFBA00678564 /* ReadWriteSaveConcurrentItem.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -438,6 +468,16 @@
 			);
 			currentVersion = EE4DC6A017AB6CE2003EF354 /* SameAttributesForDifferentEntities.xcdatamodel */;
 			path = SameAttributesForDifferentEntities.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+		46BF7AA617AFEEF900678564 /* ReadWriteSaveConcurrent.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				46BF7AA717AFEEFA00678564 /* ReadWriteSaveConcurrent.xcdatamodel */,
+			);
+			currentVersion = 46BF7AA717AFEEFA00678564 /* ReadWriteSaveConcurrent.xcdatamodel */;
+			path = ReadWriteSaveConcurrent.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};

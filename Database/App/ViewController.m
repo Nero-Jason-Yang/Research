@@ -11,6 +11,7 @@
 #import "ToManyRelationshipTest.h"
 #import "TransformerRelationshipTest.h"
 #import "SameAttributesForDifferentEntitiesTest.h"
+#import "ReadWriteSaveConcurrentTest.h"
 
 @interface ViewController ()
 
@@ -51,6 +52,12 @@
 - (IBAction)onSameAttributesForDifferentEntities:(id)sender
 {
     SameAttributesForDifferentEntitiesTest *tester = [[SameAttributesForDifferentEntitiesTest alloc] init];
+    [tester test];
+}
+
+- (IBAction)onReadWriteSaveConcurrent:(id)sender
+{
+    ReadWriteSaveConcurrentTest *tester = [[ReadWriteSaveConcurrentTest alloc] init];
     [tester test];
 }
 
