@@ -16,20 +16,23 @@
 }
 
 - (id)transformedValue:(id)value {
-    NSLog(@"start save");
+    NSLog(@"encode begin");
     NSError *error = nil;
     NSData *data = [NSJSONSerialization dataWithJSONObject:value options:0 error:&error];
     if (error) {
         NSLog(@"File:%s Line:%d error:%@", __FILE__, __LINE__, error);
     }
-    [NSThread sleepForTimeInterval:10];
-    NSLog(@"end save");
+    [NSThread sleepForTimeInterval:2];
+    NSLog(@"encode end");
     return data;
 }
 
 - (id)reverseTransformedValue:(id)value {
+    NSLog(@"decode begin");
     NSError *error = nil;
     NSDictionary *json = [NSJSONSerialization JSONObjectWithData:value options:0 error:&error];
+    [NSThread sleepForTimeInterval:2];
+    NSLog(@"decode end");
     return json;
 }
 

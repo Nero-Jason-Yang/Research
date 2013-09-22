@@ -13,6 +13,12 @@
 #import "SameAttributesForDifferentEntitiesTest.h"
 #import "ReadWriteSaveConcurrentTest.h"
 #import "OverrideWithDifferentReturnTypesTest.h"
+#import "KeyedArchiverTest.h"
+#import "FetchWithPredicateNilTest.h"
+#import "CategoryWithPropertiesTest.h"
+#import "AssetForURLTest.h"
+#import "DerivedManagedObjectTest.h"
+#import "ALAssetTransformerTest.h"
 
 @interface ViewController ()
 
@@ -68,4 +74,39 @@
     [tester test];
 }
 
+- (IBAction)onKeyedArchiver:(id)sender
+{
+    KeyedArchiverTest *tester = [[KeyedArchiverTest alloc] init];
+    [tester test];
+}
+
+- (IBAction)onFetchWithPredicateNil:(id)sender
+{
+    FetchWithPredicateNilTest *tester = [[FetchWithPredicateNilTest alloc] init];
+    [tester test];
+}
+
+- (IBAction)onCategoryWithProperties:(id)sender
+{
+    CategoryWithPropertiesTest *tester = [[CategoryWithPropertiesTest alloc] init];
+    [tester test];
+}
+
+- (IBAction)onAssetForURL:(id)sender
+{
+    AssetForURLTest *tester = [[AssetForURLTest alloc] init];
+    [tester test];
+}
+
+- (IBAction)onDerivedManagedObject:(id)sender
+{
+    DerivedManagedObjectTest *tester = [[DerivedManagedObjectTest alloc] init];
+    [tester test];
+}
+
+- (IBAction)onALAssetTransformer:(id)sender
+{
+    ALAssetTransformerTest *tester = [[ALAssetTransformerTest alloc] init];
+    [tester test];
+}
 @end

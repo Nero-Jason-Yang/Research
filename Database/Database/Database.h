@@ -11,6 +11,7 @@
 - (BOOL)saveContext:(NSError **)error;
 
 - (NSArray *)fetchObjectsForEntity:(NSString *)entityName;
+- (NSArray *)fetchObjectsForEntity:(NSString *)entityName withPredicate:(NSPredicate *)predicate sortDescriptors:(NSArray *)sortDescriptors fetchLimit:(NSUInteger)maxCount fetchOffset:(NSUInteger)offset;
 - (NSManagedObject *)createObjectWithEntityName:(NSString *)entityName;
 - (void)deleteObject:(NSManagedObject *)object;
 

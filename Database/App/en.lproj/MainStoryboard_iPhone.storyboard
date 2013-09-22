@@ -13,6 +13,9 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e44-f0-pjm">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="28" id="xOv-2L-dSH"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <state key="normal" title="NSDictionaryTransformer">
                                     <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
@@ -26,6 +29,9 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0N3-LE-hZ4">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="27" id="2Z4-pV-5hk"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <state key="normal" title="ToManyRelationship">
                                     <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
@@ -39,6 +45,9 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Eyx-B5-mJH">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="26" id="Y7v-mS-naP"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <state key="normal" title="TransformerRelationship">
                                     <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
@@ -52,6 +61,9 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Atk-a7-3Ow">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="29" id="hD0-ze-weP"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <state key="normal" title="SameAttributesForDifferentEntities">
                                     <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
@@ -65,6 +77,9 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="684-Nk-j8g">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="25" id="72d-67-KcS"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <state key="normal" title="ReadWriteSaveConcurrent">
                                     <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
@@ -78,6 +93,9 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qXQ-bI-Ccl">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="24" id="mVL-1P-Yv3"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <state key="normal" title="OverrideWithDifferentReturnTypes">
                                     <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
@@ -91,26 +109,141 @@
                                     <action selector="onReadWriteSaveConcurrent:" destination="2" eventType="touchUpInside" id="AWi-R5-RE1"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kMy-XE-FD2">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="27" id="wd5-II-uie"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="KeyedArchiver">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="onKeyedArchiver:" destination="2" eventType="touchUpInside" id="Bbe-2B-B0n"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vmf-t0-k7e">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="26" id="jem-ei-XTU"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="FetchWithPredicateNil">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="onFetchWithPredicateNil:" destination="2" eventType="touchUpInside" id="Hlq-bb-boQ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RFF-pf-uoN">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="28" id="sh5-ul-VaF"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="CategoryWithProperties">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="onCategoryWithProperties:" destination="2" eventType="touchUpInside" id="wxF-WR-nCU"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s7x-Wi-ygj">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="25" id="VCV-Hh-6DJ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="AssetForURL">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="onAssetForURL:" destination="2" eventType="touchUpInside" id="dlC-aH-vIe"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Zj-mr-580">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="27" id="fnm-tu-XiK"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="DerivedManagedObject">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="onDerivedManagedObject:" destination="2" eventType="touchUpInside" id="a0Z-jw-chl"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YZ7-bY-8FE">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="26" id="oVS-u2-sYb"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="ALAssetTransformer">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="onALAssetTransformer:" destination="2" eventType="touchUpInside" id="COQ-Zg-04D"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="Atk-a7-3Ow" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="3CO-xQ-0sV"/>
-                            <constraint firstItem="0N3-LE-hZ4" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="4F7-HD-7sM"/>
-                            <constraint firstAttribute="trailing" secondItem="e44-f0-pjm" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="IHZ-xw-wX1"/>
-                            <constraint firstAttribute="trailing" secondItem="Eyx-B5-mJH" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="RpI-bX-xzl"/>
-                            <constraint firstAttribute="trailing" secondItem="684-Nk-j8g" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="SHQ-7j-vVp"/>
-                            <constraint firstItem="684-Nk-j8g" firstAttribute="top" secondItem="Eyx-B5-mJH" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="U4t-C9-zl6"/>
-                            <constraint firstAttribute="trailing" secondItem="qXQ-bI-Ccl" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="YTo-bX-djD"/>
-                            <constraint firstItem="Atk-a7-3Ow" firstAttribute="top" secondItem="Eyx-B5-mJH" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="Yza-Q0-a4q"/>
-                            <constraint firstAttribute="trailing" secondItem="0N3-LE-hZ4" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="b8g-vc-wPp"/>
-                            <constraint firstItem="qXQ-bI-Ccl" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="kDl-AH-Pp9"/>
+                            <constraint firstItem="684-Nk-j8g" firstAttribute="top" secondItem="Atk-a7-3Ow" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="1Sh-cw-7FL"/>
+                            <constraint firstAttribute="trailing" secondItem="s7x-Wi-ygj" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="2Zg-Hl-NXA"/>
+                            <constraint firstItem="684-Nk-j8g" firstAttribute="trailing" secondItem="YZ7-bY-8FE" secondAttribute="trailing" type="default" id="5i7-YF-Tgg"/>
+                            <constraint firstItem="qXQ-bI-Ccl" firstAttribute="top" secondItem="684-Nk-j8g" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="7Xc-A2-qNy"/>
+                            <constraint firstAttribute="trailing" secondItem="vmf-t0-k7e" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="7zg-Xs-3nh"/>
+                            <constraint firstAttribute="trailing" secondItem="qXQ-bI-Ccl" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="8zN-0n-JOi"/>
+                            <constraint firstItem="Eyx-B5-mJH" firstAttribute="top" secondItem="0N3-LE-hZ4" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="C1h-x4-5dX"/>
+                            <constraint firstItem="4Zj-mr-580" firstAttribute="centerX" secondItem="YZ7-bY-8FE" secondAttribute="centerX" type="default" id="CJK-fT-9mD"/>
+                            <constraint firstAttribute="trailing" secondItem="0N3-LE-hZ4" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="CmV-Cg-So7"/>
+                            <constraint firstAttribute="trailing" secondItem="Atk-a7-3Ow" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="GSQ-nI-dnP"/>
+                            <constraint firstItem="RFF-pf-uoN" firstAttribute="leading" secondItem="s7x-Wi-ygj" secondAttribute="leading" type="default" id="HfP-nr-qms"/>
+                            <constraint firstItem="RFF-pf-uoN" firstAttribute="top" secondItem="vmf-t0-k7e" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="Hg2-uo-Ciq"/>
+                            <constraint firstItem="YZ7-bY-8FE" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="Iq8-ol-38X"/>
+                            <constraint firstItem="4Zj-mr-580" firstAttribute="centerX" secondItem="s7x-Wi-ygj" secondAttribute="centerX" type="default" id="MdO-td-XcH"/>
+                            <constraint firstItem="4Zj-mr-580" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="O1E-h5-FGC"/>
+                            <constraint firstItem="Atk-a7-3Ow" firstAttribute="baseline" secondItem="684-Nk-j8g" secondAttribute="baseline" type="default" id="P9r-3b-ROk"/>
+                            <constraint firstItem="vmf-t0-k7e" firstAttribute="top" secondItem="kMy-XE-FD2" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="PQO-Zw-eCw"/>
+                            <constraint firstAttribute="trailing" secondItem="Eyx-B5-mJH" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="SXR-IO-Nhc"/>
+                            <constraint firstItem="Eyx-B5-mJH" firstAttribute="leading" secondItem="0N3-LE-hZ4" secondAttribute="leading" type="default" id="Ssb-gH-8UK"/>
+                            <constraint firstItem="qXQ-bI-Ccl" firstAttribute="leading" secondItem="Atk-a7-3Ow" secondAttribute="leading" type="default" id="YZB-NA-s2d"/>
+                            <constraint firstItem="s7x-Wi-ygj" firstAttribute="top" secondItem="RFF-pf-uoN" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="Za5-F7-T7m"/>
+                            <constraint firstItem="Eyx-B5-mJH" firstAttribute="leading" secondItem="Atk-a7-3Ow" secondAttribute="leading" type="default" id="b0L-Ta-6HI"/>
+                            <constraint firstItem="vmf-t0-k7e" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="c3W-rW-vSF"/>
+                            <constraint firstItem="684-Nk-j8g" firstAttribute="trailing" secondItem="e44-f0-pjm" secondAttribute="trailing" type="default" id="dMq-K2-DY8"/>
+                            <constraint firstItem="qXQ-bI-Ccl" firstAttribute="leading" secondItem="kMy-XE-FD2" secondAttribute="leading" type="default" id="f4j-yO-3pT"/>
+                            <constraint firstAttribute="trailing" secondItem="kMy-XE-FD2" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="g1O-cD-aOL"/>
+                            <constraint firstItem="4Zj-mr-580" firstAttribute="top" secondItem="s7x-Wi-ygj" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="iq4-t4-UY3"/>
+                            <constraint firstAttribute="trailing" secondItem="RFF-pf-uoN" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="jqC-D0-ZIQ"/>
+                            <constraint firstItem="kMy-XE-FD2" firstAttribute="leading" secondItem="RFF-pf-uoN" secondAttribute="leading" type="default" id="m9q-hx-aAG"/>
                             <constraint firstItem="e44-f0-pjm" firstAttribute="top" secondItem="3" secondAttribute="top" constant="20" symbolic="YES" type="default" id="n9e-9b-WuR"/>
-                            <constraint firstAttribute="trailing" secondItem="Atk-a7-3Ow" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="s4X-NW-fPV"/>
-                            <constraint firstItem="Eyx-B5-mJH" firstAttribute="top" secondItem="0N3-LE-hZ4" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="sa5-KH-UpZ"/>
-                            <constraint firstItem="0N3-LE-hZ4" firstAttribute="top" secondItem="e44-f0-pjm" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="tih-10-x3R"/>
-                            <constraint firstItem="qXQ-bI-Ccl" firstAttribute="top" secondItem="684-Nk-j8g" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="vXa-AT-G5C"/>
-                            <constraint firstItem="Eyx-B5-mJH" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="vuC-NG-ist"/>
-                            <constraint firstItem="684-Nk-j8g" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="y9w-th-1dJ"/>
+                            <constraint firstItem="0N3-LE-hZ4" firstAttribute="top" secondItem="e44-f0-pjm" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="nFi-aq-uaR"/>
+                            <constraint firstAttribute="trailing" secondItem="4Zj-mr-580" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="oMU-zk-Dmy"/>
+                            <constraint firstItem="684-Nk-j8g" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="pGu-5P-tHY"/>
+                            <constraint firstItem="YZ7-bY-8FE" firstAttribute="top" secondItem="4Zj-mr-580" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="rB1-D8-Vbg"/>
+                            <constraint firstItem="Atk-a7-3Ow" firstAttribute="top" secondItem="Eyx-B5-mJH" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="skX-5i-Mac"/>
+                            <constraint firstItem="kMy-XE-FD2" firstAttribute="top" secondItem="qXQ-bI-Ccl" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="xkL-ZK-T96"/>
                             <constraint firstItem="e44-f0-pjm" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="ygM-g8-SW0"/>
                         </constraints>
                     </view>
@@ -119,6 +252,28 @@
             </objects>
         </scene>
     </scenes>
+    <classes>
+        <class className="NSLayoutConstraint" superclassName="NSObject">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
+        </class>
+        <class className="ViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/ViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="onALAssetTransformer:"/>
+                <relationship kind="action" name="onAssetForURL:"/>
+                <relationship kind="action" name="onCategoryWithProperties:"/>
+                <relationship kind="action" name="onDerivedManagedObject:"/>
+                <relationship kind="action" name="onFetchWithPredicateNil:"/>
+                <relationship kind="action" name="onKeyedArchiver:"/>
+                <relationship kind="action" name="onNSDictionaryTransformer:"/>
+                <relationship kind="action" name="onOverrideWithDiffernetReturnTypes:"/>
+                <relationship kind="action" name="onReadWriteSaveConcurrent:"/>
+                <relationship kind="action" name="onSameAttributesForDifferentEntities:"/>
+                <relationship kind="action" name="onToManyRelationship:"/>
+                <relationship kind="action" name="onTransformerRelationship:"/>
+            </relationships>
+        </class>
+    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

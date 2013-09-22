@@ -18,21 +18,34 @@
     NSString *modelName = @"ReadWriteSaveConcurrent";
     Database *db = [[Database alloc] initWithModelName:modelName forStoreName:modelName];
     
-    ReadWriteSaveConcurrentItem *item = (ReadWriteSaveConcurrentItem *)[db createObjectWithEntityName:@"Item"];
-    item.info = @{@"name":@"Jerry"};
-    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_LOW, 0), ^{
-        [NSThread sleepForTimeInterval:2];
-        NSLog(@"start read");
-        NSDictionary *info = item.info;
-        NSLog(@"end read");
-    });
-    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
-        [NSThread sleepForTimeInterval:2];
-        NSLog(@"start write");
-        item.info = @{@"name":@"Tom"};
-        NSLog(@"end write");
-    });
-    [db saveContext];
+    @autoreleasepool {
+        NSArray *itemArray = [db fetchObjectsForEntity:@"Item"];
+        NSLog(@"read begin");
+        for (NSInteger i = 0; i < itemArray.count; i ++) {
+            ReadWriteSaveConcurrentItem *item = itemArray[i];
+            NSDictionary *info = item.info;
+            NSInteger value = item.num.integerValue;
+            NSLog(@"item[%d] info:%@ value:%d", i, info, value);
+        }
+        NSLog(@"read end");
+    }
+    
+    @autoreleasepool {
+        ReadWriteSaveConcurrentItem *item = (ReadWriteSaveConcurrentItem *)[db createObjectWithEntityName:@"Item"];
+        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_LOW, 0), ^{
+            item.info = @{@"name":@"Tom"};
+            item.num = [NSNumber numberWithInteger:1];
+            [db saveContext];
+        });
+        
+        [NSThread sleepForTimeInterval:1];
+        item.num = [NSNumber numberWithInteger:2];
+        NSInteger a = item.num.integerValue;
+        [db saveContext];
+        NSInteger b = item.num.integerValue;
+        
+    }
+    
     [db saveContext];
 }
 

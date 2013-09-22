@@ -10,11 +10,33 @@
 		46BF7AA517AFEE7800678564 /* NSDictionarySlowTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = 46BF7AA417AFEE7800678564 /* NSDictionarySlowTransformer.m */; };
 		46BF7AA817AFEEFA00678564 /* ReadWriteSaveConcurrent.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 46BF7AA617AFEEF900678564 /* ReadWriteSaveConcurrent.xcdatamodeld */; };
 		46BF7AAB17AFEF4100678564 /* ReadWriteSaveConcurrentTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 46BF7AAA17AFEF4100678564 /* ReadWriteSaveConcurrentTest.m */; };
-		46BF7AAE17AFEFBA00678564 /* ReadWriteSaveConcurrentItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 46BF7AAD17AFEFBA00678564 /* ReadWriteSaveConcurrentItem.m */; };
+		EE1209D217C05E6C00FBE575 /* KeyedArchiverTest.m in Sources */ = {isa = PBXBuildFile; fileRef = EE1209D117C05E6C00FBE575 /* KeyedArchiverTest.m */; };
+		EE1209EC17C0BBBC00FBE575 /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE1209EB17C0BBBC00FBE575 /* AssetsLibrary.framework */; };
+		EE2294CA17CDA2A4000B5256 /* HTTPConnection.m in Sources */ = {isa = PBXBuildFile; fileRef = EE2294C917CDA2A4000B5256 /* HTTPConnection.m */; };
+		EE22952417CEEBE0000B5256 /* AssetForURLTest.m in Sources */ = {isa = PBXBuildFile; fileRef = EE22952317CEEBE0000B5256 /* AssetForURLTest.m */; };
+		EE22952717CEECD6000B5256 /* ALAssetsLibrary+Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = EE22952617CEECD6000B5256 /* ALAssetsLibrary+Utils.m */; };
+		EE22952A17CEEE93000B5256 /* ALAssetsGroup+Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = EE22952917CEEE93000B5256 /* ALAssetsGroup+Utils.m */; };
 		EE366AB717B0B4CE003793F6 /* OverrideWithDifferentReturnTypesTest.m in Sources */ = {isa = PBXBuildFile; fileRef = EE366AB617B0B4CE003793F6 /* OverrideWithDifferentReturnTypesTest.m */; };
+		EE4A739517CAE2B000707821 /* FetchWithPredicateNil.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = EE4A739317CAE2B000707821 /* FetchWithPredicateNil.xcdatamodeld */; };
+		EE4A739817CAE2C800707821 /* FetchWithPredicateNilTest.m in Sources */ = {isa = PBXBuildFile; fileRef = EE4A739717CAE2C800707821 /* FetchWithPredicateNilTest.m */; };
+		EE4A739B17CAE38200707821 /* FetchWithPredicateNilPerson.m in Sources */ = {isa = PBXBuildFile; fileRef = EE4A739A17CAE38200707821 /* FetchWithPredicateNilPerson.m */; };
 		EE4DC6A117AB6CE2003EF354 /* SameAttributesForDifferentEntities.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = EE4DC69F17AB6CE2003EF354 /* SameAttributesForDifferentEntities.xcdatamodeld */; };
 		EE4DC6A417AB6DA4003EF354 /* SameAttributesForDifferentEntitiesTest.m in Sources */ = {isa = PBXBuildFile; fileRef = EE4DC6A317AB6DA4003EF354 /* SameAttributesForDifferentEntitiesTest.m */; };
 		EE4DC6AD17AB6E3A003EF354 /* SameManagedObject.m in Sources */ = {isa = PBXBuildFile; fileRef = EE4DC6AC17AB6E3A003EF354 /* SameManagedObject.m */; };
+		EEBD674617BDF6B1007B9A9C /* ReadWriteSaveConcurrentItem.m in Sources */ = {isa = PBXBuildFile; fileRef = EEBD674517BDF6B1007B9A9C /* ReadWriteSaveConcurrentItem.m */; };
+		EEC7EEF217D6DE0F000B3D10 /* DerivedManagedObject.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = EEC7EEF017D6DE0F000B3D10 /* DerivedManagedObject.xcdatamodeld */; };
+		EEC7EEF517D6DE1F000B3D10 /* DerivedManagedObjectTest.m in Sources */ = {isa = PBXBuildFile; fileRef = EEC7EEF417D6DE1F000B3D10 /* DerivedManagedObjectTest.m */; };
+		EEC7EEF817D6DE59000B3D10 /* PhotoManagedObject.m in Sources */ = {isa = PBXBuildFile; fileRef = EEC7EEF717D6DE59000B3D10 /* PhotoManagedObject.m */; };
+		EEC7EEFB17D6DE7C000B3D10 /* DerivedPhotoManagedObject.m in Sources */ = {isa = PBXBuildFile; fileRef = EEC7EEFA17D6DE7C000B3D10 /* DerivedPhotoManagedObject.m */; };
+		EEC7EEFE17D6DEAD000B3D10 /* PhotoManagedObject+Derived.m in Sources */ = {isa = PBXBuildFile; fileRef = EEC7EEFD17D6DEAD000B3D10 /* PhotoManagedObject+Derived.m */; };
+		EEC7F02017D9796E000B3D10 /* ALAssetTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = EEC7F01F17D9796E000B3D10 /* ALAssetTransformer.m */; };
+		EEC7F02317D97988000B3D10 /* ALAssetTransformer.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = EEC7F02117D97988000B3D10 /* ALAssetTransformer.xcdatamodeld */; };
+		EEC7F02617D9799A000B3D10 /* ALAssetTransformerTest.m in Sources */ = {isa = PBXBuildFile; fileRef = EEC7F02517D9799A000B3D10 /* ALAssetTransformerTest.m */; };
+		EEC7F02917D97A43000B3D10 /* ALAssetTransformerItem.m in Sources */ = {isa = PBXBuildFile; fileRef = EEC7F02817D97A43000B3D10 /* ALAssetTransformerItem.m */; };
+		EEC7F02C17D97ADA000B3D10 /* ALAssetsLibrary+Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = EEC7F02B17D97ADA000B3D10 /* ALAssetsLibrary+Utils.m */; };
+		EED1A96C17CC533B0010D265 /* CategoryPerson.m in Sources */ = {isa = PBXBuildFile; fileRef = EED1A96B17CC533B0010D265 /* CategoryPerson.m */; };
+		EED1A96F17CC536C0010D265 /* CategoryPerson+age.m in Sources */ = {isa = PBXBuildFile; fileRef = EED1A96E17CC536C0010D265 /* CategoryPerson+age.m */; };
+		EED1A97517CC57870010D265 /* CategoryWithPropertiesTest.m in Sources */ = {isa = PBXBuildFile; fileRef = EED1A97417CC57870010D265 /* CategoryWithPropertiesTest.m */; };
 		EEE3B424179CE51000EE4FD6 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EEE3B423179CE51000EE4FD6 /* UIKit.framework */; };
 		EEE3B426179CE51000EE4FD6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EEE3B425179CE51000EE4FD6 /* Foundation.framework */; };
 		EEE3B428179CE51000EE4FD6 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EEE3B427179CE51000EE4FD6 /* CoreGraphics.framework */; };
@@ -47,15 +69,55 @@
 		46BF7AA717AFEEFA00678564 /* ReadWriteSaveConcurrent.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ReadWriteSaveConcurrent.xcdatamodel; sourceTree = "<group>"; };
 		46BF7AA917AFEF4100678564 /* ReadWriteSaveConcurrentTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReadWriteSaveConcurrentTest.h; sourceTree = "<group>"; };
 		46BF7AAA17AFEF4100678564 /* ReadWriteSaveConcurrentTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReadWriteSaveConcurrentTest.m; sourceTree = "<group>"; };
-		46BF7AAC17AFEFBA00678564 /* ReadWriteSaveConcurrentItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReadWriteSaveConcurrentItem.h; sourceTree = "<group>"; };
-		46BF7AAD17AFEFBA00678564 /* ReadWriteSaveConcurrentItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReadWriteSaveConcurrentItem.m; sourceTree = "<group>"; };
+		EE1209D017C05E6C00FBE575 /* KeyedArchiverTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KeyedArchiverTest.h; sourceTree = "<group>"; };
+		EE1209D117C05E6C00FBE575 /* KeyedArchiverTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KeyedArchiverTest.m; sourceTree = "<group>"; };
+		EE1209EB17C0BBBC00FBE575 /* AssetsLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AssetsLibrary.framework; path = System/Library/Frameworks/AssetsLibrary.framework; sourceTree = SDKROOT; };
+		EE2294C817CDA2A4000B5256 /* HTTPConnection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTTPConnection.h; sourceTree = "<group>"; };
+		EE2294C917CDA2A4000B5256 /* HTTPConnection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTTPConnection.m; sourceTree = "<group>"; };
+		EE22952217CEEBE0000B5256 /* AssetForURLTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AssetForURLTest.h; sourceTree = "<group>"; };
+		EE22952317CEEBE0000B5256 /* AssetForURLTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AssetForURLTest.m; sourceTree = "<group>"; };
+		EE22952517CEECD6000B5256 /* ALAssetsLibrary+Utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ALAssetsLibrary+Utils.h"; sourceTree = "<group>"; };
+		EE22952617CEECD6000B5256 /* ALAssetsLibrary+Utils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "ALAssetsLibrary+Utils.m"; sourceTree = "<group>"; };
+		EE22952817CEEE93000B5256 /* ALAssetsGroup+Utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ALAssetsGroup+Utils.h"; sourceTree = "<group>"; };
+		EE22952917CEEE93000B5256 /* ALAssetsGroup+Utils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "ALAssetsGroup+Utils.m"; sourceTree = "<group>"; };
 		EE366AB517B0B4CE003793F6 /* OverrideWithDifferentReturnTypesTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OverrideWithDifferentReturnTypesTest.h; sourceTree = "<group>"; };
 		EE366AB617B0B4CE003793F6 /* OverrideWithDifferentReturnTypesTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OverrideWithDifferentReturnTypesTest.m; sourceTree = "<group>"; };
+		EE4A739417CAE2B000707821 /* FetchWithPredicateNil.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = FetchWithPredicateNil.xcdatamodel; sourceTree = "<group>"; };
+		EE4A739617CAE2C800707821 /* FetchWithPredicateNilTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FetchWithPredicateNilTest.h; sourceTree = "<group>"; };
+		EE4A739717CAE2C800707821 /* FetchWithPredicateNilTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FetchWithPredicateNilTest.m; sourceTree = "<group>"; };
+		EE4A739917CAE38200707821 /* FetchWithPredicateNilPerson.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FetchWithPredicateNilPerson.h; sourceTree = "<group>"; };
+		EE4A739A17CAE38200707821 /* FetchWithPredicateNilPerson.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FetchWithPredicateNilPerson.m; sourceTree = "<group>"; };
 		EE4DC6A017AB6CE2003EF354 /* SameAttributesForDifferentEntities.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = SameAttributesForDifferentEntities.xcdatamodel; sourceTree = "<group>"; };
 		EE4DC6A217AB6DA4003EF354 /* SameAttributesForDifferentEntitiesTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SameAttributesForDifferentEntitiesTest.h; sourceTree = "<group>"; };
 		EE4DC6A317AB6DA4003EF354 /* SameAttributesForDifferentEntitiesTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SameAttributesForDifferentEntitiesTest.m; sourceTree = "<group>"; };
 		EE4DC6AB17AB6E3A003EF354 /* SameManagedObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SameManagedObject.h; sourceTree = "<group>"; };
 		EE4DC6AC17AB6E3A003EF354 /* SameManagedObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SameManagedObject.m; sourceTree = "<group>"; };
+		EEBD674417BDF6B1007B9A9C /* ReadWriteSaveConcurrentItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReadWriteSaveConcurrentItem.h; sourceTree = "<group>"; };
+		EEBD674517BDF6B1007B9A9C /* ReadWriteSaveConcurrentItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReadWriteSaveConcurrentItem.m; sourceTree = "<group>"; };
+		EEC7EEF117D6DE0F000B3D10 /* DerivedManagedObject.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DerivedManagedObject.xcdatamodel; sourceTree = "<group>"; };
+		EEC7EEF317D6DE1F000B3D10 /* DerivedManagedObjectTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DerivedManagedObjectTest.h; sourceTree = "<group>"; };
+		EEC7EEF417D6DE1F000B3D10 /* DerivedManagedObjectTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DerivedManagedObjectTest.m; sourceTree = "<group>"; };
+		EEC7EEF617D6DE59000B3D10 /* PhotoManagedObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhotoManagedObject.h; sourceTree = "<group>"; };
+		EEC7EEF717D6DE59000B3D10 /* PhotoManagedObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhotoManagedObject.m; sourceTree = "<group>"; };
+		EEC7EEF917D6DE7C000B3D10 /* DerivedPhotoManagedObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DerivedPhotoManagedObject.h; sourceTree = "<group>"; };
+		EEC7EEFA17D6DE7C000B3D10 /* DerivedPhotoManagedObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DerivedPhotoManagedObject.m; sourceTree = "<group>"; };
+		EEC7EEFC17D6DEAD000B3D10 /* PhotoManagedObject+Derived.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "PhotoManagedObject+Derived.h"; sourceTree = "<group>"; };
+		EEC7EEFD17D6DEAD000B3D10 /* PhotoManagedObject+Derived.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "PhotoManagedObject+Derived.m"; sourceTree = "<group>"; };
+		EEC7F01E17D9796E000B3D10 /* ALAssetTransformer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALAssetTransformer.h; sourceTree = "<group>"; };
+		EEC7F01F17D9796E000B3D10 /* ALAssetTransformer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALAssetTransformer.m; sourceTree = "<group>"; };
+		EEC7F02217D97988000B3D10 /* ALAssetTransformer.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ALAssetTransformer.xcdatamodel; sourceTree = "<group>"; };
+		EEC7F02417D9799A000B3D10 /* ALAssetTransformerTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALAssetTransformerTest.h; sourceTree = "<group>"; };
+		EEC7F02517D9799A000B3D10 /* ALAssetTransformerTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALAssetTransformerTest.m; sourceTree = "<group>"; };
+		EEC7F02717D97A43000B3D10 /* ALAssetTransformerItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALAssetTransformerItem.h; sourceTree = "<group>"; };
+		EEC7F02817D97A43000B3D10 /* ALAssetTransformerItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALAssetTransformerItem.m; sourceTree = "<group>"; };
+		EEC7F02A17D97AD9000B3D10 /* ALAssetsLibrary+Utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ALAssetsLibrary+Utils.h"; sourceTree = "<group>"; };
+		EEC7F02B17D97ADA000B3D10 /* ALAssetsLibrary+Utils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "ALAssetsLibrary+Utils.m"; sourceTree = "<group>"; };
+		EED1A96A17CC533B0010D265 /* CategoryPerson.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CategoryPerson.h; sourceTree = "<group>"; };
+		EED1A96B17CC533B0010D265 /* CategoryPerson.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CategoryPerson.m; sourceTree = "<group>"; };
+		EED1A96D17CC536C0010D265 /* CategoryPerson+age.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CategoryPerson+age.h"; sourceTree = "<group>"; };
+		EED1A96E17CC536C0010D265 /* CategoryPerson+age.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CategoryPerson+age.m"; sourceTree = "<group>"; };
+		EED1A97317CC57870010D265 /* CategoryWithPropertiesTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CategoryWithPropertiesTest.h; sourceTree = "<group>"; };
+		EED1A97417CC57870010D265 /* CategoryWithPropertiesTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CategoryWithPropertiesTest.m; sourceTree = "<group>"; };
 		EEE3B420179CE51000EE4FD6 /* Database.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Database.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EEE3B423179CE51000EE4FD6 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		EEE3B425179CE51000EE4FD6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -99,6 +161,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EE1209EC17C0BBBC00FBE575 /* AssetsLibrary.framework in Frameworks */,
 				EEE3B47C179CE61400EE4FD6 /* CoreData.framework in Frameworks */,
 				EEE3B424179CE51000EE4FD6 /* UIKit.framework in Frameworks */,
 				EEE3B426179CE51000EE4FD6 /* Foundation.framework in Frameworks */,
@@ -116,11 +179,42 @@
 				46BF7AA417AFEE7800678564 /* NSDictionarySlowTransformer.m */,
 				46BF7AA917AFEF4100678564 /* ReadWriteSaveConcurrentTest.h */,
 				46BF7AAA17AFEF4100678564 /* ReadWriteSaveConcurrentTest.m */,
-				46BF7AAC17AFEFBA00678564 /* ReadWriteSaveConcurrentItem.h */,
-				46BF7AAD17AFEFBA00678564 /* ReadWriteSaveConcurrentItem.m */,
+				EEBD674417BDF6B1007B9A9C /* ReadWriteSaveConcurrentItem.h */,
+				EEBD674517BDF6B1007B9A9C /* ReadWriteSaveConcurrentItem.m */,
 				46BF7AA617AFEEF900678564 /* ReadWriteSaveConcurrent.xcdatamodeld */,
 			);
 			path = ReadWriteSaveConcurrent;
+			sourceTree = "<group>";
+		};
+		EE1209CF17C05E5600FBE575 /* NSKeyedArchiver */ = {
+			isa = PBXGroup;
+			children = (
+				EE1209D017C05E6C00FBE575 /* KeyedArchiverTest.h */,
+				EE1209D117C05E6C00FBE575 /* KeyedArchiverTest.m */,
+			);
+			path = NSKeyedArchiver;
+			sourceTree = "<group>";
+		};
+		EE2294C717CDA297000B5256 /* HTTPConnection */ = {
+			isa = PBXGroup;
+			children = (
+				EE2294C817CDA2A4000B5256 /* HTTPConnection.h */,
+				EE2294C917CDA2A4000B5256 /* HTTPConnection.m */,
+			);
+			path = HTTPConnection;
+			sourceTree = "<group>";
+		};
+		EE22952117CEEBD0000B5256 /* AssetForURL */ = {
+			isa = PBXGroup;
+			children = (
+				EE22952217CEEBE0000B5256 /* AssetForURLTest.h */,
+				EE22952317CEEBE0000B5256 /* AssetForURLTest.m */,
+				EE22952517CEECD6000B5256 /* ALAssetsLibrary+Utils.h */,
+				EE22952617CEECD6000B5256 /* ALAssetsLibrary+Utils.m */,
+				EE22952817CEEE93000B5256 /* ALAssetsGroup+Utils.h */,
+				EE22952917CEEE93000B5256 /* ALAssetsGroup+Utils.m */,
+			);
+			path = AssetForURL;
 			sourceTree = "<group>";
 		};
 		EE366AB417B0B4AF003793F6 /* OverrideWithDifferentReturnTypes */ = {
@@ -130,6 +224,63 @@
 				EE366AB617B0B4CE003793F6 /* OverrideWithDifferentReturnTypesTest.m */,
 			);
 			path = OverrideWithDifferentReturnTypes;
+			sourceTree = "<group>";
+		};
+		EE4A739217CAE29F00707821 /* FetchWithPredicateNil */ = {
+			isa = PBXGroup;
+			children = (
+				EE4A739317CAE2B000707821 /* FetchWithPredicateNil.xcdatamodeld */,
+				EE4A739617CAE2C800707821 /* FetchWithPredicateNilTest.h */,
+				EE4A739717CAE2C800707821 /* FetchWithPredicateNilTest.m */,
+				EE4A739917CAE38200707821 /* FetchWithPredicateNilPerson.h */,
+				EE4A739A17CAE38200707821 /* FetchWithPredicateNilPerson.m */,
+			);
+			path = FetchWithPredicateNil;
+			sourceTree = "<group>";
+		};
+		EEC7EEEF17D6DDFC000B3D10 /* DerivedManagedObject */ = {
+			isa = PBXGroup;
+			children = (
+				EEC7EEF017D6DE0F000B3D10 /* DerivedManagedObject.xcdatamodeld */,
+				EEC7EEF317D6DE1F000B3D10 /* DerivedManagedObjectTest.h */,
+				EEC7EEF417D6DE1F000B3D10 /* DerivedManagedObjectTest.m */,
+				EEC7EEF617D6DE59000B3D10 /* PhotoManagedObject.h */,
+				EEC7EEF717D6DE59000B3D10 /* PhotoManagedObject.m */,
+				EEC7EEFC17D6DEAD000B3D10 /* PhotoManagedObject+Derived.h */,
+				EEC7EEFD17D6DEAD000B3D10 /* PhotoManagedObject+Derived.m */,
+				EEC7EEF917D6DE7C000B3D10 /* DerivedPhotoManagedObject.h */,
+				EEC7EEFA17D6DE7C000B3D10 /* DerivedPhotoManagedObject.m */,
+			);
+			path = DerivedManagedObject;
+			sourceTree = "<group>";
+		};
+		EEC7F01D17D9793B000B3D10 /* ALAssetTransformer */ = {
+			isa = PBXGroup;
+			children = (
+				EEC7F02417D9799A000B3D10 /* ALAssetTransformerTest.h */,
+				EEC7F02517D9799A000B3D10 /* ALAssetTransformerTest.m */,
+				EEC7F01E17D9796E000B3D10 /* ALAssetTransformer.h */,
+				EEC7F01F17D9796E000B3D10 /* ALAssetTransformer.m */,
+				EEC7F02117D97988000B3D10 /* ALAssetTransformer.xcdatamodeld */,
+				EEC7F02717D97A43000B3D10 /* ALAssetTransformerItem.h */,
+				EEC7F02817D97A43000B3D10 /* ALAssetTransformerItem.m */,
+				EEC7F02A17D97AD9000B3D10 /* ALAssetsLibrary+Utils.h */,
+				EEC7F02B17D97ADA000B3D10 /* ALAssetsLibrary+Utils.m */,
+			);
+			path = ALAssetTransformer;
+			sourceTree = "<group>";
+		};
+		EED1A96917CC52F80010D265 /* CategeryWithProperties */ = {
+			isa = PBXGroup;
+			children = (
+				EED1A97317CC57870010D265 /* CategoryWithPropertiesTest.h */,
+				EED1A97417CC57870010D265 /* CategoryWithPropertiesTest.m */,
+				EED1A96A17CC533B0010D265 /* CategoryPerson.h */,
+				EED1A96B17CC533B0010D265 /* CategoryPerson.m */,
+				EED1A96D17CC536C0010D265 /* CategoryPerson+age.h */,
+				EED1A96E17CC536C0010D265 /* CategoryPerson+age.m */,
+			);
+			path = CategeryWithProperties;
 			sourceTree = "<group>";
 		};
 		EEE3B417179CE51000EE4FD6 = {
@@ -156,6 +307,7 @@
 		EEE3B422179CE51000EE4FD6 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				EE1209EB17C0BBBC00FBE575 /* AssetsLibrary.framework */,
 				EEE3B423179CE51000EE4FD6 /* UIKit.framework */,
 				EEE3B425179CE51000EE4FD6 /* Foundation.framework */,
 				EEE3B427179CE51000EE4FD6 /* CoreGraphics.framework */,
@@ -192,6 +344,13 @@
 		EEE3B45A179CE56300EE4FD6 /* Test */ = {
 			isa = PBXGroup;
 			children = (
+				EEC7F01D17D9793B000B3D10 /* ALAssetTransformer */,
+				EEC7EEEF17D6DDFC000B3D10 /* DerivedManagedObject */,
+				EE22952117CEEBD0000B5256 /* AssetForURL */,
+				EE2294C717CDA297000B5256 /* HTTPConnection */,
+				EED1A96917CC52F80010D265 /* CategeryWithProperties */,
+				EE4A739217CAE29F00707821 /* FetchWithPredicateNil */,
+				EE1209CF17C05E5600FBE575 /* NSKeyedArchiver */,
 				EEE3B45B179CE56300EE4FD6 /* NSDictionaryTransformer.xcdatamodeld */,
 				EEE3B47D179CE6BD00EE4FD6 /* NSDictionaryTransformerTest.h */,
 				EEE3B47E179CE6BD00EE4FD6 /* NSDictionaryTransformerTest.m */,
@@ -332,8 +491,29 @@
 				46BF7AA517AFEE7800678564 /* NSDictionarySlowTransformer.m in Sources */,
 				46BF7AA817AFEEFA00678564 /* ReadWriteSaveConcurrent.xcdatamodeld in Sources */,
 				46BF7AAB17AFEF4100678564 /* ReadWriteSaveConcurrentTest.m in Sources */,
-				46BF7AAE17AFEFBA00678564 /* ReadWriteSaveConcurrentItem.m in Sources */,
 				EE366AB717B0B4CE003793F6 /* OverrideWithDifferentReturnTypesTest.m in Sources */,
+				EEBD674617BDF6B1007B9A9C /* ReadWriteSaveConcurrentItem.m in Sources */,
+				EE1209D217C05E6C00FBE575 /* KeyedArchiverTest.m in Sources */,
+				EE4A739517CAE2B000707821 /* FetchWithPredicateNil.xcdatamodeld in Sources */,
+				EE4A739817CAE2C800707821 /* FetchWithPredicateNilTest.m in Sources */,
+				EE4A739B17CAE38200707821 /* FetchWithPredicateNilPerson.m in Sources */,
+				EED1A96C17CC533B0010D265 /* CategoryPerson.m in Sources */,
+				EED1A96F17CC536C0010D265 /* CategoryPerson+age.m in Sources */,
+				EED1A97517CC57870010D265 /* CategoryWithPropertiesTest.m in Sources */,
+				EE2294CA17CDA2A4000B5256 /* HTTPConnection.m in Sources */,
+				EE22952417CEEBE0000B5256 /* AssetForURLTest.m in Sources */,
+				EE22952717CEECD6000B5256 /* ALAssetsLibrary+Utils.m in Sources */,
+				EE22952A17CEEE93000B5256 /* ALAssetsGroup+Utils.m in Sources */,
+				EEC7EEF217D6DE0F000B3D10 /* DerivedManagedObject.xcdatamodeld in Sources */,
+				EEC7EEF517D6DE1F000B3D10 /* DerivedManagedObjectTest.m in Sources */,
+				EEC7EEF817D6DE59000B3D10 /* PhotoManagedObject.m in Sources */,
+				EEC7EEFB17D6DE7C000B3D10 /* DerivedPhotoManagedObject.m in Sources */,
+				EEC7EEFE17D6DEAD000B3D10 /* PhotoManagedObject+Derived.m in Sources */,
+				EEC7F02017D9796E000B3D10 /* ALAssetTransformer.m in Sources */,
+				EEC7F02317D97988000B3D10 /* ALAssetTransformer.xcdatamodeld in Sources */,
+				EEC7F02617D9799A000B3D10 /* ALAssetTransformerTest.m in Sources */,
+				EEC7F02917D97A43000B3D10 /* ALAssetTransformerItem.m in Sources */,
+				EEC7F02C17D97ADA000B3D10 /* ALAssetsLibrary+Utils.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -485,6 +665,16 @@
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};
+		EE4A739317CAE2B000707821 /* FetchWithPredicateNil.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				EE4A739417CAE2B000707821 /* FetchWithPredicateNil.xcdatamodel */,
+			);
+			currentVersion = EE4A739417CAE2B000707821 /* FetchWithPredicateNil.xcdatamodel */;
+			path = FetchWithPredicateNil.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
 		EE4DC69F17AB6CE2003EF354 /* SameAttributesForDifferentEntities.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
@@ -492,6 +682,26 @@
 			);
 			currentVersion = EE4DC6A017AB6CE2003EF354 /* SameAttributesForDifferentEntities.xcdatamodel */;
 			path = SameAttributesForDifferentEntities.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+		EEC7EEF017D6DE0F000B3D10 /* DerivedManagedObject.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				EEC7EEF117D6DE0F000B3D10 /* DerivedManagedObject.xcdatamodel */,
+			);
+			currentVersion = EEC7EEF117D6DE0F000B3D10 /* DerivedManagedObject.xcdatamodel */;
+			path = DerivedManagedObject.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+		EEC7F02117D97988000B3D10 /* ALAssetTransformer.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				EEC7F02217D97988000B3D10 /* ALAssetTransformer.xcdatamodel */,
+			);
+			currentVersion = EEC7F02217D97988000B3D10 /* ALAssetTransformer.xcdatamodel */;
+			path = ALAssetTransformer.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};

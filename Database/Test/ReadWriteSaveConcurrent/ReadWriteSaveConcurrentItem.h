@@ -2,7 +2,7 @@
 //  ReadWriteSaveConcurrentItem.h
 //  Database
 //
-//  Created by Yang Jason on 13-8-5.
+//  Created by Jason Yang on 13-8-16.
 //  Copyright (c) 2013年 nero. All rights reserved.
 //
 
@@ -12,6 +12,7 @@
 
 @interface ReadWriteSaveConcurrentItem : NSManagedObject
 
-@property (nonatomic, retain) NSDictionary * info;
+@property (nonatomic, retain) id info;
+@property (nonatomic, retain) NSNumber * num;
 
 @end

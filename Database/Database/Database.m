@@ -41,14 +41,16 @@
 {
     NSManagedObjectContext *context = _context;
     if (context) {
-        NSError *error = nil;
-        if ([context hasChanges] && ![context save:&error]) {
-            // Replace this implementation with code to handle the error appropriately.
-            // abort() causes the application to generate a crash log and terminate.
-            // You should not use this function in a shipping application,
-            // although it may be useful during development.
-            NSLog(@"Unresolved error %@, %@, at file:%s(%d)", error, [error userInfo], __FILE__, __LINE__);
-            abort();
+        @synchronized(context) {
+            NSError *error = nil;
+            if ([context hasChanges] && ![context save:&error]) {
+                // Replace this implementation with code to handle the error appropriately.
+                // abort() causes the application to generate a crash log and terminate.
+                // You should not use this function in a shipping application,
+                // although it may be useful during development.
+                NSLog(@"Unresolved error %@, %@, at file:%s(%d)", error, [error userInfo], __FILE__, __LINE__);
+                abort();
+            }
         }
     }
 }
@@ -77,6 +79,43 @@
     }
     return results;
 }
+
+- (NSArray *)fetchObjectsForEntity:(NSString *)entityName withPredicate:(NSPredicate *)predicate sortDescriptors:(NSArray *)sortDescriptors fetchLimit:(NSUInteger)maxCount fetchOffset:(NSUInteger)offset
+{
+    NSManagedObjectContext *context = _context;
+    if (context) {
+        if (![context.persistentStoreCoordinator.managedObjectModel.entitiesByName objectForKey:entityName]) {
+            return nil; // entity not found in database
+        }
+        
+        NSFetchRequest *fetchRequest = [NSFetchRequest fetchRequestWithEntityName:entityName];
+        
+        if (predicate) {
+            [fetchRequest setPredicate:predicate];
+        }
+        
+        if (sortDescriptors) {
+            [fetchRequest setSortDescriptors:sortDescriptors];
+        }
+        
+        if (maxCount > 0) {
+            [fetchRequest setFetchLimit:maxCount];
+        }
+        
+        if (offset > 0) {
+            [fetchRequest setFetchOffset:offset];
+        }
+        
+        NSError *error = nil;
+        NSArray *results = [context executeFetchRequest:fetchRequest error:&error];
+        if (error) {
+            NSLog(@"Database fetch error %@, %@, at file:%s(%d)", error, [error userInfo], __FILE__, __LINE__);
+        }
+        return results;
+    }
+    return nil;
+}
+
 
 - (NSManagedObject *)createObjectWithEntityName:(NSString *)entityName
 {
