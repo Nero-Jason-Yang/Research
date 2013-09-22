@@ -14,10 +14,10 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "46B20A8F1785BF0700C0D94A"
-               BuildableName = "DraggingCollectionView.app"
-               BlueprintName = "DraggingCollectionView"
-               ReferencedContainer = "container:DraggingCollectionView.xcodeproj">
+               BlueprintIdentifier = "EEC8966B17EEFE8400EA983A"
+               BuildableName = "SceneController.app"
+               BlueprintName = "SceneController"
+               ReferencedContainer = "container:SceneController.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -32,10 +32,10 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "46B20A8F1785BF0700C0D94A"
-            BuildableName = "DraggingCollectionView.app"
-            BlueprintName = "DraggingCollectionView"
-            ReferencedContainer = "container:DraggingCollectionView.xcodeproj">
+            BlueprintIdentifier = "EEC8966B17EEFE8400EA983A"
+            BuildableName = "SceneController.app"
+            BlueprintName = "SceneController"
+            ReferencedContainer = "container:SceneController.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </TestAction>
@@ -51,10 +51,10 @@
       <BuildableProductRunnable>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "46B20A8F1785BF0700C0D94A"
-            BuildableName = "DraggingCollectionView.app"
-            BlueprintName = "DraggingCollectionView"
-            ReferencedContainer = "container:DraggingCollectionView.xcodeproj">
+            BlueprintIdentifier = "EEC8966B17EEFE8400EA983A"
+            BuildableName = "SceneController.app"
+            BlueprintName = "SceneController"
+            ReferencedContainer = "container:SceneController.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -69,10 +69,10 @@
       <BuildableProductRunnable>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "46B20A8F1785BF0700C0D94A"
-            BuildableName = "DraggingCollectionView.app"
-            BlueprintName = "DraggingCollectionView"
-            ReferencedContainer = "container:DraggingCollectionView.xcodeproj">
+            BlueprintIdentifier = "EEC8966B17EEFE8400EA983A"
+            BuildableName = "SceneController.app"
+            BlueprintName = "SceneController"
+            ReferencedContainer = "container:SceneController.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

@@ -1,9 +1,9 @@
 //
 //  main.m
-//  DraggingCollectionView
+//  SceneController
 //
-//  Created by Yang Jason on 13-7-4.
-//  Copyright (c) 2013年 YangGuang. All rights reserved.
+//  Created by Jason Yang on 13-9-22.
+//  Copyright (c) 2013年 yang. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>

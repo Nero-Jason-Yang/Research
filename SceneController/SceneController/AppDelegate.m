@@ -1,18 +1,18 @@
-//
-//  AppDelegate.m
-//  DraggingCollectionView
-//
-//  Created by Yang Jason on 13-7-4.
-//  Copyright (c) 2013年 YangGuang. All rights reserved.
-//
-
 #import "AppDelegate.h"
+#import "SceneViewController.h"
 
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    // Override point for customization after application launch.
+    GridLayout *layout = [[GridLayout alloc] init];
+    SceneViewController *controller = [[SceneViewController alloc] initWithCollectionViewLayout:layout];
+    controller.cellSize = CGSizeMake(40, 40);
+    controller.contentSizeForCells = CGSizeMake(13,24);
+    
+    self.window = [[UIWindow alloc] initWithFrame:UIScreen.mainScreen.bounds];
+    self.window.rootViewController = controller;
+    [self.window makeKeyAndVisible];
     return YES;
 }
 							

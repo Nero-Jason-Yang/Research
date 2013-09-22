@@ -4,7 +4,7 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>DraggingCollectionView.xcscheme</key>
+		<key>SceneController.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
 			<integer>0</integer>
@@ -12,7 +12,7 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>46B20A8F1785BF0700C0D94A</key>
+		<key>EEC8966B17EEFE8400EA983A</key>
 		<dict>
 			<key>primary</key>
 			<true/>

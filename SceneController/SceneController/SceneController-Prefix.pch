@@ -1,5 +1,5 @@
 //
-// Prefix header for all source files of the 'DraggingCollectionView' target in the 'DraggingCollectionView' project
+// Prefix header for all source files of the 'SceneController' target in the 'SceneController' project
 //
 
 #import <Availability.h>
