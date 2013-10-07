@@ -4,6 +4,7 @@
 //
 
 #import "Game.h" 
+#import "Character.h"
 
 // --- private interface ---------------------------------------------------------------------------
 
@@ -114,6 +115,37 @@
     //   * iPhone/iPad -> Universal App  
     // 
     // Sparrow's minimum deployment target is iOS 5.
+    
+    Character *girl = [[Character alloc] initWithAtlasFile:@"girl.xml" fps:5.0];
+    NSMutableArray *girlMovieClips = [NSMutableArray array];
+    [girlMovieClips addObject:girl.walk];
+    [girlMovieClips addObject:girl.climb];
+    [girlMovieClips addObject:girl.standSide];
+    [girlMovieClips addObject:girl.standFace];
+    [girlMovieClips addObject:girl.fall];
+    [girlMovieClips addObject:girl.happy];
+    [girlMovieClips addObject:girl.lieProne];
+    [girlMovieClips addObject:girl.hitDown];
+    [girlMovieClips addObject:girl.hitDownBash];
+    [girlMovieClips addObject:girl.hitSide];
+    [girlMovieClips addObject:girl.hitSideBash];
+    [girlMovieClips addObject:girl.hitUp];
+    float x = 0.0f;
+    float y = 0.0f;
+    for (SPMovieClip *mc in girlMovieClips) {
+        mc.x = x;
+        mc.y = y;
+        [self addChild:mc];
+        [Sparrow.juggler addObject:mc];
+        
+        if (mc.x + mc.width >= UIScreen.mainScreen.bounds.size.width) {
+            x = 0.0f;
+            y += mc.height + 10.0f;
+            mc.x = x;
+            mc.y = y;
+        }
+        x += mc.width + 2.0f;
+    }
 }
 
 - (void)updateLocations
