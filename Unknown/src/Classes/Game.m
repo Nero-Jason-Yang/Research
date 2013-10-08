@@ -4,6 +4,7 @@
 //
 
 #import "Game.h" 
+#import "Grids.h"
 #import "Character.h"
 
 // --- private interface ---------------------------------------------------------------------------
@@ -116,7 +117,11 @@
     // 
     // Sparrow's minimum deployment target is iOS 5.
     
-    Character *girl = [[Character alloc] initWithAtlasFile:@"girl.xml" fps:5.0];
+    Grids *grids = [[Grids alloc] init];
+    [grids flatten];
+    [self addChild:grids];
+    
+    Character *girl = [[Character alloc] initWithAtlasFile:@"girl.xml" fps:1.0];
     NSMutableArray *girlMovieClips = [NSMutableArray array];
     [girlMovieClips addObject:girl.walk];
     [girlMovieClips addObject:girl.climb];
@@ -130,8 +135,8 @@
     [girlMovieClips addObject:girl.hitSide];
     [girlMovieClips addObject:girl.hitSideBash];
     [girlMovieClips addObject:girl.hitUp];
-    float x = 0.0f;
-    float y = 0.0f;
+    float x = 32;
+    float y = 32;
     for (SPMovieClip *mc in girlMovieClips) {
         mc.x = x;
         mc.y = y;
@@ -139,12 +144,12 @@
         [Sparrow.juggler addObject:mc];
         
         if (mc.x + mc.width >= UIScreen.mainScreen.bounds.size.width) {
-            x = 0.0f;
-            y += mc.height + 10.0f;
+            x = 0;
+            y += 64;
             mc.x = x;
             mc.y = y;
         }
-        x += mc.width + 2.0f;
+        x += 64;
     }
 }
 
