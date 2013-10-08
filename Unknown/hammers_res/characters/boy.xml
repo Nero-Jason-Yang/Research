@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with TexturePacker http://www.codeandweb.com/texturepacker-->
+<!-- $TexturePacker:SmartUpdate:2fdbc2bc985640d884865a2635b56438:1/1$ -->
+<TextureAtlas imagePath="boy.png">
+    <SubTexture name="climb_0" x="352" y="357" width="57" height="64" frameX="-2" frameY="-2" frameWidth="61" frameHeight="68"/>
+    <SubTexture name="climb_1" x="163" y="306" width="57" height="61" frameX="-2" frameY="-2" frameWidth="61" frameHeight="65"/>
+    <SubTexture name="climb_2" x="371" y="291" width="58" height="64" frameX="-2" frameY="-2" frameWidth="62" frameHeight="68"/>
+    <SubTexture name="climb_3" x="232" y="283" width="58" height="61" frameX="-2" frameY="-2" frameWidth="62" frameHeight="65"/>
+    <SubTexture name="dead_0" x="251" y="171" width="69" height="41" frameX="-2" frameY="-2" frameWidth="73" frameHeight="45"/>
+    <SubTexture name="dead_1" x="2" y="291" width="69" height="41" frameX="-2" frameY="-2" frameWidth="73" frameHeight="45"/>
+    <SubTexture name="happy_0" x="58" y="334" width="54" height="62" frameX="-2" frameY="-2" frameWidth="58" frameHeight="66"/>
+    <SubTexture name="happy_1" x="2" y="358" width="54" height="63" frameX="-2" frameY="-2" frameWidth="58" frameHeight="67"/>
+    <SubTexture name="happy_2" x="431" y="346" width="58" height="61" frameX="-2" frameY="-2" frameWidth="62" frameHeight="65"/>
+    <SubTexture name="happy_3" x="292" y="298" width="58" height="58" frameX="-2" frameY="-2" frameWidth="62" frameHeight="62"/>
+    <SubTexture name="hitBash_0" x="291" y="83" width="84" height="86" frameX="-2" frameY="-2" frameWidth="88" frameHeight="90"/>
+    <SubTexture name="hitBash_1" x="93" y="64" width="89" height="81" frameX="-2" frameY="-2" frameWidth="93" frameHeight="85"/>
+    <SubTexture name="hitBash_2" x="377" y="153" width="83" height="74" frameX="-2" frameY="-2" frameWidth="87" frameHeight="78"/>
+    <SubTexture name="hitBash_3" x="2" y="147" width="82" height="75" frameX="-2" frameY="-2" frameWidth="86" frameHeight="79"/>
+    <SubTexture name="hitBash_4" x="163" y="369" width="56" height="59" frameX="-2" frameY="-2" frameWidth="60" frameHeight="63"/>
+    <SubTexture name="hitBash_5" x="163" y="430" width="47" height="62" frameX="-2" frameY="-2" frameWidth="51" frameHeight="66"/>
+    <SubTexture name="hitUp_0" x="86" y="215" width="76" height="75" frameX="-2" frameY="-2" frameWidth="80" frameHeight="79"/>
+    <SubTexture name="hitUp_1" x="169" y="165" width="80" height="73" frameX="-2" frameY="-2" frameWidth="84" frameHeight="77"/>
+    <SubTexture name="hitUp_2" x="381" y="2" width="86" height="61" frameX="-2" frameY="-2" frameWidth="90" frameHeight="65"/>
+    <SubTexture name="hitUp_3" x="86" y="147" width="81" height="66" frameX="-2" frameY="-2" frameWidth="85" frameHeight="70"/>
+    <SubTexture name="hitUp_4" x="222" y="346" width="56" height="59" frameX="-2" frameY="-2" frameWidth="60" frameHeight="63"/>
+    <SubTexture name="hitUp_5" x="114" y="420" width="47" height="62" frameX="-2" frameY="-2" frameWidth="51" frameHeight="66"/>
+    <SubTexture name="hit_0" x="381" y="65" width="84" height="86" frameX="-2" frameY="-2" frameWidth="88" frameHeight="90"/>
+    <SubTexture name="hit_1" x="2" y="64" width="89" height="81" frameX="-2" frameY="-2" frameWidth="93" frameHeight="85"/>
+    <SubTexture name="hit_2" x="2" y="2" width="98" height="60" frameX="-2" frameY="-2" frameWidth="102" frameHeight="64"/>
+    <SubTexture name="hit_3" x="102" y="2" width="94" height="60" frameX="-2" frameY="-2" frameWidth="98" frameHeight="64"/>
+    <SubTexture name="hit_4" x="251" y="214" width="67" height="67" frameX="-2" frameY="-2" frameWidth="71" frameHeight="71"/>
+    <SubTexture name="hit_5" x="114" y="356" width="47" height="62" frameX="-2" frameY="-2" frameWidth="51" frameHeight="66"/>
+    <SubTexture name="scare_0" x="164" y="240" width="66" height="64" frameX="-2" frameY="-2" frameWidth="70" frameHeight="68"/>
+    <SubTexture name="scare_1" x="440" y="279" width="61" height="65" frameX="-2" frameY="-2" frameWidth="65" frameHeight="69"/>
+    <SubTexture name="show_0" x="2" y="423" width="54" height="63" frameX="-2" frameY="-2" frameWidth="58" frameHeight="67"/>
+    <SubTexture name="show_1" x="58" y="423" width="54" height="62" frameX="-2" frameY="-2" frameWidth="58" frameHeight="66"/>
+    <SubTexture name="stand_0" x="114" y="292" width="47" height="62" frameX="-2" frameY="-2" frameWidth="51" frameHeight="66"/>
+    <SubTexture name="stand_1" x="212" y="430" width="47" height="61" frameX="-2" frameY="-2" frameWidth="51" frameHeight="65"/>
+    <SubTexture name="unhappy_0" x="373" y="229" width="65" height="60" frameX="-2" frameY="-2" frameWidth="69" frameHeight="64"/>
+    <SubTexture name="unhappy_1" x="2" y="224" width="75" height="65" frameX="-2" frameY="-2" frameWidth="79" frameHeight="69"/>
+    <SubTexture name="unhappy_2" x="184" y="89" width="83" height="74" frameX="-2" frameY="-2" frameWidth="87" frameHeight="78"/>
+    <SubTexture name="unhappy_3" x="291" y="2" width="88" height="79" frameX="-2" frameY="-2" frameWidth="92" frameHeight="83"/>
+    <SubTexture name="unhappy_4" x="198" y="2" width="91" height="85" frameX="-2" frameY="-2" frameWidth="95" frameHeight="89"/>
+    <SubTexture name="walk_0" x="462" y="216" width="48" height="61" frameX="-2" frameY="-2" frameWidth="52" frameHeight="65"/>
+    <SubTexture name="walk_1" x="462" y="153" width="48" height="61" frameX="-2" frameY="-2" frameWidth="52" frameHeight="65"/>
+    <SubTexture name="walk_2" x="322" y="171" width="49" height="62" frameX="-2" frameY="-2" frameWidth="53" frameHeight="66"/>
+    <SubTexture name="walk_3" x="320" y="235" width="49" height="61" frameX="-2" frameY="-2" frameWidth="53" frameHeight="65"/>
+</TextureAtlas>
