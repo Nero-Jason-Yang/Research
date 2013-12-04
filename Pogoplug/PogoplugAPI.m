@@ -2,6 +2,7 @@
 #import "PogoplugOperationManager.h"
 #import "PogoplugResponse.h"
 #import "AFNetworking.h"
+#import "AppDelegate.h"
 
 @interface PogoplugAPI ()
 @property (nonatomic) NSString *deviceID;
@@ -156,9 +157,23 @@
 
 - (BOOL)uploadFileWithFileID:(NSString *)fileID fromContentOfFile:(NSURL *)localFileURL error:(NSError **)error
 {
-    NSURLSessionConfiguration *config = [NSURLSessionConfiguration defaultSessionConfiguration];
-    config = [NSURLSessionConfiguration backgroundSessionConfiguration:@"com.nero.biu.background"];
-    AFHTTPSessionManager *manager = [[AFHTTPSessionManager alloc] initWithSessionConfiguration:config];
+    static AFHTTPSessionManager *manager;
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        NSURLSessionConfiguration *config = [NSURLSessionConfiguration defaultSessionConfiguration];
+        config = [NSURLSessionConfiguration backgroundSessionConfiguration:@"com.nero.biu.background"];
+        manager = [[AFHTTPSessionManager alloc] initWithSessionConfiguration:config];
+        [manager setDidFinishEventsForBackgroundURLSessionBlock:^(NSURLSession *session) {
+            AppDelegate *appDelegate = (AppDelegate *)[UIApplication sharedApplication].delegate;
+            if (appDelegate.backgroundSessionCompletionHandler) {
+                NSLog(@"manager didFinishEventsForBackgroundURLSession");
+                dispatch_block_t block = appDelegate.backgroundSessionCompletionHandler;
+                appDelegate.backgroundSessionCompletionHandler = nil;
+                block();
+            }
+        }];
+    });
+    
     if (!manager.securityPolicy) {
         manager.securityPolicy = [AFSecurityPolicy defaultPolicy];
     }
@@ -182,6 +197,7 @@
         [condition signal];
     }];
     [task resume];
+    NSLog(@"start upload task with url: %@", localFileURL);
     
     [condition lock];
     while (!completed) {
