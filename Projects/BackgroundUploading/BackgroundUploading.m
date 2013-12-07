@@ -6,6 +6,7 @@
 #import "ALAssetsLibrary+Utils.h"
 #import "AppDelegate.h"
 #import <CoreLocation/CoreLocation.h>
+//#import "UMManager.h"
 
 @interface BackgroundUploading () <CLLocationManagerDelegate>
 @property (nonatomic) AppDelegate *appDelegate;
@@ -29,6 +30,8 @@
 - (id)init
 {
     if (self = [super init]) {
+        //UMManager *manager = [UMManager sharedManager];
+        
         AppDelegate *appDelegate = (AppDelegate *)[UIApplication sharedApplication].delegate;
         self.appDelegate = appDelegate;
         self.api = [[PogoplugAPI alloc] init];
