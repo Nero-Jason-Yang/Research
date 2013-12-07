@@ -38,6 +38,13 @@
 		EE0CC3EE184DD7E90063EEE4 /* ALAssetsGroup+Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = EE0CC3ED184DD7E90063EEE4 /* ALAssetsGroup+Utils.m */; };
 		EE0CC3F1184DDA550063EEE4 /* ALAsset+Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = EE0CC3F0184DDA550063EEE4 /* ALAsset+Utils.m */; };
 		EE0CC3F4184DDE0C0063EEE4 /* Logger.m in Sources */ = {isa = PBXBuildFile; fileRef = EE0CC3F3184DDE0C0063EEE4 /* Logger.m */; };
+		EE0CC3F7184F244F0063EEE4 /* AssetUploadSource.m in Sources */ = {isa = PBXBuildFile; fileRef = EE0CC3F6184F244F0063EEE4 /* AssetUploadSource.m */; };
+		EE0CC3F9184F4AD20063EEE4 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE0CC3F8184F4AD20063EEE4 /* CoreLocation.framework */; };
+		EE0CC401185059080063EEE4 /* ALAssetInputStream.m in Sources */ = {isa = PBXBuildFile; fileRef = EE0CC400185059080063EEE4 /* ALAssetInputStream.m */; };
+		EE0CC408185073360063EEE4 /* BackgroundLocation.m in Sources */ = {isa = PBXBuildFile; fileRef = EE0CC407185073360063EEE4 /* BackgroundLocation.m */; };
+		EE12EFDE185196950066CA42 /* AssetsLibrary.m in Sources */ = {isa = PBXBuildFile; fileRef = EE12EFDD185196950066CA42 /* AssetsLibrary.m */; };
+		EE12EFE118519B750066CA42 /* ALAsset+Properties.m in Sources */ = {isa = PBXBuildFile; fileRef = EE12EFE018519B750066CA42 /* ALAsset+Properties.m */; };
+		EE12EFE51852C20B0066CA42 /* UploadByRange.m in Sources */ = {isa = PBXBuildFile; fileRef = EE12EFE41852C20B0066CA42 /* UploadByRange.m */; };
 		EEC23824180E8E0E00ECB171 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EEC23823180E8E0E00ECB171 /* Foundation.framework */; };
 		EEC23826180E8E0E00ECB171 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EEC23825180E8E0E00ECB171 /* CoreGraphics.framework */; };
 		EEC23828180E8E0E00ECB171 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EEC23827180E8E0E00ECB171 /* UIKit.framework */; };
@@ -138,6 +145,19 @@
 		EE0CC3F0184DDA550063EEE4 /* ALAsset+Utils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "ALAsset+Utils.m"; sourceTree = "<group>"; };
 		EE0CC3F2184DDE0C0063EEE4 /* Logger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Logger.h; sourceTree = "<group>"; };
 		EE0CC3F3184DDE0C0063EEE4 /* Logger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Logger.m; sourceTree = "<group>"; };
+		EE0CC3F5184F244F0063EEE4 /* AssetUploadSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AssetUploadSource.h; sourceTree = "<group>"; };
+		EE0CC3F6184F244F0063EEE4 /* AssetUploadSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AssetUploadSource.m; sourceTree = "<group>"; };
+		EE0CC3F8184F4AD20063EEE4 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		EE0CC3FF185059080063EEE4 /* ALAssetInputStream.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALAssetInputStream.h; sourceTree = "<group>"; };
+		EE0CC400185059080063EEE4 /* ALAssetInputStream.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALAssetInputStream.m; sourceTree = "<group>"; };
+		EE0CC406185073360063EEE4 /* BackgroundLocation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BackgroundLocation.h; sourceTree = "<group>"; };
+		EE0CC407185073360063EEE4 /* BackgroundLocation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BackgroundLocation.m; sourceTree = "<group>"; };
+		EE12EFDC185196950066CA42 /* AssetsLibrary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AssetsLibrary.h; sourceTree = "<group>"; };
+		EE12EFDD185196950066CA42 /* AssetsLibrary.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AssetsLibrary.m; sourceTree = "<group>"; };
+		EE12EFDF18519B750066CA42 /* ALAsset+Properties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ALAsset+Properties.h"; sourceTree = "<group>"; };
+		EE12EFE018519B750066CA42 /* ALAsset+Properties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "ALAsset+Properties.m"; sourceTree = "<group>"; };
+		EE12EFE31852C20B0066CA42 /* UploadByRange.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UploadByRange.h; sourceTree = "<group>"; };
+		EE12EFE41852C20B0066CA42 /* UploadByRange.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UploadByRange.m; sourceTree = "<group>"; };
 		EEC23820180E8E0E00ECB171 /* Research.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Research.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EEC23823180E8E0E00ECB171 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		EEC23825180E8E0E00ECB171 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -179,6 +199,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EE0CC3F9184F4AD20063EEE4 /* CoreLocation.framework in Frameworks */,
 				EEC23826180E8E0E00ECB171 /* CoreGraphics.framework in Frameworks */,
 				EEC2382A180E8E0E00ECB171 /* CoreData.framework in Frameworks */,
 				EEC23828180E8E0E00ECB171 /* UIKit.framework in Frameworks */,
@@ -205,6 +226,8 @@
 			children = (
 				EE0CC395184DCD970063EEE4 /* BackgroundUploading.h */,
 				EE0CC396184DCD970063EEE4 /* BackgroundUploading.m */,
+				EE0CC3F5184F244F0063EEE4 /* AssetUploadSource.h */,
+				EE0CC3F6184F244F0063EEE4 /* AssetUploadSource.m */,
 			);
 			path = BackgroundUploading;
 			sourceTree = "<group>";
@@ -291,6 +314,33 @@
 			path = Pogoplug;
 			sourceTree = "<group>";
 		};
+		EE0CC405185073160063EEE4 /* BackgroundLocation */ = {
+			isa = PBXGroup;
+			children = (
+				EE0CC406185073360063EEE4 /* BackgroundLocation.h */,
+				EE0CC407185073360063EEE4 /* BackgroundLocation.m */,
+			);
+			path = BackgroundLocation;
+			sourceTree = "<group>";
+		};
+		EE12EFDB185196830066CA42 /* AssetsLibrary */ = {
+			isa = PBXGroup;
+			children = (
+				EE12EFDC185196950066CA42 /* AssetsLibrary.h */,
+				EE12EFDD185196950066CA42 /* AssetsLibrary.m */,
+			);
+			path = AssetsLibrary;
+			sourceTree = "<group>";
+		};
+		EE12EFE21852C1FC0066CA42 /* UploadByRange */ = {
+			isa = PBXGroup;
+			children = (
+				EE12EFE31852C20B0066CA42 /* UploadByRange.h */,
+				EE12EFE41852C20B0066CA42 /* UploadByRange.m */,
+			);
+			path = UploadByRange;
+			sourceTree = "<group>";
+		};
 		EEC23817180E8E0E00ECB171 = {
 			isa = PBXGroup;
 			children = (
@@ -317,6 +367,7 @@
 		EEC23822180E8E0E00ECB171 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				EE0CC3F8184F4AD20063EEE4 /* CoreLocation.framework */,
 				EEC23823180E8E0E00ECB171 /* Foundation.framework */,
 				EEC23825180E8E0E00ECB171 /* CoreGraphics.framework */,
 				EEC23827180E8E0E00ECB171 /* UIKit.framework */,
@@ -376,6 +427,9 @@
 				EEED027018110FF3000D0D09 /* Basic */,
 				EEC2387A180E974800ECB171 /* ParentEntity */,
 				EE0CC394184DCD850063EEE4 /* BackgroundUploading */,
+				EE0CC405185073160063EEE4 /* BackgroundLocation */,
+				EE12EFDB185196830066CA42 /* AssetsLibrary */,
+				EE12EFE21852C1FC0066CA42 /* UploadByRange */,
 			);
 			path = Projects;
 			sourceTree = "<group>";
@@ -409,6 +463,10 @@
 				EE0CC3ED184DD7E90063EEE4 /* ALAssetsGroup+Utils.m */,
 				EE0CC3EF184DDA550063EEE4 /* ALAsset+Utils.h */,
 				EE0CC3F0184DDA550063EEE4 /* ALAsset+Utils.m */,
+				EE12EFDF18519B750066CA42 /* ALAsset+Properties.h */,
+				EE12EFE018519B750066CA42 /* ALAsset+Properties.m */,
+				EE0CC3FF185059080063EEE4 /* ALAssetInputStream.h */,
+				EE0CC400185059080063EEE4 /* ALAssetInputStream.m */,
 				EE0CC3F2184DDE0C0063EEE4 /* Logger.h */,
 				EE0CC3F3184DDE0C0063EEE4 /* Logger.m */,
 			);
@@ -536,14 +594,18 @@
 				EE0CC3BF184DCE9D0063EEE4 /* AFHTTPSessionManager.m in Sources */,
 				EE0CC3BD184DCE9D0063EEE4 /* AFHTTPRequestOperation.m in Sources */,
 				EEC23884180E974800ECB171 /* ParentEntity.xcdatamodeld in Sources */,
+				EE0CC401185059080063EEE4 /* ALAssetInputStream.m in Sources */,
 				EE0CC3D8184DD09F0063EEE4 /* NeroJSONResponseSerializer.m in Sources */,
 				EE0CC3C6184DCE9D0063EEE4 /* AFNetworkActivityIndicatorManager.m in Sources */,
 				EE0CC3C1184DCE9D0063EEE4 /* AFSecurityPolicy.m in Sources */,
+				EE0CC3F7184F244F0063EEE4 /* AssetUploadSource.m in Sources */,
 				EE0CC3F4184DDE0C0063EEE4 /* Logger.m in Sources */,
 				EEC23896180E9A6800ECB171 /* VideoFileMO.m in Sources */,
 				EE0CC3CA184DCE9D0063EEE4 /* UIImageView+AFNetworking.m in Sources */,
+				EE12EFDE185196950066CA42 /* AssetsLibrary.m in Sources */,
 				EE0CC3D7184DD09F0063EEE4 /* PogoplugJSONResponseSerializer.m in Sources */,
 				EE0CC3C0184DCE9D0063EEE4 /* AFNetworkReachabilityManager.m in Sources */,
+				EE12EFE118519B750066CA42 /* ALAsset+Properties.m in Sources */,
 				EE0CC3EB184DD75D0063EEE4 /* ALAssetsLibrary+Utils.m in Sources */,
 				EE0CC3D0184DCF020063EEE4 /* PogoplugAPI.m in Sources */,
 				EE0CC3C5184DCE9D0063EEE4 /* AFURLSessionManager.m in Sources */,
@@ -555,6 +617,8 @@
 				EEC23893180E9A6800ECB171 /* PhotoFileMO.m in Sources */,
 				EE0CC397184DCD970063EEE4 /* BackgroundUploading.m in Sources */,
 				EE0CC3CC184DCE9D0063EEE4 /* UIWebView+AFNetworking.m in Sources */,
+				EE12EFE51852C20B0066CA42 /* UploadByRange.m in Sources */,
+				EE0CC408185073360063EEE4 /* BackgroundLocation.m in Sources */,
 				EE0CC3EE184DD7E90063EEE4 /* ALAssetsGroup+Utils.m in Sources */,
 				EE0CC3E5184DD1BF0063EEE4 /* AccountError.m in Sources */,
 				EE0CC3E2184DD1B00063EEE4 /* NSError+Pogoplug.m in Sources */,

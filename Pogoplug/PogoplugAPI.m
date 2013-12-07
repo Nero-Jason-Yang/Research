@@ -2,6 +2,7 @@
 #import "PogoplugOperationManager.h"
 #import "PogoplugResponse.h"
 #import "AFNetworking.h"
+#import "AppDelegate.h"
 
 @interface PogoplugAPI ()
 @property (nonatomic) NSString *deviceID;
@@ -156,9 +157,23 @@
 
 - (BOOL)uploadFileWithFileID:(NSString *)fileID fromContentOfFile:(NSURL *)localFileURL error:(NSError **)error
 {
-    NSURLSessionConfiguration *config = [NSURLSessionConfiguration defaultSessionConfiguration];
-    config = [NSURLSessionConfiguration backgroundSessionConfiguration:@"com.nero.biu.background"];
-    AFHTTPSessionManager *manager = [[AFHTTPSessionManager alloc] initWithSessionConfiguration:config];
+    static AFHTTPSessionManager *manager;
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        NSURLSessionConfiguration *config = [NSURLSessionConfiguration defaultSessionConfiguration];
+        config = [NSURLSessionConfiguration backgroundSessionConfiguration:@"com.nero.biu.background"];
+        manager = [[AFHTTPSessionManager alloc] initWithSessionConfiguration:config];
+        [manager setDidFinishEventsForBackgroundURLSessionBlock:^(NSURLSession *session) {
+            AppDelegate *appDelegate = (AppDelegate *)[UIApplication sharedApplication].delegate;
+            if (appDelegate.backgroundSessionCompletionHandler) {
+                NSLog(@"manager didFinishEventsForBackgroundURLSession");
+                dispatch_block_t block = appDelegate.backgroundSessionCompletionHandler;
+                appDelegate.backgroundSessionCompletionHandler = nil;
+                block();
+            }
+        }];
+    });
+    
     if (!manager.securityPolicy) {
         manager.securityPolicy = [AFSecurityPolicy defaultPolicy];
     }
@@ -182,6 +197,7 @@
         [condition signal];
     }];
     [task resume];
+    NSLog(@"start upload task with url: %@", localFileURL);
     
     [condition lock];
     while (!completed) {
@@ -195,7 +211,83 @@
     }
     
     return YES;
+}
 
+- (BOOL)uploadFileWithFileID:(NSString *)fileID fromContentOfFile:(NSURL *)localFileURL sectionSize:(NSUInteger)sectionSize error:(NSError **)error
+{
+    static AFHTTPSessionManager *manager;
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        NSURLSessionConfiguration *config = [NSURLSessionConfiguration defaultSessionConfiguration];
+        //config = [NSURLSessionConfiguration backgroundSessionConfiguration:@"com.nero.biu.background"];
+        manager = [[AFHTTPSessionManager alloc] initWithSessionConfiguration:config];
+        [manager setDidFinishEventsForBackgroundURLSessionBlock:^(NSURLSession *session) {
+            AppDelegate *appDelegate = (AppDelegate *)[UIApplication sharedApplication].delegate;
+            if (appDelegate.backgroundSessionCompletionHandler) {
+                NSLog(@"manager didFinishEventsForBackgroundURLSession");
+                dispatch_block_t block = appDelegate.backgroundSessionCompletionHandler;
+                appDelegate.backgroundSessionCompletionHandler = nil;
+                block();
+            }
+        }];
+        if (!manager.securityPolicy) {
+            manager.securityPolicy = [AFSecurityPolicy defaultPolicy];
+        }
+        manager.securityPolicy.allowInvalidCertificates = YES;
+        manager.completionQueue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
+    });
+    
+    NSString *path = [self filePathWithID:fileID flag:nil name:nil];
+    NSParameterAssert(self.baseURL);
+    NSURL *cloudFileURL = [NSURL URLWithString:path relativeToURL:self.baseURL];
+    
+    NSData *data = [NSData dataWithContentsOfURL:localFileURL];
+    NSUInteger total = data.length;
+    NSUInteger position = 0;
+    void *bytes = malloc(sectionSize);
+    while (position < total) {
+        NSUInteger remain = total - position;
+        NSUInteger len = sectionSize < remain ? sectionSize : remain;
+        [data getBytes:bytes range:NSMakeRange(position, len)];
+        
+        NSData *section = [NSData dataWithBytes:bytes length:len];
+        NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:cloudFileURL];
+        request.HTTPMethod = @"PUT";
+//        NSString *contentRange = [NSString stringWithFormat:@"bytes %lu-%lu/%lu", (unsigned long)position, (unsigned long)(position+len-1), (unsigned long)total];
+//        NSString *contentRange = [NSString stringWithFormat:@"bytes=%lu-%lu/%lu", (unsigned long)position, (unsigned long)(position+len-1), (unsigned long)total];
+        NSString *contentRange = [NSString stringWithFormat:@"bytes %lu-%lu/*", (unsigned long)position, (unsigned long)(position+len-1)];
+//        [request setValue:contentRange forHTTPHeaderField:@"Content-Range"];
+        [request setValue:contentRange forHTTPHeaderField:@"Range"];
+        [request setValue:@"video/quicktime" forHTTPHeaderField:@"Content-Type"];
+        
+        __block NSError *blockError;
+        __block BOOL completed = NO;
+        NSCondition *condition = [[NSCondition alloc] init];
+        NSProgress *progress;
+        NSURLSessionUploadTask *task = [manager uploadTaskWithRequest:request fromData:section progress:&progress completionHandler:^(NSURLResponse *response, id responseObject, NSError *error) {
+            blockError = error;
+            completed = YES;
+            [condition signal];
+        }];
+        [task resume];
+        NSLog(@"start upload task with url: %@", localFileURL);
+        
+        [condition lock];
+        while (!completed) {
+            [condition wait];
+        }
+        [condition unlock];
+        
+        if (blockError) {
+            *error = blockError;
+            return NO;
+        }
+        
+        position += len;
+    }
+    free(bytes);
+    
+    return YES;
 }
 
 - (NSString *)filePathWithID:(NSString *)fileID flag:(NSString *)flag name:(NSString *)name
