@@ -45,6 +45,7 @@
 		EE12EFDE185196950066CA42 /* AssetsLibrary.m in Sources */ = {isa = PBXBuildFile; fileRef = EE12EFDD185196950066CA42 /* AssetsLibrary.m */; };
 		EE12EFE118519B750066CA42 /* ALAsset+Properties.m in Sources */ = {isa = PBXBuildFile; fileRef = EE12EFE018519B750066CA42 /* ALAsset+Properties.m */; };
 		EE12EFE51852C20B0066CA42 /* UploadByRange.m in Sources */ = {isa = PBXBuildFile; fileRef = EE12EFE41852C20B0066CA42 /* UploadByRange.m */; };
+		EE12EFE9185561BA0066CA42 /* BackgroundFetch.m in Sources */ = {isa = PBXBuildFile; fileRef = EE12EFE8185561BA0066CA42 /* BackgroundFetch.m */; };
 		EEC23824180E8E0E00ECB171 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EEC23823180E8E0E00ECB171 /* Foundation.framework */; };
 		EEC23826180E8E0E00ECB171 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EEC23825180E8E0E00ECB171 /* CoreGraphics.framework */; };
 		EEC23828180E8E0E00ECB171 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EEC23827180E8E0E00ECB171 /* UIKit.framework */; };
@@ -67,7 +68,6 @@
 		EEC23890180E9A6700ECB171 /* FileMO.m in Sources */ = {isa = PBXBuildFile; fileRef = EEC2388F180E9A6700ECB171 /* FileMO.m */; };
 		EEC23893180E9A6800ECB171 /* PhotoFileMO.m in Sources */ = {isa = PBXBuildFile; fileRef = EEC23892180E9A6800ECB171 /* PhotoFileMO.m */; };
 		EEC23896180E9A6800ECB171 /* VideoFileMO.m in Sources */ = {isa = PBXBuildFile; fileRef = EEC23895180E9A6800ECB171 /* VideoFileMO.m */; };
-		EEED02731811100B000D0D09 /* Basic.m in Sources */ = {isa = PBXBuildFile; fileRef = EEED02721811100B000D0D09 /* Basic.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -158,6 +158,8 @@
 		EE12EFE018519B750066CA42 /* ALAsset+Properties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "ALAsset+Properties.m"; sourceTree = "<group>"; };
 		EE12EFE31852C20B0066CA42 /* UploadByRange.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UploadByRange.h; sourceTree = "<group>"; };
 		EE12EFE41852C20B0066CA42 /* UploadByRange.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UploadByRange.m; sourceTree = "<group>"; };
+		EE12EFE7185561BA0066CA42 /* BackgroundFetch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BackgroundFetch.h; sourceTree = "<group>"; };
+		EE12EFE8185561BA0066CA42 /* BackgroundFetch.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BackgroundFetch.m; sourceTree = "<group>"; };
 		EEC23820180E8E0E00ECB171 /* Research.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Research.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EEC23823180E8E0E00ECB171 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		EEC23825180E8E0E00ECB171 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -190,8 +192,6 @@
 		EEC23892180E9A6800ECB171 /* PhotoFileMO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhotoFileMO.m; sourceTree = "<group>"; };
 		EEC23894180E9A6800ECB171 /* VideoFileMO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VideoFileMO.h; sourceTree = "<group>"; };
 		EEC23895180E9A6800ECB171 /* VideoFileMO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VideoFileMO.m; sourceTree = "<group>"; };
-		EEED02711811100B000D0D09 /* Basic.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Basic.h; sourceTree = "<group>"; };
-		EEED02721811100B000D0D09 /* Basic.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Basic.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -341,6 +341,15 @@
 			path = UploadByRange;
 			sourceTree = "<group>";
 		};
+		EE12EFE6185561A20066CA42 /* BackgroundFetch */ = {
+			isa = PBXGroup;
+			children = (
+				EE12EFE7185561BA0066CA42 /* BackgroundFetch.h */,
+				EE12EFE8185561BA0066CA42 /* BackgroundFetch.m */,
+			);
+			path = BackgroundFetch;
+			sourceTree = "<group>";
+		};
 		EEC23817180E8E0E00ECB171 = {
 			isa = PBXGroup;
 			children = (
@@ -424,12 +433,12 @@
 			children = (
 				EE0CC391184DC8CD0063EEE4 /* ProjectManager.h */,
 				EE0CC392184DC8CD0063EEE4 /* ProjectManager.m */,
-				EEED027018110FF3000D0D09 /* Basic */,
 				EEC2387A180E974800ECB171 /* ParentEntity */,
 				EE0CC394184DCD850063EEE4 /* BackgroundUploading */,
 				EE0CC405185073160063EEE4 /* BackgroundLocation */,
 				EE12EFDB185196830066CA42 /* AssetsLibrary */,
 				EE12EFE21852C1FC0066CA42 /* UploadByRange */,
+				EE12EFE6185561A20066CA42 /* BackgroundFetch */,
 			);
 			path = Projects;
 			sourceTree = "<group>";
@@ -471,15 +480,6 @@
 				EE0CC3F3184DDE0C0063EEE4 /* Logger.m */,
 			);
 			path = Utils;
-			sourceTree = "<group>";
-		};
-		EEED027018110FF3000D0D09 /* Basic */ = {
-			isa = PBXGroup;
-			children = (
-				EEED02711811100B000D0D09 /* Basic.h */,
-				EEED02721811100B000D0D09 /* Basic.m */,
-			);
-			path = Basic;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -579,7 +579,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				EE0CC3CB184DCE9D0063EEE4 /* UIProgressView+AFNetworking.m in Sources */,
-				EEED02731811100B000D0D09 /* Basic.m in Sources */,
 				EEC23890180E9A6700ECB171 /* FileMO.m in Sources */,
 				EE0CC3BE184DCE9D0063EEE4 /* AFHTTPRequestOperationManager.m in Sources */,
 				EE0CC3F1184DDA550063EEE4 /* ALAsset+Utils.m in Sources */,
@@ -617,6 +616,7 @@
 				EEC23893180E9A6800ECB171 /* PhotoFileMO.m in Sources */,
 				EE0CC397184DCD970063EEE4 /* BackgroundUploading.m in Sources */,
 				EE0CC3CC184DCE9D0063EEE4 /* UIWebView+AFNetworking.m in Sources */,
+				EE12EFE9185561BA0066CA42 /* BackgroundFetch.m in Sources */,
 				EE12EFE51852C20B0066CA42 /* UploadByRange.m in Sources */,
 				EE0CC408185073360063EEE4 /* BackgroundLocation.m in Sources */,
 				EE0CC3EE184DD7E90063EEE4 /* ALAssetsGroup+Utils.m in Sources */,

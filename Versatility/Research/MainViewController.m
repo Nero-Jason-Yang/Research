@@ -48,6 +48,7 @@
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell" forIndexPath:indexPath];
     
     cell.textLabel.text = self.projectNames[indexPath.row];
+    cell.textLabel.font = [UIFont fontWithName:nil size:16];
     
     return cell;
 }
