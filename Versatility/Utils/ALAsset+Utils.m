@@ -47,4 +47,26 @@
     return YES;
 }
 
+- (NSData *)load
+{
+    ALAssetRepresentation *rep = self.defaultRepresentation;
+    NSParameterAssert(rep);
+    
+    int64_t size = rep.size, offset = 0;
+    uint8_t buffer[BUFFERSIZE];
+    
+    NSMutableData *data = [NSMutableData data];
+    NSError *e;
+    while (offset < size) {
+        NSUInteger gn = [rep getBytes:buffer fromOffset:offset length:20*1024 error:&e];
+        if (0 == gn || e) {
+            return nil;
+        }
+        [data appendBytes:buffer length:gn];
+        offset += gn;
+    }
+    
+    return data;
+}
+
 @end

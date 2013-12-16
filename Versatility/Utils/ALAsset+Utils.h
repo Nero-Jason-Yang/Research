@@ -4,5 +4,6 @@
 
 - (BOOL)saveToFile:(NSString *)filePath;
 - (BOOL)saveToURL:(NSURL *)fileURL;
+- (NSData *)load;
 
 @end

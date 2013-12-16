@@ -304,4 +304,96 @@
     return path;
 }
 
+- (BOOL)uploadFileForFileID:(NSString *)fileID withData:(NSData *)data error:(NSError **)error
+{
+    NSParameterAssert(fileID && data && error);
+    NSString *filePath = [self filePathWithID:fileID flag:nil name:nil];
+    NSParameterAssert(self.baseURL);
+    PogoplugOperationManager *manager = [PogoplugOperationManager managerWithBaseURL:self.baseURL];
+    return [manager uploadData:data withPath:filePath parameters:nil error:error];
+}
+
+- (BOOL)uploadFileForFileID:(NSString *)fileID withFileURL:(NSURL *)localFileURL error:(NSError **)error
+{
+    NSURLSessionConfiguration *config = [NSURLSessionConfiguration defaultSessionConfiguration];
+    AFHTTPSessionManager *manager = [[AFHTTPSessionManager alloc] initWithSessionConfiguration:config];
+    if (!manager.securityPolicy) {
+        manager.securityPolicy = [AFSecurityPolicy defaultPolicy];
+    }
+    manager.securityPolicy.allowInvalidCertificates = YES;
+    manager.completionQueue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
+    
+    NSString *path = [self filePathWithID:fileID flag:nil name:nil];
+    NSParameterAssert(self.baseURL);
+    NSURL *cloudFileURL = [NSURL URLWithString:path relativeToURL:self.baseURL];
+    NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:cloudFileURL];
+    request.HTTPMethod = @"PUT";
+    
+    __block NSError *blockError;
+    __block BOOL completed = NO;
+    NSCondition *condition = [[NSCondition alloc] init];
+    NSProgress *progress;
+    NSURLSessionUploadTask *task = [manager uploadTaskWithRequest:request fromFile:localFileURL progress:&progress completionHandler:^(NSURLResponse *response, id responseObject, NSError *error) {
+        blockError = error;
+        completed = YES;
+        [condition signal];
+    }];
+    [task resume];
+    
+    [condition lock];
+    while (!completed) {
+        [condition wait];
+    }
+    [condition unlock];
+    
+    if (blockError) {
+        *error = blockError;
+        return NO;
+    }
+    
+    return YES;
+}
+
+- (BOOL)uploadFileForFileID:(NSString *)fileID withInputStream:(NSInputStream *)inputStream error:(NSError **)error
+{
+    NSURLSessionConfiguration *config = [NSURLSessionConfiguration defaultSessionConfiguration];
+    AFHTTPSessionManager *manager = [[AFHTTPSessionManager alloc] initWithSessionConfiguration:config];
+    if (!manager.securityPolicy) {
+        manager.securityPolicy = [AFSecurityPolicy defaultPolicy];
+    }
+    manager.securityPolicy.allowInvalidCertificates = YES;
+    manager.completionQueue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
+    
+    NSString *path = [self filePathWithID:fileID flag:nil name:nil];
+    NSParameterAssert(self.baseURL);
+    NSURL *cloudFileURL = [NSURL URLWithString:path relativeToURL:self.baseURL];
+    NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:cloudFileURL];
+    request.HTTPMethod = @"PUT";
+    request.HTTPBodyStream = inputStream;
+    
+    __block NSError *blockError;
+    __block BOOL completed = NO;
+    NSCondition *condition = [[NSCondition alloc] init];
+    NSProgress *progress;
+        NSURLSessionUploadTask *task = [manager uploadTaskWithStreamedRequest:request progress:&progress completionHandler:^(NSURLResponse *response, id responseObject, NSError *error) {
+        blockError = error;
+        completed = YES;
+        [condition signal];
+    }];
+    [task resume];
+    
+    [condition lock];
+    while (!completed) {
+        [condition wait];
+    }
+    [condition unlock];
+    
+    if (blockError) {
+        *error = blockError;
+        return NO;
+    }
+    
+    return YES;
+}
+
 @end

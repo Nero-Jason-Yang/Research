@@ -46,6 +46,7 @@
 		EE12EFE118519B750066CA42 /* ALAsset+Properties.m in Sources */ = {isa = PBXBuildFile; fileRef = EE12EFE018519B750066CA42 /* ALAsset+Properties.m */; };
 		EE12EFE51852C20B0066CA42 /* UploadByRange.m in Sources */ = {isa = PBXBuildFile; fileRef = EE12EFE41852C20B0066CA42 /* UploadByRange.m */; };
 		EE12EFE9185561BA0066CA42 /* BackgroundFetch.m in Sources */ = {isa = PBXBuildFile; fileRef = EE12EFE8185561BA0066CA42 /* BackgroundFetch.m */; };
+		EE8DA9B5185951E40042C89A /* UploadSpeedTest.m in Sources */ = {isa = PBXBuildFile; fileRef = EE8DA9B4185951E40042C89A /* UploadSpeedTest.m */; };
 		EEC23824180E8E0E00ECB171 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EEC23823180E8E0E00ECB171 /* Foundation.framework */; };
 		EEC23826180E8E0E00ECB171 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EEC23825180E8E0E00ECB171 /* CoreGraphics.framework */; };
 		EEC23828180E8E0E00ECB171 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EEC23827180E8E0E00ECB171 /* UIKit.framework */; };
@@ -160,6 +161,8 @@
 		EE12EFE41852C20B0066CA42 /* UploadByRange.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UploadByRange.m; sourceTree = "<group>"; };
 		EE12EFE7185561BA0066CA42 /* BackgroundFetch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BackgroundFetch.h; sourceTree = "<group>"; };
 		EE12EFE8185561BA0066CA42 /* BackgroundFetch.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BackgroundFetch.m; sourceTree = "<group>"; };
+		EE8DA9B3185951E40042C89A /* UploadSpeedTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UploadSpeedTest.h; sourceTree = "<group>"; };
+		EE8DA9B4185951E40042C89A /* UploadSpeedTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UploadSpeedTest.m; sourceTree = "<group>"; };
 		EEC23820180E8E0E00ECB171 /* Research.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Research.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EEC23823180E8E0E00ECB171 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		EEC23825180E8E0E00ECB171 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -350,6 +353,15 @@
 			path = BackgroundFetch;
 			sourceTree = "<group>";
 		};
+		EE8DA9B2185951D30042C89A /* UploadSpeedTest */ = {
+			isa = PBXGroup;
+			children = (
+				EE8DA9B3185951E40042C89A /* UploadSpeedTest.h */,
+				EE8DA9B4185951E40042C89A /* UploadSpeedTest.m */,
+			);
+			path = UploadSpeedTest;
+			sourceTree = "<group>";
+		};
 		EEC23817180E8E0E00ECB171 = {
 			isa = PBXGroup;
 			children = (
@@ -439,6 +451,7 @@
 				EE12EFDB185196830066CA42 /* AssetsLibrary */,
 				EE12EFE21852C1FC0066CA42 /* UploadByRange */,
 				EE12EFE6185561A20066CA42 /* BackgroundFetch */,
+				EE8DA9B2185951D30042C89A /* UploadSpeedTest */,
 			);
 			path = Projects;
 			sourceTree = "<group>";
@@ -608,6 +621,7 @@
 				EE0CC3EB184DD75D0063EEE4 /* ALAssetsLibrary+Utils.m in Sources */,
 				EE0CC3D0184DCF020063EEE4 /* PogoplugAPI.m in Sources */,
 				EE0CC3C5184DCE9D0063EEE4 /* AFURLSessionManager.m in Sources */,
+				EE8DA9B5185951E40042C89A /* UploadSpeedTest.m in Sources */,
 				EEC23836180E8E0E00ECB171 /* AppDelegate.m in Sources */,
 				EE0CC3DC184DD0D80063EEE4 /* PogoplugResponse.m in Sources */,
 				EE0CC3DF184DD18F0063EEE4 /* NSError+Core.m in Sources */,
