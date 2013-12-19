@@ -39,6 +39,8 @@
 		46B0CA141861D28A0094234A /* AFURLSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 46B0CA0B1861D28A0094234A /* AFURLSessionManager.m */; };
 		46B0CA171861D2C00094234A /* Logger.m in Sources */ = {isa = PBXBuildFile; fileRef = 46B0CA161861D2C00094234A /* Logger.m */; };
 		46B0CA1A1861E1930094234A /* NSDictionary+Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = 46B0CA191861E1930094234A /* NSDictionary+Utils.m */; };
+		EEB6712218629F19000AEBC3 /* NeroAPIError.m in Sources */ = {isa = PBXBuildFile; fileRef = EEB6712118629F19000AEBC3 /* NeroAPIError.m */; };
+		EEB671251862A0DB000AEBC3 /* HTTPError.m in Sources */ = {isa = PBXBuildFile; fileRef = EEB671241862A0DB000AEBC3 /* HTTPError.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -107,6 +109,10 @@
 		46B0CA161861D2C00094234A /* Logger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Logger.m; sourceTree = "<group>"; };
 		46B0CA181861E1930094234A /* NSDictionary+Utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+Utils.h"; sourceTree = "<group>"; };
 		46B0CA191861E1930094234A /* NSDictionary+Utils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+Utils.m"; sourceTree = "<group>"; };
+		EEB6712018629F19000AEBC3 /* NeroAPIError.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NeroAPIError.h; sourceTree = "<group>"; };
+		EEB6712118629F19000AEBC3 /* NeroAPIError.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NeroAPIError.m; sourceTree = "<group>"; };
+		EEB671231862A0DB000AEBC3 /* HTTPError.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTTPError.h; sourceTree = "<group>"; };
+		EEB671241862A0DB000AEBC3 /* HTTPError.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTTPError.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -215,6 +221,10 @@
 			children = (
 				46B0C9EE1861D22F0094234A /* NeroAPI.h */,
 				46B0C9EF1861D22F0094234A /* NeroAPI.m */,
+				EEB6712018629F19000AEBC3 /* NeroAPIError.h */,
+				EEB6712118629F19000AEBC3 /* NeroAPIError.m */,
+				EEB671231862A0DB000AEBC3 /* HTTPError.h */,
+				EEB671241862A0DB000AEBC3 /* HTTPError.m */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -354,6 +364,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EEB671251862A0DB000AEBC3 /* HTTPError.m in Sources */,
 				46B0CA1A1861E1930094234A /* NSDictionary+Utils.m in Sources */,
 				46B0CA0C1861D28A0094234A /* AFHTTPRequestOperation.m in Sources */,
 				46B0C9F71861D25B0094234A /* NSManagedObjectContext+Utils.m in Sources */,
@@ -361,6 +372,7 @@
 				46B0C9D91861D0FA0094234A /* BrowsingCore.m in Sources */,
 				46B0C99E1861CFC10094234A /* main.m in Sources */,
 				46B0CA141861D28A0094234A /* AFURLSessionManager.m in Sources */,
+				EEB6712218629F19000AEBC3 /* NeroAPIError.m in Sources */,
 				46B0CA0E1861D28A0094234A /* AFHTTPSessionManager.m in Sources */,
 				46B0C9E91861D1DC0094234A /* AccountManager.xcdatamodeld in Sources */,
 				46B0CA0F1861D28A0094234A /* AFNetworkReachabilityManager.m in Sources */,
@@ -569,6 +581,7 @@
 				46B0C9C01861CFC10094234A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		46B0C9C11861CFC10094234A /* Build configuration list for PBXNativeTarget "BrowsingCoreTests" */ = {
 			isa = XCConfigurationList;
@@ -577,6 +590,7 @@
 				46B0C9C31861CFC10094234A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

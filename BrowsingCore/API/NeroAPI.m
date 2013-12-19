@@ -1,4 +1,6 @@
 #import "NeroAPI.h"
+#import "NeroAPIError.h"
+#import "HTTPError.h"
 #import "AFNetworking.h"
 #import "CompletionWaiter.h"
 #import "NSDictionary+Utils.h"
@@ -19,11 +21,40 @@
 @interface NeroResponseSerializer_AuthLogin : NeroResponseSerializer
 @end
 
-@interface NeroResponseObject ()
+@interface NeroResponseSerializer_AuthRegister : NeroResponseSerializer
+@end
+
+@interface NeroResponseSerializer_AuthPasswordChange : NeroResponseSerializer
+@end
+
+@interface NeroResponseSerializer_AuthPasswordRenew : NeroResponseSerializer
+@end
+
+@interface NeroResponseSerializer_UserAcceptTOS : NeroResponseSerializer
+@end
+
+@interface NeroResponseSerializer_SubscriptionPogoplugLogin : NeroResponseSerializer
+@end
+
+@interface NeroResponseObject : NSObject
+- (id)initWithStatusCode:(NSInteger)statusCode dictionary:(NSDictionary *)dictionary;
+@property (nonatomic,readonly) NSInteger statusCode;
+@property (nonatomic,readonly) NSDictionary *dictionary;
+@property (nonatomic,readonly) NSInteger code;
+@property (nonatomic,readonly) NSDictionary *data;
+@property (nonatomic,readonly) NeroResponseObject_AccountInfo *accountInfo;
+@property (nonatomic,readonly) NeroResponseObject_PogoplugInfo *pogoplugLogin;
+@end
+
+@interface NeroResponseObject_Data ()
 - (id)initWithDictionary:(NSDictionary *)dictionary;
+@property (nonatomic,readonly) NSDictionary *dictionary;
 @end
 
 @interface NeroResponseObject_AccountInfo ()
+@end
+
+@interface NeroResponseObject_PogoplugInfo ()
 @end
 
 @implementation NeroAPI
@@ -31,23 +62,23 @@
 - (id)init
 {
     if (self = [super init]) {
-        _baseURL = [[NSURL alloc] initWithScheme:@"http" host:@"services.my.nerobackitup.com" path:@"/api/vi"];
+        _baseURL = [[NSURL alloc] initWithScheme:@"http" host:@"services.my.nerobackitup.com" path:@"/api/v1"];
     }
     return self;
 }
 
-- (void)authLoginSync:(BOOL)sync email:(NSString *)email password:(NSString *)password completionHandler:(NeroAuthLoginCompletionHandler)handler
+- (void)subscriptionPogoplugLoginSync:(BOOL)sync completionHandler:(NeroAPISubscriptionPogoplugLoginCompletionHandler)handler
 {
-    NSParameterAssert(email && password && handler);
+    NSParameterAssert(handler);
     
-    NSDictionary *parameters = @{@"email":email, @"password":password};
-    NSURL *url = [self.baseURL URLByAppendingPathComponent:@"auth/ncs/login"];
     CompletionWaiter *cw = [[CompletionWaiter alloc] init];
+    NSURL *url = [self.baseURL URLByAppendingPathComponent:@"subscriptions/pogoplug/login"];
     
     NeroOperationManager *manager = [NeroOperationManager manager];
-    [manager POST:url.absoluteString parameters:parameters success:^(AFHTTPRequestOperation *operation, id responseObject) {
-        // TODO
-        handler(responseObject, nil);
+    manager.responseSerializer = [NeroResponseSerializer_SubscriptionPogoplugLogin serializer];
+    [manager POST:url.absoluteString parameters:nil success:^(AFHTTPRequestOperation *operation, NeroResponseObject *object) {
+        NSParameterAssert([object isKindOfClass:NeroResponseObject.class]);
+        handler(object.pogoplugLogin, nil);
         [cw complete];
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
         handler(nil, error);
@@ -59,9 +90,155 @@
     }
 }
 
-- (void)subscriptionPogoplugLoginSync:(BOOL)sync completionHandler:(NeroSubscriptionPogoplugLoginCompletionHandler)handler
+- (void)authLoginSync:(BOOL)sync email:(NSString *)email password:(NSString *)password completionHandler:(NeroAPIAuthLoginCompletionHandler)handler
 {
+    NSParameterAssert(email && password && handler);
     
+    CompletionWaiter *cw = [[CompletionWaiter alloc] init];
+    NSURL *url = [self.baseURL URLByAppendingPathComponent:@"auth/ncs/login"];
+    NSDictionary *parameters = @{@"email":email, @"password":password};
+    
+    NeroOperationManager *manager = [NeroOperationManager manager];
+    manager.responseSerializer = [NeroResponseSerializer_AuthLogin serializer];
+    [manager POST:url.absoluteString parameters:parameters success:^(AFHTTPRequestOperation *operation, NeroResponseObject *object) {
+        NSParameterAssert([object isKindOfClass:NeroResponseObject.class]);
+        handler(object.accountInfo, nil);
+        [cw complete];
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        handler(nil, error);
+        [cw complete];
+    }];
+    
+    if (sync) {
+        [cw wait];
+    }
+}
+
+- (void)authLogoutSync:(BOOL)sync completionHandler:(NeroAPICompletionHandler)handler
+{
+    NSParameterAssert(handler);
+    
+    CompletionWaiter *cw = [[CompletionWaiter alloc] init];
+    NSURL *url = [self.baseURL URLByAppendingPathComponent:@"auth/ncs/logout"];
+    
+    NeroOperationManager *manager = [NeroOperationManager manager];
+    [manager POST:url.absoluteString parameters:nil success:^(AFHTTPRequestOperation *operation, NeroResponseObject *object) {
+        handler(nil);
+        [cw complete];
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        handler(error);
+        [cw complete];
+    }];
+    
+    if (sync) {
+        [cw wait];
+    }
+}
+
+- (void)authRegisterSync:(BOOL)sync email:(NSString *)email password:(NSString *)password firstName:(NSString *)firstName lastName:(NSString *)lastName language:(NSString *)language country:(NSString *)country completionHandler:(NeroAPIAuthRegisterCompletionHandler)handler
+{
+    NSParameterAssert(email && password && handler);
+    
+    CompletionWaiter *cw = [[CompletionWaiter alloc] init];
+    NSURL *url = [self.baseURL URLByAppendingPathComponent:@"auth/ncs/register"];
+    
+    NSMutableDictionary *parameters = @{@"email":email, @"password":password}.mutableCopy;
+    if (firstName) {
+        parameters[@"firstname"] = firstName;
+    }
+    if (lastName) {
+        parameters[@"lastname"] = lastName;
+    }
+    if (language) {
+        parameters[@"lang"] = language;
+    }
+    if (country) {
+        parameters[@"country"] = country;
+    }
+    
+    NeroOperationManager *manager = [NeroOperationManager manager];
+    manager.responseSerializer = [NeroResponseSerializer_AuthRegister serializer];
+    [manager POST:url.absoluteString parameters:parameters success:^(AFHTTPRequestOperation *operation, NeroResponseObject *object) {
+        NSParameterAssert([object isKindOfClass:NeroResponseObject.class]);
+        handler(object.accountInfo, nil);
+        [cw complete];
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        handler(nil, error);
+        [cw complete];
+    }];
+    
+    if (sync) {
+        [cw wait];
+    }
+}
+
+- (void)authPasswordChangeSync:(BOOL)sync email:(NSString *)email passwordold:(NSString *)passwordold passwordnew:(NSString *)passwordnew completionHandler:(NeroAPICompletionHandler)handler
+{
+    NSParameterAssert(email && passwordold && passwordnew && handler);
+    
+    CompletionWaiter *cw = [[CompletionWaiter alloc] init];
+    NSURL *url = [self.baseURL URLByAppendingPathComponent:@"auth/ncs/passwordchange"];
+    NSDictionary *parameters = @{@"email":email, @"passwordold":passwordold, @"passwordnew":passwordnew};
+    
+    NeroOperationManager *manager = [NeroOperationManager manager];
+    manager.responseSerializer = [NeroResponseSerializer_AuthPasswordChange serializer];
+    [manager POST:url.absoluteString parameters:parameters success:^(AFHTTPRequestOperation *operation, NeroResponseObject *object) {
+        handler(nil);
+        [cw complete];
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        handler(error);
+        [cw complete];
+    }];
+    
+    if (sync) {
+        [cw wait];
+    }
+}
+
+- (void)authPasswordRenewSync:(BOOL)sync email:(NSString *)email completionHandler:(NeroAPICompletionHandler)handler
+{
+    NSParameterAssert(email && handler);
+    
+    CompletionWaiter *cw = [[CompletionWaiter alloc] init];
+    NSURL *url = [self.baseURL URLByAppendingPathComponent:@"auth/ncs/passwordrenew"];
+    NSDictionary *parameters = @{@"email":email};
+    
+    NeroOperationManager *manager = [NeroOperationManager manager];
+    manager.responseSerializer = [NeroResponseSerializer_AuthPasswordRenew serializer];
+    [manager POST:url.absoluteString parameters:parameters success:^(AFHTTPRequestOperation *operation, NeroResponseObject *object) {
+        handler(nil);
+        [cw complete];
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        handler(error);
+        [cw complete];
+    }];
+    
+    if (sync) {
+        [cw wait];
+    }
+}
+
+- (void)userAcceptTOSSync:(BOOL)sync email:(NSString *)email completionHandler:(NeroAPICompletionHandler)handler
+{
+    NSParameterAssert(email && handler);
+    
+    CompletionWaiter *cw = [[CompletionWaiter alloc] init];
+    NSURL *url = [self.baseURL URLByAppendingPathComponent:@"user/accepttos"];
+    NSDictionary *parameters = @{@"email":email, @"tos":NSDate.date};
+    
+    NeroOperationManager *manager = [NeroOperationManager manager];
+    manager.responseSerializer = [NeroResponseSerializer_UserAcceptTOS serializer];
+    [manager POST:url.absoluteString parameters:parameters success:^(AFHTTPRequestOperation *operation, NeroResponseObject *object) {
+        handler(nil);
+        [cw complete];
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        handler(error);
+        [cw complete];
+    }];
+    
+    if (sync) {
+        [cw wait];
+    }
 }
 
 @end
@@ -118,8 +295,14 @@
         return nil; // http error.
     }
     
-    // no error.
-    return json;
+    // nero api response data must be a dictionary json object.
+    if (![json isKindOfClass:NSDictionary.class]) {
+        // TODO
+        // to create an error.
+        return nil; // invalid response data.
+    }
+    
+    return [[NeroResponseObject alloc] initWithStatusCode:statusCode dictionary:json];
 }
 
 - (id)jsonObjectFromData:(NSData *)data withResponse:(NSURLResponse *)response
@@ -200,7 +383,8 @@
 - (NSError *)customErrorWithExceptionCode:(NSString *)code message:(NSString *)message statusCode:(NSInteger)statusCode
 {
     // TODO
-    return nil;
+    
+    return [NeroAPIError errorWithCode:NeroAPIError_Unknown description:message];
 }
 
 - (NSError *)httpErrorForStatusCode:(NSInteger)statusCode withJsonObject:(id)json
@@ -213,12 +397,14 @@
                 message = [details stringObjectForKey:@"message"];
             }
         }
-        // TODO
-        // return [AccountError errorWithCode:AccountError_ServiceUnavailable description:message];
-        return nil;
+        
+        return [NeroAPIError errorWithCode:NeroAPIError_ServiceUnavailable description:message];
     }
     
-    // TODO
+    if (statusCode >= 400) {
+        return [HTTPError errorWithCode:statusCode];
+    }
+    
     return nil;
 }
 
@@ -228,35 +414,194 @@
 
 - (NSError *)customErrorWithExceptionCode:(NSString *)code message:(NSString *)message statusCode:(NSInteger)statusCode
 {
-//    if ([code isEqualToString:@"data:1"]) {
-//        return [AccountError errorWithCode:AccountError_Login_DataMissing description:message];
-//    }
-//    if ([code isEqualToString:@"login:1"]) {
-//        return [AccountError errorWithCode:AccountError_Login_NicknameMissing description:message];
-//    }
-//    if ([code isEqualToString:@"login:2"]) {
-//        return [AccountError errorWithCode:AccountError_Login_PasswordMissing description:message];
-//    }
-//    if ([code isEqualToString:@"login:3"]) {
-//        return [AccountError errorWithCode:AccountError_Login_AccountInactived description:message];
-//    }
-//    if ([code isEqualToString:@"login:4"]) {
-//        return [AccountError errorWithCode:AccountError_Login_EmailPasswordMismatched description:message];
-//    }
-//    if ([code isEqualToString:@"login:6"]) {
-//        return [AccountError errorWithCode:AccountError_Login_TOSChanged description:message];
-//    }
-//    if ([code isEqualToString:@"login:7"]) {
-//        return [AccountError errorWithCode:AccountError_Login_NotFound description:message];
-//    }
-//    
-//    return [AccountError errorWithCode:AccountError_Unknown description:message];
-    return nil;
+    if ([code isEqualToString:@"data:1"]) {
+        return [NeroAPIError errorWithCode:NeroAPIError_Login_DataMissing description:message];
+    }
+    if ([code isEqualToString:@"login:1"]) {
+        return [NeroAPIError errorWithCode:NeroAPIError_Login_NicknameMissing description:message];
+    }
+    if ([code isEqualToString:@"login:2"]) {
+        return [NeroAPIError errorWithCode:NeroAPIError_Login_PasswordMissing description:message];
+    }
+    if ([code isEqualToString:@"login:3"]) {
+        return [NeroAPIError errorWithCode:NeroAPIError_Login_AccountInactived description:message];
+    }
+    if ([code isEqualToString:@"login:4"]) {
+        return [NeroAPIError errorWithCode:NeroAPIError_Login_EmailPasswordMismatched description:message];
+    }
+    if ([code isEqualToString:@"login:6"]) {
+        return [NeroAPIError errorWithCode:NeroAPIError_Login_TOSChanged description:message];
+    }
+    if ([code isEqualToString:@"login:7"]) {
+        return [NeroAPIError errorWithCode:NeroAPIError_Login_NotFound description:message];
+    }
+    
+    return [super customErrorWithExceptionCode:code message:message statusCode:statusCode];
+}
+
+@end
+
+@implementation NeroResponseSerializer_AuthRegister
+
+- (NSError *)customErrorWithExceptionCode:(NSString *)code message:(NSString *)message statusCode:(NSInteger)statusCode
+{
+    if ([code isEqualToString:@"register:1"]) {
+        return [NeroAPIError errorWithCode:NeroAPIError_Register_NicknameMissing description:message];
+    }
+    if ([code isEqualToString:@"register:3"]) {
+        return [NeroAPIError errorWithCode:NeroAPIError_Register_EmailMissing description:message];
+    }
+    if ([code isEqualToString:@"register:4"]) {
+        return [NeroAPIError errorWithCode:NeroAPIError_Register_CountryMissing description:message];
+    }
+    if ([code isEqualToString:@"register:5"]) {
+        return [NeroAPIError errorWithCode:NeroAPIError_Register_SecurityCodeMissing description:message];
+    }
+    if ([code isEqualToString:@"register:6"]) {
+        return [NeroAPIError errorWithCode:NeroAPIError_Register_PasswordMissing description:message];
+    }
+    if ([code isEqualToString:@"register:7"]) {
+        return [NeroAPIError errorWithCode:NeroAPIError_Register_ChecksumMissing description:message];
+    }
+    if ([code isEqualToString:@"register:8"]) {
+        return [NeroAPIError errorWithCode:NeroAPIError_Register_ActivateFailed description:message];
+    }
+    if ([code isEqualToString:@"invalid:email:String:1202"]) {
+        return [NeroAPIError errorWithCode:NeroAPIError_Register_AlreadyExisted description:message];
+    }
+    
+    return [super customErrorWithExceptionCode:code message:message statusCode:statusCode];
+}
+
+@end
+
+@implementation NeroResponseSerializer_AuthPasswordChange
+
+- (NSError *)customErrorWithExceptionCode:(NSString *)code message:(NSString *)message statusCode:(NSInteger)statusCode
+{
+    if ([code isEqualToString:@"password:1"]) {
+        return [NeroAPIError errorWithCode:NeroAPIError_PasswordChange_OldPasswordMissing description:message];
+    }
+    if ([code isEqualToString:@"password:2"]) {
+        return [NeroAPIError errorWithCode:NeroAPIError_PasswordChange_NewPasswordMissing description:message];
+    }
+    if ([code isEqualToString:@"password:3"]) {
+        return [NeroAPIError errorWithCode:NeroAPIError_PasswordChange_NewPasswordTooShort description:message];
+    }
+    if ([code isEqualToString:@"password:4"]) {
+        return [NeroAPIError errorWithCode:NeroAPIError_PasswordChange_InvalidCharacters description:message];
+    }
+    if ([code isEqualToString:@"invalid:email:String:1"]) {
+        return [NeroAPIError errorWithCode:NeroAPIError_PasswordChange_EmailMissing description:message];
+    }
+    if ([code isEqualToString:@"user:passwordchange:1"]) {
+        return [NeroAPIError errorWithCode:NeroAPIError_PasswordChange_NotFound description:message];
+    }
+    
+    return [super customErrorWithExceptionCode:code message:message statusCode:statusCode];
+}
+
+@end
+
+@implementation NeroResponseSerializer_AuthPasswordRenew
+
+- (NSError *)customErrorWithExceptionCode:(NSString *)code message:(NSString *)message statusCode:(NSInteger)statusCode
+{
+    if ([code isEqualToString:@"invalid:email:String:1"]) {
+        return [NeroAPIError errorWithCode:NeroAPIError_PasswordRenew_EmailMissing description:message];
+    }
+    if ([code isEqualToString:@"user:passwordrenew:1"]) {
+        return [NeroAPIError errorWithCode:NeroAPIError_PasswordRenew_SendFailed description:message];
+    }
+    
+    return [super customErrorWithExceptionCode:code message:message statusCode:statusCode];
+}
+
+@end
+
+@implementation NeroResponseSerializer_UserAcceptTOS
+
+- (NSError *)customErrorWithExceptionCode:(NSString *)code message:(NSString *)message statusCode:(NSInteger)statusCode
+{
+    if ([code isEqualToString:@"email:missing"]) {
+        return [NeroAPIError errorWithCode:NeroAPIError_AcceptTOS_EmailMissing description:message];
+    }
+    if ([code isEqualToString:@"tos:missing"]) {
+        return [NeroAPIError errorWithCode:NeroAPIError_AcceptTOS_TOSMissing description:message];
+    }
+    if ([code isEqualToString:@"ots:invalid"]) {
+        return [NeroAPIError errorWithCode:NeroAPIError_AcceptTOS_TOSInvalid description:message];
+    }
+    if (statusCode == 403) {
+        return [NeroAPIError errorWithCode:NeroAPIError_AcceptTOS_TOSDateOld description:nil];
+    }
+    if (statusCode == 404) {
+        return [NeroAPIError errorWithCode:NeroAPIError_AcceptTOS_NotFound description:nil];
+    }
+    
+    return [super customErrorWithExceptionCode:code message:message statusCode:statusCode];
+}
+
+@end
+
+@implementation NeroResponseSerializer_SubscriptionPogoplugLogin
+
+- (NSError *)customErrorWithExceptionCode:(NSString *)code message:(NSString *)message statusCode:(NSInteger)statusCode
+{
+    if (statusCode == 404) {
+        return [NeroAPIError errorWithCode:NeroAPIError_UserHasNoPogoplugSubscription description:nil];
+    }
+    
+    return [super customErrorWithExceptionCode:code message:message statusCode:statusCode];
 }
 
 @end
 
 @implementation NeroResponseObject
+
+- (id)initWithStatusCode:(NSInteger)statusCode dictionary:(NSDictionary *)dictionary;
+{
+    if (self = [super init]) {
+        _statusCode = statusCode;
+        _dictionary = dictionary;
+    }
+    return self;
+}
+
+- (NSInteger)code
+{
+    NSString *value = [self.dictionary stringObjectForKey:@"code"];
+    return value.integerValue;
+}
+
+- (NSDictionary *)data
+{
+    return [self.dictionary dictionaryObjectForKey:@"data"];
+}
+
+- (NeroResponseObject_AccountInfo *)accountInfo
+{
+    NSDictionary *data = self.data;
+    if (!data) {
+        return nil;
+    }
+    
+    return [[NeroResponseObject_AccountInfo alloc] initWithDictionary:data];
+}
+
+- (NeroResponseObject_PogoplugInfo *)pogoplugLoginResult
+{
+    NSDictionary *data = self.data;
+    if (!data) {
+        return nil;
+    }
+    
+    return [[NeroResponseObject_PogoplugInfo alloc] initWithDictionary:data];
+}
+
+@end
+
+@implementation NeroResponseObject_Data
 
 - (id)initWithDictionary:(NSDictionary *)dictionary
 {
@@ -321,6 +666,25 @@
         return value;
     }
     return nil;
+}
+
+@end
+
+@implementation NeroResponseObject_PogoplugInfo
+
+- (NSString *)token
+{
+    return [self.dictionary stringObjectForKey:@"token"];
+}
+
+- (NSString *)api_host
+{
+    return [self.dictionary stringObjectForKey:@"api_host"];
+}
+
+- (NSString *)webclient_url
+{
+    return [self.dictionary stringObjectForKey:@"webclient_url"];
 }
 
 @end
