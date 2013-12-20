@@ -47,6 +47,10 @@
 		EE12EFE51852C20B0066CA42 /* UploadByRange.m in Sources */ = {isa = PBXBuildFile; fileRef = EE12EFE41852C20B0066CA42 /* UploadByRange.m */; };
 		EE12EFE9185561BA0066CA42 /* BackgroundFetch.m in Sources */ = {isa = PBXBuildFile; fileRef = EE12EFE8185561BA0066CA42 /* BackgroundFetch.m */; };
 		EE8DA9B5185951E40042C89A /* UploadSpeedTest.m in Sources */ = {isa = PBXBuildFile; fileRef = EE8DA9B4185951E40042C89A /* UploadSpeedTest.m */; };
+		EE965D5E1863F01500A6B151 /* DatabaseTest.m in Sources */ = {isa = PBXBuildFile; fileRef = EE965D5D1863F01500A6B151 /* DatabaseTest.m */; };
+		EE965D611863F0C600A6B151 /* DatabaseTest.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = EE965D5F1863F0C600A6B151 /* DatabaseTest.xcdatamodeld */; };
+		EE965D641863F0FA00A6B151 /* DatabaseTestMO.m in Sources */ = {isa = PBXBuildFile; fileRef = EE965D631863F0FA00A6B151 /* DatabaseTestMO.m */; };
+		EE965D671863F13800A6B151 /* NSManagedObjectContext+Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = EE965D661863F13800A6B151 /* NSManagedObjectContext+Utils.m */; };
 		EEC23824180E8E0E00ECB171 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EEC23823180E8E0E00ECB171 /* Foundation.framework */; };
 		EEC23826180E8E0E00ECB171 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EEC23825180E8E0E00ECB171 /* CoreGraphics.framework */; };
 		EEC23828180E8E0E00ECB171 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EEC23827180E8E0E00ECB171 /* UIKit.framework */; };
@@ -163,6 +167,13 @@
 		EE12EFE8185561BA0066CA42 /* BackgroundFetch.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BackgroundFetch.m; sourceTree = "<group>"; };
 		EE8DA9B3185951E40042C89A /* UploadSpeedTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UploadSpeedTest.h; sourceTree = "<group>"; };
 		EE8DA9B4185951E40042C89A /* UploadSpeedTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UploadSpeedTest.m; sourceTree = "<group>"; };
+		EE965D5C1863F01500A6B151 /* DatabaseTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DatabaseTest.h; sourceTree = "<group>"; };
+		EE965D5D1863F01500A6B151 /* DatabaseTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DatabaseTest.m; sourceTree = "<group>"; };
+		EE965D601863F0C600A6B151 /* DatabaseTest.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DatabaseTest.xcdatamodel; sourceTree = "<group>"; };
+		EE965D621863F0FA00A6B151 /* DatabaseTestMO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DatabaseTestMO.h; sourceTree = "<group>"; };
+		EE965D631863F0FA00A6B151 /* DatabaseTestMO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DatabaseTestMO.m; sourceTree = "<group>"; };
+		EE965D651863F13800A6B151 /* NSManagedObjectContext+Utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSManagedObjectContext+Utils.h"; sourceTree = "<group>"; };
+		EE965D661863F13800A6B151 /* NSManagedObjectContext+Utils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSManagedObjectContext+Utils.m"; sourceTree = "<group>"; };
 		EEC23820180E8E0E00ECB171 /* Research.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Research.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EEC23823180E8E0E00ECB171 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		EEC23825180E8E0E00ECB171 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -362,6 +373,20 @@
 			path = UploadSpeedTest;
 			sourceTree = "<group>";
 		};
+		EE965D5B1863F00100A6B151 /* Database */ = {
+			isa = PBXGroup;
+			children = (
+				EE965D5C1863F01500A6B151 /* DatabaseTest.h */,
+				EE965D5D1863F01500A6B151 /* DatabaseTest.m */,
+				EE965D5F1863F0C600A6B151 /* DatabaseTest.xcdatamodeld */,
+				EE965D621863F0FA00A6B151 /* DatabaseTestMO.h */,
+				EE965D631863F0FA00A6B151 /* DatabaseTestMO.m */,
+				EE965D651863F13800A6B151 /* NSManagedObjectContext+Utils.h */,
+				EE965D661863F13800A6B151 /* NSManagedObjectContext+Utils.m */,
+			);
+			path = Database;
+			sourceTree = "<group>";
+		};
 		EEC23817180E8E0E00ECB171 = {
 			isa = PBXGroup;
 			children = (
@@ -445,6 +470,7 @@
 			children = (
 				EE0CC391184DC8CD0063EEE4 /* ProjectManager.h */,
 				EE0CC392184DC8CD0063EEE4 /* ProjectManager.m */,
+				EE965D5B1863F00100A6B151 /* Database */,
 				EEC2387A180E974800ECB171 /* ParentEntity */,
 				EE0CC394184DCD850063EEE4 /* BackgroundUploading */,
 				EE0CC405185073160063EEE4 /* BackgroundLocation */,
@@ -603,6 +629,7 @@
 				EEC23863180E8EC000ECB171 /* MainViewController.m in Sources */,
 				EE0CC3C3184DCE9D0063EEE4 /* AFURLRequestSerialization.m in Sources */,
 				EEC23885180E974800ECB171 /* Database.m in Sources */,
+				EE965D641863F0FA00A6B151 /* DatabaseTestMO.m in Sources */,
 				EE0CC3BF184DCE9D0063EEE4 /* AFHTTPSessionManager.m in Sources */,
 				EE0CC3BD184DCE9D0063EEE4 /* AFHTTPRequestOperation.m in Sources */,
 				EEC23884180E974800ECB171 /* ParentEntity.xcdatamodeld in Sources */,
@@ -619,6 +646,8 @@
 				EE0CC3C0184DCE9D0063EEE4 /* AFNetworkReachabilityManager.m in Sources */,
 				EE12EFE118519B750066CA42 /* ALAsset+Properties.m in Sources */,
 				EE0CC3EB184DD75D0063EEE4 /* ALAssetsLibrary+Utils.m in Sources */,
+				EE965D671863F13800A6B151 /* NSManagedObjectContext+Utils.m in Sources */,
+				EE965D5E1863F01500A6B151 /* DatabaseTest.m in Sources */,
 				EE0CC3D0184DCF020063EEE4 /* PogoplugAPI.m in Sources */,
 				EE0CC3C5184DCE9D0063EEE4 /* AFURLSessionManager.m in Sources */,
 				EE8DA9B5185951E40042C89A /* UploadSpeedTest.m in Sources */,
@@ -639,6 +668,7 @@
 				EE0CC3C4184DCE9D0063EEE4 /* AFURLResponseSerialization.m in Sources */,
 				EE0CC3E8184DD1CE0063EEE4 /* NSDate+Pogoplug.m in Sources */,
 				EE0CC3C9184DCE9D0063EEE4 /* UIButton+AFNetworking.m in Sources */,
+				EE965D611863F0C600A6B151 /* DatabaseTest.xcdatamodeld in Sources */,
 				EEC23883180E974800ECB171 /* ParentEntity.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -854,6 +884,16 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
+		EE965D5F1863F0C600A6B151 /* DatabaseTest.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				EE965D601863F0C600A6B151 /* DatabaseTest.xcdatamodel */,
+			);
+			currentVersion = EE965D601863F0C600A6B151 /* DatabaseTest.xcdatamodel */;
+			path = DatabaseTest.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
 		EEC2387D180E974800ECB171 /* ParentEntity.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
