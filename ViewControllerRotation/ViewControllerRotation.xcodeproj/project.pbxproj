@@ -1,0 +1,495 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		EE58984319A5E4C20093C7C0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE58984219A5E4C20093C7C0 /* Foundation.framework */; };
+		EE58984519A5E4C20093C7C0 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE58984419A5E4C20093C7C0 /* CoreGraphics.framework */; };
+		EE58984719A5E4C20093C7C0 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE58984619A5E4C20093C7C0 /* UIKit.framework */; };
+		EE58984D19A5E4C20093C7C0 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = EE58984B19A5E4C20093C7C0 /* InfoPlist.strings */; };
+		EE58984F19A5E4C20093C7C0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EE58984E19A5E4C20093C7C0 /* main.m */; };
+		EE58985319A5E4C30093C7C0 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EE58985219A5E4C30093C7C0 /* AppDelegate.m */; };
+		EE58985619A5E4C30093C7C0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EE58985419A5E4C30093C7C0 /* Main.storyboard */; };
+		EE58985919A5E4C30093C7C0 /* MasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EE58985819A5E4C30093C7C0 /* MasterViewController.m */; };
+		EE58985C19A5E4C30093C7C0 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EE58985B19A5E4C30093C7C0 /* DetailViewController.m */; };
+		EE58985E19A5E4C30093C7C0 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EE58985D19A5E4C30093C7C0 /* Images.xcassets */; };
+		EE58986519A5E4C30093C7C0 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE58986419A5E4C30093C7C0 /* XCTest.framework */; };
+		EE58986619A5E4C30093C7C0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE58984219A5E4C20093C7C0 /* Foundation.framework */; };
+		EE58986719A5E4C30093C7C0 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE58984619A5E4C20093C7C0 /* UIKit.framework */; };
+		EE58986F19A5E4C30093C7C0 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = EE58986D19A5E4C30093C7C0 /* InfoPlist.strings */; };
+		EE58987119A5E4C30093C7C0 /* ViewControllerRotationTests.m in Sources */ = {isa = PBXBuildFile; fileRef = EE58987019A5E4C30093C7C0 /* ViewControllerRotationTests.m */; };
+		EE58987E19A5E4F70093C7C0 /* AutoRotation.m in Sources */ = {isa = PBXBuildFile; fileRef = EE58987B19A5E4F70093C7C0 /* AutoRotation.m */; };
+		EE58987F19A5E4F70093C7C0 /* NavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = EE58987D19A5E4F70093C7C0 /* NavigationController.m */; };
+		EE58988519A5EB990093C7C0 /* UINavigationController+AutoRotating.m in Sources */ = {isa = PBXBuildFile; fileRef = EE58988419A5EB990093C7C0 /* UINavigationController+AutoRotating.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		EE58986819A5E4C30093C7C0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EE58983719A5E4C20093C7C0 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EE58983E19A5E4C20093C7C0;
+			remoteInfo = ViewControllerRotation;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		EE58983F19A5E4C20093C7C0 /* ViewControllerRotation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ViewControllerRotation.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		EE58984219A5E4C20093C7C0 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		EE58984419A5E4C20093C7C0 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		EE58984619A5E4C20093C7C0 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		EE58984A19A5E4C20093C7C0 /* ViewControllerRotation-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ViewControllerRotation-Info.plist"; sourceTree = "<group>"; };
+		EE58984C19A5E4C20093C7C0 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		EE58984E19A5E4C20093C7C0 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		EE58985019A5E4C20093C7C0 /* ViewControllerRotation-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ViewControllerRotation-Prefix.pch"; sourceTree = "<group>"; };
+		EE58985119A5E4C20093C7C0 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		EE58985219A5E4C30093C7C0 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		EE58985519A5E4C30093C7C0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		EE58985719A5E4C30093C7C0 /* MasterViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MasterViewController.h; sourceTree = "<group>"; };
+		EE58985819A5E4C30093C7C0 /* MasterViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MasterViewController.m; sourceTree = "<group>"; };
+		EE58985A19A5E4C30093C7C0 /* DetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
+		EE58985B19A5E4C30093C7C0 /* DetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
+		EE58985D19A5E4C30093C7C0 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		EE58986319A5E4C30093C7C0 /* ViewControllerRotationTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ViewControllerRotationTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		EE58986419A5E4C30093C7C0 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		EE58986C19A5E4C30093C7C0 /* ViewControllerRotationTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ViewControllerRotationTests-Info.plist"; sourceTree = "<group>"; };
+		EE58986E19A5E4C30093C7C0 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		EE58987019A5E4C30093C7C0 /* ViewControllerRotationTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewControllerRotationTests.m; sourceTree = "<group>"; };
+		EE58987A19A5E4F70093C7C0 /* AutoRotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AutoRotation.h; sourceTree = "<group>"; };
+		EE58987B19A5E4F70093C7C0 /* AutoRotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AutoRotation.m; sourceTree = "<group>"; };
+		EE58987C19A5E4F70093C7C0 /* NavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NavigationController.h; sourceTree = "<group>"; };
+		EE58987D19A5E4F70093C7C0 /* NavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NavigationController.m; sourceTree = "<group>"; };
+		EE58988319A5EB990093C7C0 /* UINavigationController+AutoRotating.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINavigationController+AutoRotating.h"; sourceTree = "<group>"; };
+		EE58988419A5EB990093C7C0 /* UINavigationController+AutoRotating.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationController+AutoRotating.m"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		EE58983C19A5E4C20093C7C0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EE58984519A5E4C20093C7C0 /* CoreGraphics.framework in Frameworks */,
+				EE58984719A5E4C20093C7C0 /* UIKit.framework in Frameworks */,
+				EE58984319A5E4C20093C7C0 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EE58986019A5E4C30093C7C0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EE58986519A5E4C30093C7C0 /* XCTest.framework in Frameworks */,
+				EE58986719A5E4C30093C7C0 /* UIKit.framework in Frameworks */,
+				EE58986619A5E4C30093C7C0 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		EE58983619A5E4C20093C7C0 = {
+			isa = PBXGroup;
+			children = (
+				EE58987A19A5E4F70093C7C0 /* AutoRotation.h */,
+				EE58987B19A5E4F70093C7C0 /* AutoRotation.m */,
+				EE58987C19A5E4F70093C7C0 /* NavigationController.h */,
+				EE58987D19A5E4F70093C7C0 /* NavigationController.m */,
+				EE58988319A5EB990093C7C0 /* UINavigationController+AutoRotating.h */,
+				EE58988419A5EB990093C7C0 /* UINavigationController+AutoRotating.m */,
+				EE58984819A5E4C20093C7C0 /* ViewControllerRotation */,
+				EE58986A19A5E4C30093C7C0 /* ViewControllerRotationTests */,
+				EE58984119A5E4C20093C7C0 /* Frameworks */,
+				EE58984019A5E4C20093C7C0 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		EE58984019A5E4C20093C7C0 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				EE58983F19A5E4C20093C7C0 /* ViewControllerRotation.app */,
+				EE58986319A5E4C30093C7C0 /* ViewControllerRotationTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		EE58984119A5E4C20093C7C0 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				EE58984219A5E4C20093C7C0 /* Foundation.framework */,
+				EE58984419A5E4C20093C7C0 /* CoreGraphics.framework */,
+				EE58984619A5E4C20093C7C0 /* UIKit.framework */,
+				EE58986419A5E4C30093C7C0 /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		EE58984819A5E4C20093C7C0 /* ViewControllerRotation */ = {
+			isa = PBXGroup;
+			children = (
+				EE58985119A5E4C20093C7C0 /* AppDelegate.h */,
+				EE58985219A5E4C30093C7C0 /* AppDelegate.m */,
+				EE58985419A5E4C30093C7C0 /* Main.storyboard */,
+				EE58985719A5E4C30093C7C0 /* MasterViewController.h */,
+				EE58985819A5E4C30093C7C0 /* MasterViewController.m */,
+				EE58985A19A5E4C30093C7C0 /* DetailViewController.h */,
+				EE58985B19A5E4C30093C7C0 /* DetailViewController.m */,
+				EE58985D19A5E4C30093C7C0 /* Images.xcassets */,
+				EE58984919A5E4C20093C7C0 /* Supporting Files */,
+			);
+			path = ViewControllerRotation;
+			sourceTree = "<group>";
+		};
+		EE58984919A5E4C20093C7C0 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				EE58984A19A5E4C20093C7C0 /* ViewControllerRotation-Info.plist */,
+				EE58984B19A5E4C20093C7C0 /* InfoPlist.strings */,
+				EE58984E19A5E4C20093C7C0 /* main.m */,
+				EE58985019A5E4C20093C7C0 /* ViewControllerRotation-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		EE58986A19A5E4C30093C7C0 /* ViewControllerRotationTests */ = {
+			isa = PBXGroup;
+			children = (
+				EE58987019A5E4C30093C7C0 /* ViewControllerRotationTests.m */,
+				EE58986B19A5E4C30093C7C0 /* Supporting Files */,
+			);
+			path = ViewControllerRotationTests;
+			sourceTree = "<group>";
+		};
+		EE58986B19A5E4C30093C7C0 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				EE58986C19A5E4C30093C7C0 /* ViewControllerRotationTests-Info.plist */,
+				EE58986D19A5E4C30093C7C0 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		EE58983E19A5E4C20093C7C0 /* ViewControllerRotation */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EE58987419A5E4C30093C7C0 /* Build configuration list for PBXNativeTarget "ViewControllerRotation" */;
+			buildPhases = (
+				EE58983B19A5E4C20093C7C0 /* Sources */,
+				EE58983C19A5E4C20093C7C0 /* Frameworks */,
+				EE58983D19A5E4C20093C7C0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ViewControllerRotation;
+			productName = ViewControllerRotation;
+			productReference = EE58983F19A5E4C20093C7C0 /* ViewControllerRotation.app */;
+			productType = "com.apple.product-type.application";
+		};
+		EE58986219A5E4C30093C7C0 /* ViewControllerRotationTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EE58987719A5E4C30093C7C0 /* Build configuration list for PBXNativeTarget "ViewControllerRotationTests" */;
+			buildPhases = (
+				EE58985F19A5E4C30093C7C0 /* Sources */,
+				EE58986019A5E4C30093C7C0 /* Frameworks */,
+				EE58986119A5E4C30093C7C0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EE58986919A5E4C30093C7C0 /* PBXTargetDependency */,
+			);
+			name = ViewControllerRotationTests;
+			productName = ViewControllerRotationTests;
+			productReference = EE58986319A5E4C30093C7C0 /* ViewControllerRotationTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		EE58983719A5E4C20093C7C0 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = nero;
+				TargetAttributes = {
+					EE58986219A5E4C30093C7C0 = {
+						TestTargetID = EE58983E19A5E4C20093C7C0;
+					};
+				};
+			};
+			buildConfigurationList = EE58983A19A5E4C20093C7C0 /* Build configuration list for PBXProject "ViewControllerRotation" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = EE58983619A5E4C20093C7C0;
+			productRefGroup = EE58984019A5E4C20093C7C0 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				EE58983E19A5E4C20093C7C0 /* ViewControllerRotation */,
+				EE58986219A5E4C30093C7C0 /* ViewControllerRotationTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		EE58983D19A5E4C20093C7C0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EE58985E19A5E4C30093C7C0 /* Images.xcassets in Resources */,
+				EE58984D19A5E4C20093C7C0 /* InfoPlist.strings in Resources */,
+				EE58985619A5E4C30093C7C0 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EE58986119A5E4C30093C7C0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EE58986F19A5E4C30093C7C0 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		EE58983B19A5E4C20093C7C0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EE58985319A5E4C30093C7C0 /* AppDelegate.m in Sources */,
+				EE58985919A5E4C30093C7C0 /* MasterViewController.m in Sources */,
+				EE58984F19A5E4C20093C7C0 /* main.m in Sources */,
+				EE58987F19A5E4F70093C7C0 /* NavigationController.m in Sources */,
+				EE58987E19A5E4F70093C7C0 /* AutoRotation.m in Sources */,
+				EE58988519A5EB990093C7C0 /* UINavigationController+AutoRotating.m in Sources */,
+				EE58985C19A5E4C30093C7C0 /* DetailViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EE58985F19A5E4C30093C7C0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EE58987119A5E4C30093C7C0 /* ViewControllerRotationTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		EE58986919A5E4C30093C7C0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EE58983E19A5E4C20093C7C0 /* ViewControllerRotation */;
+			targetProxy = EE58986819A5E4C30093C7C0 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		EE58984B19A5E4C20093C7C0 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EE58984C19A5E4C20093C7C0 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		EE58985419A5E4C30093C7C0 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EE58985519A5E4C30093C7C0 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		EE58986D19A5E4C30093C7C0 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EE58986E19A5E4C30093C7C0 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		EE58987219A5E4C30093C7C0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		EE58987319A5E4C30093C7C0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		EE58987519A5E4C30093C7C0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "ViewControllerRotation/ViewControllerRotation-Prefix.pch";
+				INFOPLIST_FILE = "ViewControllerRotation/ViewControllerRotation-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		EE58987619A5E4C30093C7C0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "ViewControllerRotation/ViewControllerRotation-Prefix.pch";
+				INFOPLIST_FILE = "ViewControllerRotation/ViewControllerRotation-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		EE58987819A5E4C30093C7C0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/ViewControllerRotation.app/ViewControllerRotation";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "ViewControllerRotation/ViewControllerRotation-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "ViewControllerRotationTests/ViewControllerRotationTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		EE58987919A5E4C30093C7C0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/ViewControllerRotation.app/ViewControllerRotation";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "ViewControllerRotation/ViewControllerRotation-Prefix.pch";
+				INFOPLIST_FILE = "ViewControllerRotationTests/ViewControllerRotationTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		EE58983A19A5E4C20093C7C0 /* Build configuration list for PBXProject "ViewControllerRotation" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EE58987219A5E4C30093C7C0 /* Debug */,
+				EE58987319A5E4C30093C7C0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EE58987419A5E4C30093C7C0 /* Build configuration list for PBXNativeTarget "ViewControllerRotation" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EE58987519A5E4C30093C7C0 /* Debug */,
+				EE58987619A5E4C30093C7C0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		EE58987719A5E4C30093C7C0 /* Build configuration list for PBXNativeTarget "ViewControllerRotationTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EE58987819A5E4C30093C7C0 /* Debug */,
+				EE58987919A5E4C30093C7C0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = EE58983719A5E4C20093C7C0 /* Project object */;
+}

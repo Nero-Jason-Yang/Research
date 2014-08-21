@@ -1,0 +1,497 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		EE58983219A58B2F0093C7C0 /* NavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = EE58983119A58B2F0093C7C0 /* NavigationController.m */; };
+		EE58983519A5D76F0093C7C0 /* AutoRotation.m in Sources */ = {isa = PBXBuildFile; fileRef = EE58983419A5D76F0093C7C0 /* AutoRotation.m */; };
+		EE7191F419A587E60051E018 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE7191F319A587E60051E018 /* Foundation.framework */; };
+		EE7191F619A587E60051E018 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE7191F519A587E60051E018 /* CoreGraphics.framework */; };
+		EE7191F819A587E60051E018 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE7191F719A587E60051E018 /* UIKit.framework */; };
+		EE7191FE19A587E60051E018 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = EE7191FC19A587E60051E018 /* InfoPlist.strings */; };
+		EE71920019A587E60051E018 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EE7191FF19A587E60051E018 /* main.m */; };
+		EE71920419A587E60051E018 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EE71920319A587E60051E018 /* AppDelegate.m */; };
+		EE71920719A587E60051E018 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EE71920519A587E60051E018 /* Main.storyboard */; };
+		EE71920A19A587E60051E018 /* MasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EE71920919A587E60051E018 /* MasterViewController.m */; };
+		EE71920D19A587E60051E018 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EE71920C19A587E60051E018 /* DetailViewController.m */; };
+		EE71920F19A587E60051E018 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EE71920E19A587E60051E018 /* Images.xcassets */; };
+		EE71921619A587E60051E018 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE71921519A587E60051E018 /* XCTest.framework */; };
+		EE71921719A587E60051E018 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE7191F319A587E60051E018 /* Foundation.framework */; };
+		EE71921819A587E60051E018 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE7191F719A587E60051E018 /* UIKit.framework */; };
+		EE71922019A587E60051E018 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = EE71921E19A587E60051E018 /* InfoPlist.strings */; };
+		EE71922219A587E60051E018 /* NestedNavViewCtrlTests.m in Sources */ = {isa = PBXBuildFile; fileRef = EE71922119A587E60051E018 /* NestedNavViewCtrlTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		EE71921919A587E60051E018 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EE7191E819A587E60051E018 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EE7191EF19A587E60051E018;
+			remoteInfo = NestedNavViewCtrl;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		EE58983019A58B2F0093C7C0 /* NavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NavigationController.h; sourceTree = "<group>"; };
+		EE58983119A58B2F0093C7C0 /* NavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NavigationController.m; sourceTree = "<group>"; };
+		EE58983319A5D76F0093C7C0 /* AutoRotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AutoRotation.h; sourceTree = "<group>"; };
+		EE58983419A5D76F0093C7C0 /* AutoRotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AutoRotation.m; sourceTree = "<group>"; };
+		EE7191F019A587E60051E018 /* ViewControllerRotation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ViewControllerRotation.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		EE7191F319A587E60051E018 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		EE7191F519A587E60051E018 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		EE7191F719A587E60051E018 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		EE7191FB19A587E60051E018 /* ViewControllerRotation-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ViewControllerRotation-Info.plist"; sourceTree = "<group>"; };
+		EE7191FD19A587E60051E018 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		EE7191FF19A587E60051E018 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		EE71920119A587E60051E018 /* ViewControllerRotation-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ViewControllerRotation-Prefix.pch"; sourceTree = "<group>"; };
+		EE71920219A587E60051E018 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		EE71920319A587E60051E018 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		EE71920619A587E60051E018 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		EE71920819A587E60051E018 /* MasterViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MasterViewController.h; sourceTree = "<group>"; };
+		EE71920919A587E60051E018 /* MasterViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MasterViewController.m; sourceTree = "<group>"; };
+		EE71920B19A587E60051E018 /* DetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
+		EE71920C19A587E60051E018 /* DetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
+		EE71920E19A587E60051E018 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		EE71921419A587E60051E018 /* ViewControllerRotationTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ViewControllerRotationTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		EE71921519A587E60051E018 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		EE71921D19A587E60051E018 /* ViewControllerRotationTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ViewControllerRotationTests-Info.plist"; sourceTree = "<group>"; };
+		EE71921F19A587E60051E018 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		EE71922119A587E60051E018 /* NestedNavViewCtrlTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NestedNavViewCtrlTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		EE7191ED19A587E60051E018 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EE7191F619A587E60051E018 /* CoreGraphics.framework in Frameworks */,
+				EE7191F819A587E60051E018 /* UIKit.framework in Frameworks */,
+				EE7191F419A587E60051E018 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EE71921119A587E60051E018 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EE71921619A587E60051E018 /* XCTest.framework in Frameworks */,
+				EE71921819A587E60051E018 /* UIKit.framework in Frameworks */,
+				EE71921719A587E60051E018 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		EE7191E719A587E60051E018 = {
+			isa = PBXGroup;
+			children = (
+				EE7191F919A587E60051E018 /* NestedNavViewCtrl */,
+				EE71921B19A587E60051E018 /* NestedNavViewCtrlTests */,
+				EE7191F219A587E60051E018 /* Frameworks */,
+				EE7191F119A587E60051E018 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		EE7191F119A587E60051E018 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				EE7191F019A587E60051E018 /* ViewControllerRotation.app */,
+				EE71921419A587E60051E018 /* ViewControllerRotationTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		EE7191F219A587E60051E018 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				EE7191F319A587E60051E018 /* Foundation.framework */,
+				EE7191F519A587E60051E018 /* CoreGraphics.framework */,
+				EE7191F719A587E60051E018 /* UIKit.framework */,
+				EE71921519A587E60051E018 /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		EE7191F919A587E60051E018 /* NestedNavViewCtrl */ = {
+			isa = PBXGroup;
+			children = (
+				EE71920219A587E60051E018 /* AppDelegate.h */,
+				EE71920319A587E60051E018 /* AppDelegate.m */,
+				EE58983319A5D76F0093C7C0 /* AutoRotation.h */,
+				EE58983419A5D76F0093C7C0 /* AutoRotation.m */,
+				EE71920519A587E60051E018 /* Main.storyboard */,
+				EE58983019A58B2F0093C7C0 /* NavigationController.h */,
+				EE58983119A58B2F0093C7C0 /* NavigationController.m */,
+				EE71920819A587E60051E018 /* MasterViewController.h */,
+				EE71920919A587E60051E018 /* MasterViewController.m */,
+				EE71920B19A587E60051E018 /* DetailViewController.h */,
+				EE71920C19A587E60051E018 /* DetailViewController.m */,
+				EE71920E19A587E60051E018 /* Images.xcassets */,
+				EE7191FA19A587E60051E018 /* Supporting Files */,
+			);
+			path = NestedNavViewCtrl;
+			sourceTree = "<group>";
+		};
+		EE7191FA19A587E60051E018 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				EE7191FB19A587E60051E018 /* ViewControllerRotation-Info.plist */,
+				EE7191FC19A587E60051E018 /* InfoPlist.strings */,
+				EE7191FF19A587E60051E018 /* main.m */,
+				EE71920119A587E60051E018 /* ViewControllerRotation-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		EE71921B19A587E60051E018 /* NestedNavViewCtrlTests */ = {
+			isa = PBXGroup;
+			children = (
+				EE71922119A587E60051E018 /* NestedNavViewCtrlTests.m */,
+				EE71921C19A587E60051E018 /* Supporting Files */,
+			);
+			path = NestedNavViewCtrlTests;
+			sourceTree = "<group>";
+		};
+		EE71921C19A587E60051E018 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				EE71921D19A587E60051E018 /* ViewControllerRotationTests-Info.plist */,
+				EE71921E19A587E60051E018 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		EE7191EF19A587E60051E018 /* ViewControllerRotation */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EE71922519A587E60051E018 /* Build configuration list for PBXNativeTarget "ViewControllerRotation" */;
+			buildPhases = (
+				EE7191EC19A587E60051E018 /* Sources */,
+				EE7191ED19A587E60051E018 /* Frameworks */,
+				EE7191EE19A587E60051E018 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ViewControllerRotation;
+			productName = NestedNavViewCtrl;
+			productReference = EE7191F019A587E60051E018 /* ViewControllerRotation.app */;
+			productType = "com.apple.product-type.application";
+		};
+		EE71921319A587E60051E018 /* ViewControllerRotationTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EE71922819A587E60051E018 /* Build configuration list for PBXNativeTarget "ViewControllerRotationTests" */;
+			buildPhases = (
+				EE71921019A587E60051E018 /* Sources */,
+				EE71921119A587E60051E018 /* Frameworks */,
+				EE71921219A587E60051E018 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EE71921A19A587E60051E018 /* PBXTargetDependency */,
+			);
+			name = ViewControllerRotationTests;
+			productName = NestedNavViewCtrlTests;
+			productReference = EE71921419A587E60051E018 /* ViewControllerRotationTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		EE7191E819A587E60051E018 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = nero;
+				TargetAttributes = {
+					EE71921319A587E60051E018 = {
+						TestTargetID = EE7191EF19A587E60051E018;
+					};
+				};
+			};
+			buildConfigurationList = EE7191EB19A587E60051E018 /* Build configuration list for PBXProject "ViewControllerRotation" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = EE7191E719A587E60051E018;
+			productRefGroup = EE7191F119A587E60051E018 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				EE7191EF19A587E60051E018 /* ViewControllerRotation */,
+				EE71921319A587E60051E018 /* ViewControllerRotationTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		EE7191EE19A587E60051E018 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EE71920F19A587E60051E018 /* Images.xcassets in Resources */,
+				EE7191FE19A587E60051E018 /* InfoPlist.strings in Resources */,
+				EE71920719A587E60051E018 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EE71921219A587E60051E018 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EE71922019A587E60051E018 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		EE7191EC19A587E60051E018 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EE58983519A5D76F0093C7C0 /* AutoRotation.m in Sources */,
+				EE71920419A587E60051E018 /* AppDelegate.m in Sources */,
+				EE71920A19A587E60051E018 /* MasterViewController.m in Sources */,
+				EE58983219A58B2F0093C7C0 /* NavigationController.m in Sources */,
+				EE71920019A587E60051E018 /* main.m in Sources */,
+				EE71920D19A587E60051E018 /* DetailViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EE71921019A587E60051E018 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EE71922219A587E60051E018 /* NestedNavViewCtrlTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		EE71921A19A587E60051E018 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EE7191EF19A587E60051E018 /* ViewControllerRotation */;
+			targetProxy = EE71921919A587E60051E018 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		EE7191FC19A587E60051E018 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EE7191FD19A587E60051E018 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		EE71920519A587E60051E018 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EE71920619A587E60051E018 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		EE71921E19A587E60051E018 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EE71921F19A587E60051E018 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		EE71922319A587E60051E018 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		EE71922419A587E60051E018 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		EE71922619A587E60051E018 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "NestedNavViewCtrl/ViewControllerRotation-Prefix.pch";
+				INFOPLIST_FILE = "NestedNavViewCtrl/ViewControllerRotation-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				PRODUCT_NAME = ViewControllerRotation;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		EE71922719A587E60051E018 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "NestedNavViewCtrl/ViewControllerRotation-Prefix.pch";
+				INFOPLIST_FILE = "NestedNavViewCtrl/ViewControllerRotation-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				PRODUCT_NAME = ViewControllerRotation;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		EE71922919A587E60051E018 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/NestedNavViewCtrl.app/NestedNavViewCtrl";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "NestedNavViewCtrl/NestedNavViewCtrl-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "NestedNavViewCtrlTests/ViewControllerRotationTests-Info.plist";
+				PRODUCT_NAME = ViewControllerRotationTests;
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		EE71922A19A587E60051E018 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/NestedNavViewCtrl.app/NestedNavViewCtrl";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "NestedNavViewCtrl/NestedNavViewCtrl-Prefix.pch";
+				INFOPLIST_FILE = "NestedNavViewCtrlTests/ViewControllerRotationTests-Info.plist";
+				PRODUCT_NAME = ViewControllerRotationTests;
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		EE7191EB19A587E60051E018 /* Build configuration list for PBXProject "ViewControllerRotation" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EE71922319A587E60051E018 /* Debug */,
+				EE71922419A587E60051E018 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EE71922519A587E60051E018 /* Build configuration list for PBXNativeTarget "ViewControllerRotation" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EE71922619A587E60051E018 /* Debug */,
+				EE71922719A587E60051E018 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EE71922819A587E60051E018 /* Build configuration list for PBXNativeTarget "ViewControllerRotationTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EE71922919A587E60051E018 /* Debug */,
+				EE71922A19A587E60051E018 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = EE7191E819A587E60051E018 /* Project object */;
+}
