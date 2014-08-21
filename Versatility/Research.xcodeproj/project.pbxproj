@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EE00FC8418AC706B00C0E668 /* ManagedObjectIDTest.m in Sources */ = {isa = PBXBuildFile; fileRef = EE00FC8318AC706B00C0E668 /* ManagedObjectIDTest.m */; };
+		EE00FC8718AC70FF00C0E668 /* ManagedObjectIDTest.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = EE00FC8518AC70FF00C0E668 /* ManagedObjectIDTest.xcdatamodeld */; };
+		EE00FC8A18AC714000C0E668 /* MOITestItem.m in Sources */ = {isa = PBXBuildFile; fileRef = EE00FC8918AC714000C0E668 /* MOITestItem.m */; };
 		EE0CC393184DC8CD0063EEE4 /* ProjectManager.m in Sources */ = {isa = PBXBuildFile; fileRef = EE0CC392184DC8CD0063EEE4 /* ProjectManager.m */; };
 		EE0CC397184DCD970063EEE4 /* BackgroundUploading.m in Sources */ = {isa = PBXBuildFile; fileRef = EE0CC396184DCD970063EEE4 /* BackgroundUploading.m */; };
 		EE0CC3BD184DCE9D0063EEE4 /* AFHTTPRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = EE0CC39B184DCE9D0063EEE4 /* AFHTTPRequestOperation.m */; };
@@ -86,6 +89,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		EE00FC8218AC706B00C0E668 /* ManagedObjectIDTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ManagedObjectIDTest.h; sourceTree = "<group>"; };
+		EE00FC8318AC706B00C0E668 /* ManagedObjectIDTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ManagedObjectIDTest.m; sourceTree = "<group>"; };
+		EE00FC8618AC70FF00C0E668 /* ManagedObjectIDTest.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ManagedObjectIDTest.xcdatamodel; sourceTree = "<group>"; };
+		EE00FC8818AC714000C0E668 /* MOITestItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MOITestItem.h; sourceTree = "<group>"; };
+		EE00FC8918AC714000C0E668 /* MOITestItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MOITestItem.m; sourceTree = "<group>"; };
 		EE0CC391184DC8CD0063EEE4 /* ProjectManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProjectManager.h; sourceTree = "<group>"; };
 		EE0CC392184DC8CD0063EEE4 /* ProjectManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProjectManager.m; sourceTree = "<group>"; };
 		EE0CC395184DCD970063EEE4 /* BackgroundUploading.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BackgroundUploading.h; sourceTree = "<group>"; };
@@ -235,6 +243,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		EE00FC8118AC704900C0E668 /* ManagedObjectID */ = {
+			isa = PBXGroup;
+			children = (
+				EE00FC8218AC706B00C0E668 /* ManagedObjectIDTest.h */,
+				EE00FC8318AC706B00C0E668 /* ManagedObjectIDTest.m */,
+				EE00FC8518AC70FF00C0E668 /* ManagedObjectIDTest.xcdatamodeld */,
+				EE00FC8818AC714000C0E668 /* MOITestItem.h */,
+				EE00FC8918AC714000C0E668 /* MOITestItem.m */,
+			);
+			path = ManagedObjectID;
+			sourceTree = "<group>";
+		};
 		EE0CC394184DCD850063EEE4 /* BackgroundUploading */ = {
 			isa = PBXGroup;
 			children = (
@@ -478,6 +498,7 @@
 				EE12EFE21852C1FC0066CA42 /* UploadByRange */,
 				EE12EFE6185561A20066CA42 /* BackgroundFetch */,
 				EE8DA9B2185951D30042C89A /* UploadSpeedTest */,
+				EE00FC8118AC704900C0E668 /* ManagedObjectID */,
 			);
 			path = Projects;
 			sourceTree = "<group>";
@@ -622,6 +643,7 @@
 				EE0CC3BE184DCE9D0063EEE4 /* AFHTTPRequestOperationManager.m in Sources */,
 				EE0CC3F1184DDA550063EEE4 /* ALAsset+Utils.m in Sources */,
 				EE0CC3D9184DD09F0063EEE4 /* PogoplugOperationManager.m in Sources */,
+				EE00FC8718AC70FF00C0E668 /* ManagedObjectIDTest.xcdatamodeld in Sources */,
 				EEC2388D180E992800ECB171 /* NSURL+Utils.m in Sources */,
 				EE0CC3C2184DCE9D0063EEE4 /* AFURLConnectionOperation.m in Sources */,
 				EE0CC393184DC8CD0063EEE4 /* ProjectManager.m in Sources */,
@@ -642,6 +664,7 @@
 				EEC23896180E9A6800ECB171 /* VideoFileMO.m in Sources */,
 				EE0CC3CA184DCE9D0063EEE4 /* UIImageView+AFNetworking.m in Sources */,
 				EE12EFDE185196950066CA42 /* AssetsLibrary.m in Sources */,
+				EE00FC8418AC706B00C0E668 /* ManagedObjectIDTest.m in Sources */,
 				EE0CC3D7184DD09F0063EEE4 /* PogoplugJSONResponseSerializer.m in Sources */,
 				EE0CC3C0184DCE9D0063EEE4 /* AFNetworkReachabilityManager.m in Sources */,
 				EE12EFE118519B750066CA42 /* ALAsset+Properties.m in Sources */,
@@ -667,6 +690,7 @@
 				EE0CC3E2184DD1B00063EEE4 /* NSError+Pogoplug.m in Sources */,
 				EE0CC3C4184DCE9D0063EEE4 /* AFURLResponseSerialization.m in Sources */,
 				EE0CC3E8184DD1CE0063EEE4 /* NSDate+Pogoplug.m in Sources */,
+				EE00FC8A18AC714000C0E668 /* MOITestItem.m in Sources */,
 				EE0CC3C9184DCE9D0063EEE4 /* UIButton+AFNetworking.m in Sources */,
 				EE965D611863F0C600A6B151 /* DatabaseTest.xcdatamodeld in Sources */,
 				EEC23883180E974800ECB171 /* ParentEntity.m in Sources */,
@@ -884,6 +908,16 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
+		EE00FC8518AC70FF00C0E668 /* ManagedObjectIDTest.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				EE00FC8618AC70FF00C0E668 /* ManagedObjectIDTest.xcdatamodel */,
+			);
+			currentVersion = EE00FC8618AC70FF00C0E668 /* ManagedObjectIDTest.xcdatamodel */;
+			path = ManagedObjectIDTest.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
 		EE965D5F1863F0C600A6B151 /* DatabaseTest.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
