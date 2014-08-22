@@ -110,4 +110,16 @@
     }
 }
 
+#pragma mark UIViewController(UIViewControllerRotation)
+
+- (NSUInteger)supportedInterfaceOrientations
+{
+    return UIInterfaceOrientationMaskPortrait;
+}
+
+- (UIInterfaceOrientation)preferredInterfaceOrientationForPresentation
+{
+    return UIInterfaceOrientationPortrait;
+}
+
 @end

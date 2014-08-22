@@ -22,9 +22,8 @@
 		EE58986719A5E4C30093C7C0 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE58984619A5E4C20093C7C0 /* UIKit.framework */; };
 		EE58986F19A5E4C30093C7C0 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = EE58986D19A5E4C30093C7C0 /* InfoPlist.strings */; };
 		EE58987119A5E4C30093C7C0 /* ViewControllerRotationTests.m in Sources */ = {isa = PBXBuildFile; fileRef = EE58987019A5E4C30093C7C0 /* ViewControllerRotationTests.m */; };
-		EE58987E19A5E4F70093C7C0 /* AutoRotation.m in Sources */ = {isa = PBXBuildFile; fileRef = EE58987B19A5E4F70093C7C0 /* AutoRotation.m */; };
-		EE58987F19A5E4F70093C7C0 /* NavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = EE58987D19A5E4F70093C7C0 /* NavigationController.m */; };
-		EE58988519A5EB990093C7C0 /* UINavigationController+AutoRotating.m in Sources */ = {isa = PBXBuildFile; fileRef = EE58988419A5EB990093C7C0 /* UINavigationController+AutoRotating.m */; };
+		EE58988819A6F2F70093C7C0 /* UINavigationRotatableController.m in Sources */ = {isa = PBXBuildFile; fileRef = EE58988719A6F2F70093C7C0 /* UINavigationRotatableController.m */; };
+		EE58988B19A71B570093C7C0 /* UIMutableDevice.m in Sources */ = {isa = PBXBuildFile; fileRef = EE58988A19A71B570093C7C0 /* UIMutableDevice.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,12 +58,10 @@
 		EE58986C19A5E4C30093C7C0 /* ViewControllerRotationTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ViewControllerRotationTests-Info.plist"; sourceTree = "<group>"; };
 		EE58986E19A5E4C30093C7C0 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		EE58987019A5E4C30093C7C0 /* ViewControllerRotationTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewControllerRotationTests.m; sourceTree = "<group>"; };
-		EE58987A19A5E4F70093C7C0 /* AutoRotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AutoRotation.h; sourceTree = "<group>"; };
-		EE58987B19A5E4F70093C7C0 /* AutoRotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AutoRotation.m; sourceTree = "<group>"; };
-		EE58987C19A5E4F70093C7C0 /* NavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NavigationController.h; sourceTree = "<group>"; };
-		EE58987D19A5E4F70093C7C0 /* NavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NavigationController.m; sourceTree = "<group>"; };
-		EE58988319A5EB990093C7C0 /* UINavigationController+AutoRotating.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINavigationController+AutoRotating.h"; sourceTree = "<group>"; };
-		EE58988419A5EB990093C7C0 /* UINavigationController+AutoRotating.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationController+AutoRotating.m"; sourceTree = "<group>"; };
+		EE58988619A6F2F70093C7C0 /* UINavigationRotatableController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UINavigationRotatableController.h; sourceTree = "<group>"; };
+		EE58988719A6F2F70093C7C0 /* UINavigationRotatableController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UINavigationRotatableController.m; sourceTree = "<group>"; };
+		EE58988919A71B570093C7C0 /* UIMutableDevice.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIMutableDevice.h; sourceTree = "<group>"; };
+		EE58988A19A71B570093C7C0 /* UIMutableDevice.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIMutableDevice.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,12 +91,10 @@
 		EE58983619A5E4C20093C7C0 = {
 			isa = PBXGroup;
 			children = (
-				EE58987A19A5E4F70093C7C0 /* AutoRotation.h */,
-				EE58987B19A5E4F70093C7C0 /* AutoRotation.m */,
-				EE58987C19A5E4F70093C7C0 /* NavigationController.h */,
-				EE58987D19A5E4F70093C7C0 /* NavigationController.m */,
-				EE58988319A5EB990093C7C0 /* UINavigationController+AutoRotating.h */,
-				EE58988419A5EB990093C7C0 /* UINavigationController+AutoRotating.m */,
+				EE58988619A6F2F70093C7C0 /* UINavigationRotatableController.h */,
+				EE58988719A6F2F70093C7C0 /* UINavigationRotatableController.m */,
+				EE58988919A71B570093C7C0 /* UIMutableDevice.h */,
+				EE58988A19A71B570093C7C0 /* UIMutableDevice.m */,
 				EE58984819A5E4C20093C7C0 /* ViewControllerRotation */,
 				EE58986A19A5E4C30093C7C0 /* ViewControllerRotationTests */,
 				EE58984119A5E4C20093C7C0 /* Frameworks */,
@@ -269,12 +264,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EE58988819A6F2F70093C7C0 /* UINavigationRotatableController.m in Sources */,
 				EE58985319A5E4C30093C7C0 /* AppDelegate.m in Sources */,
 				EE58985919A5E4C30093C7C0 /* MasterViewController.m in Sources */,
 				EE58984F19A5E4C20093C7C0 /* main.m in Sources */,
-				EE58987F19A5E4F70093C7C0 /* NavigationController.m in Sources */,
-				EE58987E19A5E4F70093C7C0 /* AutoRotation.m in Sources */,
-				EE58988519A5EB990093C7C0 /* UINavigationController+AutoRotating.m in Sources */,
+				EE58988B19A71B570093C7C0 /* UIMutableDevice.m in Sources */,
 				EE58985C19A5E4C30093C7C0 /* DetailViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -403,6 +397,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ViewControllerRotation/ViewControllerRotation-Prefix.pch";
 				INFOPLIST_FILE = "ViewControllerRotation/ViewControllerRotation-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -416,6 +411,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ViewControllerRotation/ViewControllerRotation-Prefix.pch";
 				INFOPLIST_FILE = "ViewControllerRotation/ViewControllerRotation-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
