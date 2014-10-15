@@ -29,6 +29,7 @@
     self.tableView.separatorColor = [UIColor redColor];
     self.tableView.separatorInset = UIEdgeInsetsMake(20, 0, 10, 0);
     self.tableView.backgroundColor = [UIColor yellowColor];
+    self.tableView.showsHorizontalScrollIndicator = NO;
     
     [self.view addSubview:self.tableView];
 }
@@ -48,6 +49,13 @@
     cell.textLabel.text = @(index).description;
     
     return cell;
+}
+
+- (CGFloat)tableView:(HorizontalTableView *)tableView widthForCellAtIndex:(NSInteger)index {
+    if (index == 2) {
+        return 60;
+    }
+    return tableView.cellDefaultWidth;
 }
 
 @end
