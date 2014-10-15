@@ -7,7 +7,39 @@
 //
 
 #import "UINavigationRotatableController.h"
-#import "UIDevice+Orientation.h"
+
+//
+//
+// UIDevice (Orientation)
+//
+//////////
+
+@interface _UIMutableDevice : UIDevice
+@property(nonatomic) UIDeviceOrientation orientation;
+@end
+
+@implementation _UIMutableDevice
+@dynamic orientation;
+@end
+
+@interface UIDevice (Orientation)
+@property UIInterfaceOrientation interfaceOrientation;
+@end
+
+@implementation UIDevice (Orientation)
+- (UIInterfaceOrientation)interfaceOrientation {
+    return (UIInterfaceOrientation)self.orientation;
+}
+- (void)setInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
+    ((_UIMutableDevice *)self).orientation = (UIDeviceOrientation)interfaceOrientation;
+}
+@end
+
+//
+//
+// UINavigationRotatableController
+//
+//////////
 
 @interface UINavigationRotatableController () <UINavigationControllerDelegate>
 @property (nonatomic) UIInterfaceOrientation currentOrientation;
