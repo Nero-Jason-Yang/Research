@@ -7,7 +7,7 @@
 //
 
 #import "UINavigationRotatableController.h"
-#import "UIMutableDevice.h"
+#import "UIDevice+Orientation.h"
 
 @interface UINavigationRotatableController () <UINavigationControllerDelegate>
 @property (nonatomic) UIInterfaceOrientation currentOrientation;

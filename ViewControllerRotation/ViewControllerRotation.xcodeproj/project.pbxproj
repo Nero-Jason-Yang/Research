@@ -23,7 +23,7 @@
 		EE58986F19A5E4C30093C7C0 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = EE58986D19A5E4C30093C7C0 /* InfoPlist.strings */; };
 		EE58987119A5E4C30093C7C0 /* ViewControllerRotationTests.m in Sources */ = {isa = PBXBuildFile; fileRef = EE58987019A5E4C30093C7C0 /* ViewControllerRotationTests.m */; };
 		EE58988819A6F2F70093C7C0 /* UINavigationRotatableController.m in Sources */ = {isa = PBXBuildFile; fileRef = EE58988719A6F2F70093C7C0 /* UINavigationRotatableController.m */; };
-		EE58988B19A71B570093C7C0 /* UIMutableDevice.m in Sources */ = {isa = PBXBuildFile; fileRef = EE58988A19A71B570093C7C0 /* UIMutableDevice.m */; };
+		EE8DF69619EE74DA0085C80D /* UIDevice+Orientation.m in Sources */ = {isa = PBXBuildFile; fileRef = EE8DF69519EE74DA0085C80D /* UIDevice+Orientation.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,8 +60,8 @@
 		EE58987019A5E4C30093C7C0 /* ViewControllerRotationTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewControllerRotationTests.m; sourceTree = "<group>"; };
 		EE58988619A6F2F70093C7C0 /* UINavigationRotatableController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UINavigationRotatableController.h; sourceTree = "<group>"; };
 		EE58988719A6F2F70093C7C0 /* UINavigationRotatableController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UINavigationRotatableController.m; sourceTree = "<group>"; };
-		EE58988919A71B570093C7C0 /* UIMutableDevice.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIMutableDevice.h; sourceTree = "<group>"; };
-		EE58988A19A71B570093C7C0 /* UIMutableDevice.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIMutableDevice.m; sourceTree = "<group>"; };
+		EE8DF69419EE74DA0085C80D /* UIDevice+Orientation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIDevice+Orientation.h"; sourceTree = "<group>"; };
+		EE8DF69519EE74DA0085C80D /* UIDevice+Orientation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIDevice+Orientation.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,8 +93,8 @@
 			children = (
 				EE58988619A6F2F70093C7C0 /* UINavigationRotatableController.h */,
 				EE58988719A6F2F70093C7C0 /* UINavigationRotatableController.m */,
-				EE58988919A71B570093C7C0 /* UIMutableDevice.h */,
-				EE58988A19A71B570093C7C0 /* UIMutableDevice.m */,
+				EE8DF69419EE74DA0085C80D /* UIDevice+Orientation.h */,
+				EE8DF69519EE74DA0085C80D /* UIDevice+Orientation.m */,
 				EE58984819A5E4C20093C7C0 /* ViewControllerRotation */,
 				EE58986A19A5E4C30093C7C0 /* ViewControllerRotationTests */,
 				EE58984119A5E4C20093C7C0 /* Frameworks */,
@@ -267,8 +267,8 @@
 				EE58988819A6F2F70093C7C0 /* UINavigationRotatableController.m in Sources */,
 				EE58985319A5E4C30093C7C0 /* AppDelegate.m in Sources */,
 				EE58985919A5E4C30093C7C0 /* MasterViewController.m in Sources */,
+				EE8DF69619EE74DA0085C80D /* UIDevice+Orientation.m in Sources */,
 				EE58984F19A5E4C20093C7C0 /* main.m in Sources */,
-				EE58988B19A71B570093C7C0 /* UIMutableDevice.m in Sources */,
 				EE58985C19A5E4C30093C7C0 /* DetailViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -476,6 +476,7 @@
 				EE58987619A5E4C30093C7C0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		EE58987719A5E4C30093C7C0 /* Build configuration list for PBXNativeTarget "ViewControllerRotationTests" */ = {
 			isa = XCConfigurationList;
@@ -484,6 +485,7 @@
 				EE58987919A5E4C30093C7C0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
